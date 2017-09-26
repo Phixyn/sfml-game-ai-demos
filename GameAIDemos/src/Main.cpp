@@ -1,23 +1,21 @@
-#include <SFML/Graphics.hpp>
+#include "../include/GameWindow.hpp"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works eh");
+	const unsigned int WINDOW_WIDTH = 800;
+	const unsigned int WINDOW_HEIGHT = 600;
+	const std::string WINDOW_TITLE = "SFML Game AI Demos";
+
+	GameAIDemos::GameWindow gameWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
-	while (window.isOpen())
+	while (gameWindow.isOpen())
 	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
-
-		window.clear();
-		window.draw(shape);
-		window.display();
+		gameWindow.handleEvents();
+		gameWindow.clear();
+		gameWindow.draw(shape);
+		gameWindow.render();
 	}
 
 	return 0;
