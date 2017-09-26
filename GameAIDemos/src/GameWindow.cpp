@@ -1,22 +1,15 @@
 #include "../include/GameWindow.hpp"
 
-GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE)
+GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane = true)
 {
 	m_WIDTH = WIDTH;
 	m_HEIGHT = HEIGHT;
 	m_TITLE = TITLE;
-	// Default showDebugPane to true
-	m_showDebugPane = true;
+	m_showDebugPane = showDebugPane;
 
 	// m_logger.log("DEBUG", "Creating RenderWindow object.");
 	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), TITLE, sf::Style::Close);
 	m_window->requestFocus();
-}
-
-GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane)
-{
-	m_showDebugPane = showDebugPane;
-	GameWindow(WIDTH, HEIGHT, TITLE);
 }
 
 void GameAIDemos::GameWindow::clear()

@@ -9,8 +9,7 @@ namespace GameAIDemos
 	class GameWindow
 	{
 		public:
-			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE);
-			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane);
+			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane = true);
 
 			/// <summary> Clears the window by calling the clear method on the
 			/// SFML Window instance. </summary>
@@ -48,6 +47,9 @@ namespace GameAIDemos
 			unsigned int m_HEIGHT;
 			std::string m_TITLE;
 
+			/// <summary> Boolean specifying if the debug pane should be
+			/// displayed in the window. Defaults to true in the
+			/// constructor </summary>
 			bool m_showDebugPane;
 			/// <summary> Boolean specifying if the window has focus.
 			/// This member variable is set in handleEvents()
