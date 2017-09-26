@@ -69,11 +69,11 @@ namespace GameAIDemos
 			sf::View m_view;
 		private:
 			/// <summary> Width of the game window. </summary>
-			unsigned int m_WIDTH;
+			unsigned int m_width;
 			/// <summary> Height of the game window. </summary>
-			unsigned int m_HEIGHT;
+			unsigned int m_height;
 			/// <summary> Title of the game window seen in titlebar. </summary>
-			std::string m_TITLE;
+			std::string m_title;
 
 			/// <summary>
 			/// Boolean specifying if the debug pane should be displayed in the
