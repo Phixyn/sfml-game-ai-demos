@@ -9,6 +9,7 @@ namespace GameAIDemos
 	class GameWindow
 	{
 		public:
+			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE);
 			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane);
 
 			/// <summary> Clears the window by calling the clear method on the
