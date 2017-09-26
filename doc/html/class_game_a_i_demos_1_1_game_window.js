@@ -1,0 +1,11 @@
+var class_game_a_i_demos_1_1_game_window =
+[
+    [ "GameWindow", "class_game_a_i_demos_1_1_game_window.html#a027aad88c07071b26e81f9ef9df75e5c", null ],
+    [ "clear", "class_game_a_i_demos_1_1_game_window.html#ac0bf99aecefa7e691e7714a6bf665731", null ],
+    [ "draw", "class_game_a_i_demos_1_1_game_window.html#aa00930bc111b448305324a83457df8b0", null ],
+    [ "handleEvents", "class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2", null ],
+    [ "hasFocus", "class_game_a_i_demos_1_1_game_window.html#ae26f6f8c89c7ad8c654610089b58d1cc", null ],
+    [ "isOpen", "class_game_a_i_demos_1_1_game_window.html#a3e550bd5ce2f074c3526c96ff47ec648", null ],
+    [ "render", "class_game_a_i_demos_1_1_game_window.html#acc33e5d7e85c642e51187f3af8d6c909", null ],
+    [ "m_view", "class_game_a_i_demos_1_1_game_window.html#afdcb4a04138831dccba1c28d6ec88b1f", null ]
+];
