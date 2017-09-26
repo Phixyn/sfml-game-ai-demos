@@ -1,6 +1,7 @@
 #include "../include/GameWindow.hpp"
 
-GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane)
+GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane) :
+	m_view(sf::Vector2f(WIDTH / 2.0f, HEIGHT / 2.0f), sf::Vector2f((float)WIDTH, (float)HEIGHT))
 {
 	m_WIDTH = WIDTH;
 	m_HEIGHT = HEIGHT;
