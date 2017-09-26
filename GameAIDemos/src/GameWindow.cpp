@@ -24,6 +24,11 @@ void GameAIDemos::GameWindow::render()
 	m_window->display();
 }
 
+void GameAIDemos::GameWindow::draw(const sf::Drawable &drawable)
+{
+	m_window->draw(drawable);
+}
+
 /// <summary> Polls the SFML Window for events and handles them
 /// appropriately. </summary>
 void GameAIDemos::GameWindow::handleEvents()
@@ -46,6 +51,12 @@ void GameAIDemos::GameWindow::handleEvents()
 			break;
 		}
 	}
+}
+
+/// <summary> Returns the result of SFML's Window isOpen method. </summary>
+bool GameAIDemos::GameWindow::isOpen()
+{
+	return m_window->isOpen();
 }
 
 bool GameAIDemos::GameWindow::hasFocus()

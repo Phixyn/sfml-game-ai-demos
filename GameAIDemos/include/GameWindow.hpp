@@ -19,9 +19,22 @@ namespace GameAIDemos
 			/// the window. TODO: Expand this. </summary>
 			void render();
 
+			/// <summary> Draws a SFML Drawable object on the
+			/// window. </summary>
+			///
+			/// <param name="drawable">
+			/// Reference to the SFML Drawable instance to be drawn on the
+			/// window.
+			/// </param>
+			void draw(const sf::Drawable &drawable);
+
 			/// <summary> Handles SFML events received in the
 			/// window. </summary>
 			void handleEvents();
+
+			/// <returns> A boolean indicating if the window is
+			/// open. </returns>
+			bool isOpen();
 
 			/// <returns> A boolean indicating if the window has
 			/// focus. </returns>
