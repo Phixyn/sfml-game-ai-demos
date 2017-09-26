@@ -23,3 +23,32 @@ void GameAIDemos::GameWindow::render()
 	m_window->setView(m_view);
 	m_window->display();
 }
+
+/// <summary> Polls the SFML Window for events and handles them
+/// appropriately. </summary>
+void GameAIDemos::GameWindow::handleEvents()
+{
+	sf::Event sfEvent;
+
+	while (m_window->pollEvent(sfEvent))
+	{
+		switch (sfEvent.type)
+		{
+		case sf::Event::Closed:
+			// m_logger.log("DEBUG", "Closing game window.");
+			m_window->close();
+			break;
+		case sf::Event::LostFocus:
+			m_hasFocus = false;
+			break;
+		case sf::Event::GainedFocus:
+			m_hasFocus = true;
+			break;
+		}
+	}
+}
+
+bool GameAIDemos::GameWindow::hasFocus()
+{
+	return m_hasFocus;
+}

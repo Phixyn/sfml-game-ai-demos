@@ -19,6 +19,14 @@ namespace GameAIDemos
 			/// the window. TODO: Expand this. </summary>
 			void render();
 
+			/// <summary> Handles SFML events received in the
+			/// window. </summary>
+			void handleEvents();
+
+			/// <returns> A boolean indicating if the window has
+			/// focus. </returns>
+			bool hasFocus();
+
 			// View for the game, this could be moved to the game class in the future
 			sf::View m_view;
 		private:
@@ -27,6 +35,10 @@ namespace GameAIDemos
 			std::string m_TITLE;
 
 			bool m_showDebugPane;
+			/// <summary> Boolean specifying if the window has focus.
+			/// This member variable is set in handleEvents()
+			/// method. </summary>
+			bool m_hasFocus;
 
 			std::unique_ptr<sf::RenderWindow> m_window;
 	};
