@@ -39,9 +39,22 @@ namespace GameAIDemos
 			/// </summary>
 			GameWindow m_gameWindow;
 		private:
+			/// <summary>
+			/// The delta time for the game's update frequency rate.
+			/// </summary>
 			float m_deltaTime;
+			/// <summary>
+			/// Boolean specifying if the game should run in debug mode.
+			/// </summary>
 			bool m_debugMode;
+			/// <summary>
+			/// Instance of SFML Clock used to measure time. Used to get
+			/// a <see cref="m_deltaTime">delta time</see>.
+			/// </summary>
 			sf::Clock m_clock;
+			/// <summary>
+			/// Instance of <see cref="Logger">Logger</see> for logging.
+			/// </summary>
 			Logger m_logger;
 	};
 }

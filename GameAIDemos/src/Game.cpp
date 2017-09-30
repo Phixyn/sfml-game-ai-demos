@@ -16,6 +16,8 @@ void GameAIDemos::Game::mainLoop()
 
 	while (m_gameWindow.isOpen())
 	{
+		// (Re)start the clock and get the time elapsed since clock started,
+		// as seconds
 		m_deltaTime = m_clock.restart().asSeconds();
 		// Limit framerate to 60
 		if (m_deltaTime > 1.0f / 60.0f)
