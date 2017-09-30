@@ -26,8 +26,6 @@ void GameAIDemos::GameWindow::draw(const sf::Drawable &drawable)
 	m_window->draw(drawable);
 }
 
-/// <summary> Polls the SFML Window for events and handles them
-/// appropriately. </summary>
 void GameAIDemos::GameWindow::handleEvents()
 {
 	sf::Event sfEvent;
@@ -50,7 +48,6 @@ void GameAIDemos::GameWindow::handleEvents()
 	}
 }
 
-/// <summary> Returns the result of SFML's Window isOpen method. </summary>
 bool GameAIDemos::GameWindow::isOpen()
 {
 	return m_window->isOpen();

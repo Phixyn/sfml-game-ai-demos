@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('class_game_a_i_demos_1_1_game_window.h
 </div><!--header-->
 <div class="contents">
 
-<p>Class used to create and manage a game window.  
+<p>Class used to create and manage game windows.  
  <a href="class_game_a_i_demos_1_1_game_window.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_game_window_8hpp_source.html">GameWindow.hpp</a>&gt;</code></p>
@@ -105,16 +105,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac0bf99aecefa7e691e7714a6bf665731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the window by calling the clear method on the SFML RenderWindow instance.  <a href="#ac0bf99aecefa7e691e7714a6bf665731">More...</a><br /></td></tr>
 <tr class="separator:ac0bf99aecefa7e691e7714a6bf665731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc33e5d7e85c642e51187f3af8d6c909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#acc33e5d7e85c642e51187f3af8d6c909">render</a> ()</td></tr>
-<tr class="memdesc:acc33e5d7e85c642e51187f3af8d6c909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the display method of the SFML Window to render the window. TODO: Expand this.  <a href="#acc33e5d7e85c642e51187f3af8d6c909">More...</a><br /></td></tr>
+<tr class="memdesc:acc33e5d7e85c642e51187f3af8d6c909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the view (m_view) inside the window and calls the display method of the SFML RenderWindow to render the window.  <a href="#acc33e5d7e85c642e51187f3af8d6c909">More...</a><br /></td></tr>
 <tr class="separator:acc33e5d7e85c642e51187f3af8d6c909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa00930bc111b448305324a83457df8b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#aa00930bc111b448305324a83457df8b0">draw</a> (const sf::Drawable &amp;drawable)</td></tr>
 <tr class="memdesc:aa00930bc111b448305324a83457df8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a SFML Drawable object on the window.  <a href="#aa00930bc111b448305324a83457df8b0">More...</a><br /></td></tr>
 <tr class="separator:aa00930bc111b448305324a83457df8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf9b6b1d6832906239000550f3ca04b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2">handleEvents</a> ()</td></tr>
-<tr class="memdesc:aaf9b6b1d6832906239000550f3ca04b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles SFML events received in the window.  <a href="#aaf9b6b1d6832906239000550f3ca04b2">More...</a><br /></td></tr>
+<tr class="memdesc:aaf9b6b1d6832906239000550f3ca04b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls the SFML Window for events received in the window, and handles them appropriately.  <a href="#aaf9b6b1d6832906239000550f3ca04b2">More...</a><br /></td></tr>
 <tr class="separator:aaf9b6b1d6832906239000550f3ca04b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e550bd5ce2f074c3526c96ff47ec648"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a3e550bd5ce2f074c3526c96ff47ec648">isOpen</a> ()</td></tr>
-<tr class="memdesc:a3e550bd5ce2f074c3526c96ff47ec648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of SFML's Window isOpen method.  <a href="#a3e550bd5ce2f074c3526c96ff47ec648">More...</a><br /></td></tr>
 <tr class="separator:a3e550bd5ce2f074c3526c96ff47ec648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae26f6f8c89c7ad8c654610089b58d1cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#ae26f6f8c89c7ad8c654610089b58d1cc">hasFocus</a> ()</td></tr>
 <tr class="separator:ae26f6f8c89c7ad8c654610089b58d1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,32 +121,32 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afdcb4a04138831dccba1c28d6ec88b1f"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#afdcb4a04138831dccba1c28d6ec88b1f">m_view</a></td></tr>
-<tr class="memdesc:afdcb4a04138831dccba1c28d6ec88b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">View for the game, this could be moved to the game class in the future.  <a href="#afdcb4a04138831dccba1c28d6ec88b1f">More...</a><br /></td></tr>
+<tr class="memdesc:afdcb4a04138831dccba1c28d6ec88b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML View instance for the game window. This could be moved to the game class in the future.  <a href="#afdcb4a04138831dccba1c28d6ec88b1f">More...</a><br /></td></tr>
 <tr class="separator:afdcb4a04138831dccba1c28d6ec88b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a32583e9f92b7a8b42df6d5b3051005dd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a32583e9f92b7a8b42df6d5b3051005dd">m_WIDTH</a></td></tr>
-<tr class="memdesc:a32583e9f92b7a8b42df6d5b3051005dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the game window.  <a href="#a32583e9f92b7a8b42df6d5b3051005dd">More...</a><br /></td></tr>
-<tr class="separator:a32583e9f92b7a8b42df6d5b3051005dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9cd17e47d0b3ec9a3d1e8f3323c136e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#ad9cd17e47d0b3ec9a3d1e8f3323c136e">m_HEIGHT</a></td></tr>
-<tr class="memdesc:ad9cd17e47d0b3ec9a3d1e8f3323c136e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the game window.  <a href="#ad9cd17e47d0b3ec9a3d1e8f3323c136e">More...</a><br /></td></tr>
-<tr class="separator:ad9cd17e47d0b3ec9a3d1e8f3323c136e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21fc66d9411f58aacf8f5a432c1c73fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a21fc66d9411f58aacf8f5a432c1c73fa">m_TITLE</a></td></tr>
-<tr class="memdesc:a21fc66d9411f58aacf8f5a432c1c73fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Title of the game window seen in titlebar.  <a href="#a21fc66d9411f58aacf8f5a432c1c73fa">More...</a><br /></td></tr>
-<tr class="separator:a21fc66d9411f58aacf8f5a432c1c73fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad806617b797deda8bb223da0cf86c82a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#ad806617b797deda8bb223da0cf86c82a">m_width</a></td></tr>
+<tr class="memdesc:ad806617b797deda8bb223da0cf86c82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the game window.  <a href="#ad806617b797deda8bb223da0cf86c82a">More...</a><br /></td></tr>
+<tr class="separator:ad806617b797deda8bb223da0cf86c82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf11f251112c45784681aa6857df128"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#aadf11f251112c45784681aa6857df128">m_height</a></td></tr>
+<tr class="memdesc:aadf11f251112c45784681aa6857df128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the game window.  <a href="#aadf11f251112c45784681aa6857df128">More...</a><br /></td></tr>
+<tr class="separator:aadf11f251112c45784681aa6857df128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecbac9d590f2710a828bb66c2bd5516"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a2ecbac9d590f2710a828bb66c2bd5516">m_title</a></td></tr>
+<tr class="memdesc:a2ecbac9d590f2710a828bb66c2bd5516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Title of the game window seen in titlebar.  <a href="#a2ecbac9d590f2710a828bb66c2bd5516">More...</a><br /></td></tr>
+<tr class="separator:a2ecbac9d590f2710a828bb66c2bd5516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e443f908240e6f1448532be40e4c130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a6e443f908240e6f1448532be40e4c130">m_showDebugPane</a></td></tr>
 <tr class="memdesc:a6e443f908240e6f1448532be40e4c130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the debug pane should be displayed in the window. Defaults to true in the constructor.  <a href="#a6e443f908240e6f1448532be40e4c130">More...</a><br /></td></tr>
 <tr class="separator:a6e443f908240e6f1448532be40e4c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c395dfe1a9595fc0e704e704d94f4aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a1c395dfe1a9595fc0e704e704d94f4aa">m_hasFocus</a></td></tr>
-<tr class="memdesc:a1c395dfe1a9595fc0e704e704d94f4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2" title="Handles SFML events received in the window. ">handleEvents()</a> method.  <a href="#a1c395dfe1a9595fc0e704e704d94f4aa">More...</a><br /></td></tr>
+<tr class="memdesc:a1c395dfe1a9595fc0e704e704d94f4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2" title="Polls the SFML Window for events received in the window, and handles them appropriately. ">handleEvents()</a> method.  <a href="#a1c395dfe1a9595fc0e704e704d94f4aa">More...</a><br /></td></tr>
 <tr class="separator:a1c395dfe1a9595fc0e704e704d94f4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0066a3155a4528664ef4c4874f9bc76c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; sf::RenderWindow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a0066a3155a4528664ef4c4874f9bc76c">m_window</a></td></tr>
 <tr class="memdesc:a0066a3155a4528664ef4c4874f9bc76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique pointer to SFML RenderWindow instance.  <a href="#a0066a3155a4528664ef4c4874f9bc76c">More...</a><br /></td></tr>
 <tr class="separator:a0066a3155a4528664ef4c4874f9bc76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class used to create and manage a game window. </p>
+<div class="textblock"><p>Class used to create and manage game windows. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a027aad88c07071b26e81f9ef9df75e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a027aad88c07071b26e81f9ef9df75e5c">&#9670;&nbsp;</a></span>GameWindow()</h2>
@@ -261,8 +260,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles SFML events received in the window. </p>
-<p>Polls the SFML Window for events and handles them appropriately. </p>
+<p>Polls the SFML Window for events received in the window, and handles them appropriately. </p>
 
 </div>
 </div>
@@ -298,8 +296,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the result of SFML's Window isOpen method. </p>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the window is open. </dd></dl>
 
 </div>
@@ -319,7 +315,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calls the display method of the SFML Window to render the window. TODO: Expand this. </p>
+<p>Resets the view (m_view) inside the window and calls the display method of the SFML RenderWindow to render the window. </p>
 
 </div>
 </div>
@@ -344,12 +340,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2" title="Handles SFML events received in the window. ">handleEvents()</a> method. </p>
+<p>Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2" title="Polls the SFML Window for events received in the window, and handles them appropriately. ">handleEvents()</a> method. </p>
 
 </div>
 </div>
-<a id="ad9cd17e47d0b3ec9a3d1e8f3323c136e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9cd17e47d0b3ec9a3d1e8f3323c136e">&#9670;&nbsp;</a></span>m_HEIGHT</h2>
+<a id="aadf11f251112c45784681aa6857df128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf11f251112c45784681aa6857df128">&#9670;&nbsp;</a></span>m_height</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +354,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int GameAIDemos::GameWindow::m_HEIGHT</td>
+          <td class="memname">unsigned int GameAIDemos::GameWindow::m_height</td>
         </tr>
       </table>
   </td>
@@ -396,8 +392,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a21fc66d9411f58aacf8f5a432c1c73fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21fc66d9411f58aacf8f5a432c1c73fa">&#9670;&nbsp;</a></span>m_TITLE</h2>
+<a id="a2ecbac9d590f2710a828bb66c2bd5516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecbac9d590f2710a828bb66c2bd5516">&#9670;&nbsp;</a></span>m_title</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,7 +402,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string GameAIDemos::GameWindow::m_TITLE</td>
+          <td class="memname">std::string GameAIDemos::GameWindow::m_title</td>
         </tr>
       </table>
   </td>
@@ -432,12 +428,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>View for the game, this could be moved to the game class in the future. </p>
+<p>SFML View instance for the game window. This could be moved to the game class in the future. </p>
 
 </div>
 </div>
-<a id="a32583e9f92b7a8b42df6d5b3051005dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32583e9f92b7a8b42df6d5b3051005dd">&#9670;&nbsp;</a></span>m_WIDTH</h2>
+<a id="ad806617b797deda8bb223da0cf86c82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad806617b797deda8bb223da0cf86c82a">&#9670;&nbsp;</a></span>m_width</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,7 +442,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int GameAIDemos::GameWindow::m_WIDTH</td>
+          <td class="memname">unsigned int GameAIDemos::GameWindow::m_width</td>
         </tr>
       </table>
   </td>

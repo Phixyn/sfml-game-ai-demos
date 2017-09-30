@@ -8,10 +8,10 @@ var class_game_a_i_demos_1_1_game_window =
     [ "isOpen", "class_game_a_i_demos_1_1_game_window.html#a3e550bd5ce2f074c3526c96ff47ec648", null ],
     [ "render", "class_game_a_i_demos_1_1_game_window.html#acc33e5d7e85c642e51187f3af8d6c909", null ],
     [ "m_hasFocus", "class_game_a_i_demos_1_1_game_window.html#a1c395dfe1a9595fc0e704e704d94f4aa", null ],
-    [ "m_HEIGHT", "class_game_a_i_demos_1_1_game_window.html#ad9cd17e47d0b3ec9a3d1e8f3323c136e", null ],
+    [ "m_height", "class_game_a_i_demos_1_1_game_window.html#aadf11f251112c45784681aa6857df128", null ],
     [ "m_showDebugPane", "class_game_a_i_demos_1_1_game_window.html#a6e443f908240e6f1448532be40e4c130", null ],
-    [ "m_TITLE", "class_game_a_i_demos_1_1_game_window.html#a21fc66d9411f58aacf8f5a432c1c73fa", null ],
+    [ "m_title", "class_game_a_i_demos_1_1_game_window.html#a2ecbac9d590f2710a828bb66c2bd5516", null ],
     [ "m_view", "class_game_a_i_demos_1_1_game_window.html#afdcb4a04138831dccba1c28d6ec88b1f", null ],
-    [ "m_WIDTH", "class_game_a_i_demos_1_1_game_window.html#a32583e9f92b7a8b42df6d5b3051005dd", null ],
+    [ "m_width", "class_game_a_i_demos_1_1_game_window.html#ad806617b797deda8bb223da0cf86c82a", null ],
     [ "m_window", "class_game_a_i_demos_1_1_game_window.html#a0066a3155a4528664ef4c4874f9bc76c", null ]
 ];

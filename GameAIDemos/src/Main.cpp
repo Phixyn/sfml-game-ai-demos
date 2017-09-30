@@ -1,5 +1,8 @@
 #include "../include/GameWindow.hpp"
 
+/// <summary>
+/// Entry point for the game.
+/// </summary>
 int main()
 {
 	const unsigned int WINDOW_WIDTH = 800;

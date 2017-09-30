@@ -7,7 +7,7 @@
 namespace GameAIDemos
 {
 	/// <summary>
-	/// Class used to create and manage a game window.
+	/// Class used to create and manage game windows.
 	/// </summary>
 	class GameWindow
 	{
@@ -31,9 +31,9 @@ namespace GameAIDemos
 			void clear();
 
 			/// <summary>
-			/// Calls the display method of the SFML Window to render the
+			/// Resets the view (m_view) inside the window and calls the
+			/// display method of the SFML RenderWindow to render the
 			/// window.
-			/// TODO: Expand this.
 			/// </summary>
 			void render();
 
@@ -48,7 +48,8 @@ namespace GameAIDemos
 			void draw(const sf::Drawable &drawable);
 
 			/// <summary>
-			/// Handles SFML events received in the window.
+			/// Polls the SFML Window for events received in the window, and
+			/// handles them appropriately.
 			/// </summary>
 			void handleEvents();
 
@@ -63,8 +64,8 @@ namespace GameAIDemos
 			bool hasFocus();
 
 			/// <summary>
-			/// View for the game, this could be moved to the game class in
-			/// the future.
+			/// SFML View instance for the game window.
+			/// This could be moved to the game class in the future.
 			/// </summary>
 			sf::View m_view;
 		private:
