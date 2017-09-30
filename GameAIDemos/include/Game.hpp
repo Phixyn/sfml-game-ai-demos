@@ -15,7 +15,9 @@ namespace GameAIDemos
 	class Game
 	{
 		public:
-			/// <summary> Default constructor. </summary>
+			/// <summary>
+			/// Initializes the GameWindow instance and member variables.
+			/// </summary>
 			///
 			/// <param name="WIDTH"> The width of the game window. </param>
 			/// <param name="HEIGHT"> The height of the game window. </param>
@@ -24,17 +26,22 @@ namespace GameAIDemos
 			/// A boolean specifying if the game is to be run in debug mode.
 			/// Defaults to true.
 			/// </param>
+			/// <seealso cref="GameWindow" />
 			Game(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool DEBUG = true);
 
-			/// <summary> Handles the game's main loop. </summary>
+			/// <summary>
+			/// Handles the game's main loop.
+			/// </summary>
 			void mainLoop();
 
-			/// <summary> Window instance for the game. </summary>
+			/// <summary>
+			/// <see cref="GameWindow">GameWindow</see> instance for the game.
+			/// </summary>
 			GameWindow m_gameWindow;
 		private:
 			float m_deltaTime;
 			bool m_debugMode;
-		
+			sf::Clock m_clock;
 			Logger m_logger;
 	};
 }
