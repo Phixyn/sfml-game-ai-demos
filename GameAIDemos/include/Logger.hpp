@@ -75,9 +75,9 @@ namespace GameAIDemos
 			/// </item>
 			/// </list>
 			/// </para>
+			/// </summary>
 			/// <seealso cref="m_timeInfo" />
 			/// <seealso cref="m_timeT" />
-			/// </summary>
 			// TODO: Note localtime_s() can be called in the constructor and
 			// its return value does not need to be stored here.
 			errno_t m_localtime = localtime_s(&m_timeInfo, &m_timeT);

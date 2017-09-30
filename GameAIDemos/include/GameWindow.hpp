@@ -32,9 +32,9 @@ namespace GameAIDemos
 			void clear();
 
 			/// <summary>
-			/// Resets the view (m_view) inside the window and calls the
-			/// display method of the SFML RenderWindow to render the
-			/// window.
+			/// Resets the view (<see cref="m_view">m_view</see>) inside the
+			/// window and calls the display method of the SFML RenderWindow
+			/// to render the window.
 			/// </summary>
 			void render();
 
