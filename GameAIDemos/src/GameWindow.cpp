@@ -1,8 +1,8 @@
 #include "../include/GameWindow.hpp"
 
-GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane) :
+GameAIDemos::GameWindow::GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool SHOW_DEBUG_PANE) :
 	m_view(sf::Vector2f(WIDTH / 2.0f, HEIGHT / 2.0f), sf::Vector2f((float)WIDTH, (float)HEIGHT)),
-	m_width(WIDTH), m_height(HEIGHT), m_title(TITLE), m_showDebugPane(showDebugPane)
+	m_width(WIDTH), m_height(HEIGHT), m_title(TITLE), m_showDebugPane(SHOW_DEBUG_PANE)
 {
 	// m_logger.log("DEBUG", "Creating RenderWindow object.");
 	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), TITLE, sf::Style::Close);

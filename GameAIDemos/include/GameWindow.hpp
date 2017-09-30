@@ -20,9 +20,9 @@ namespace GameAIDemos
 			/// <param name="WIDTH"> The width of the window. </param>
 			/// <param name="HEIGHT"> The height of the window. </param>
 			/// <param name="TITLE"> A title for the window. </param>
-			/// <param name="showDebugPane"> A boolean specifying whether the
+			/// <param name="SHOW_DEBUG_PANE"> A boolean specifying whether the
 			/// debug pane should be displayed. Defaults to true. </param>
-			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane = true);
+			GameWindow(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool SHOW_DEBUG_PANE = true);
 
 			/// <summary>
 			/// Clears the window by calling the clear method on the SFML
