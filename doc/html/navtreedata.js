@@ -1,6 +1,9 @@
 var NAVTREE =
 [
   [ "SFML Game AI Demos", "index.html", [
+    [ "Namespaces", null, [
+      [ "Namespace List", "namespaces.html", "namespaces" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -18,7 +21,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html"
+"_game_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
