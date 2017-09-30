@@ -98,9 +98,9 @@ $(document).ready(function(){initNavTree('class_game_a_i_demos_1_1_game_window.h
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a027aad88c07071b26e81f9ef9df75e5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a027aad88c07071b26e81f9ef9df75e5c">GameWindow</a> (const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, bool showDebugPane=true)</td></tr>
-<tr class="memdesc:a027aad88c07071b26e81f9ef9df75e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default class constructor. Initializes all member variables and creates a new instance of SFML's RenderWindow.  <a href="#a027aad88c07071b26e81f9ef9df75e5c">More...</a><br /></td></tr>
-<tr class="separator:a027aad88c07071b26e81f9ef9df75e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb986a4d8df487930c640a70b2f9945"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#acdb986a4d8df487930c640a70b2f9945">GameWindow</a> (const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool SHOW_DEBUG_PANE=true)</td></tr>
+<tr class="memdesc:acdb986a4d8df487930c640a70b2f9945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default class constructor. Initializes all member variables and creates a new instance of SFML's RenderWindow.  <a href="#acdb986a4d8df487930c640a70b2f9945">More...</a><br /></td></tr>
+<tr class="separator:acdb986a4d8df487930c640a70b2f9945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0bf99aecefa7e691e7714a6bf665731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#ac0bf99aecefa7e691e7714a6bf665731">clear</a> ()</td></tr>
 <tr class="memdesc:ac0bf99aecefa7e691e7714a6bf665731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the window by calling the clear method on the SFML RenderWindow instance.  <a href="#ac0bf99aecefa7e691e7714a6bf665731">More...</a><br /></td></tr>
 <tr class="separator:ac0bf99aecefa7e691e7714a6bf665731"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,12 +144,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a0066a3155a4528664ef4c4874f9bc76c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; sf::RenderWindow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a0066a3155a4528664ef4c4874f9bc76c">m_window</a></td></tr>
 <tr class="memdesc:a0066a3155a4528664ef4c4874f9bc76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique pointer to SFML RenderWindow instance.  <a href="#a0066a3155a4528664ef4c4874f9bc76c">More...</a><br /></td></tr>
 <tr class="separator:a0066a3155a4528664ef4c4874f9bc76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9384efb85d10684b643bad7ff553d39b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game_window.html#a9384efb85d10684b643bad7ff553d39b">m_logger</a></td></tr>
+<tr class="memdesc:a9384efb85d10684b643bad7ff553d39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="#a9384efb85d10684b643bad7ff553d39b">More...</a><br /></td></tr>
+<tr class="separator:a9384efb85d10684b643bad7ff553d39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to create and manage game windows. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a027aad88c07071b26e81f9ef9df75e5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027aad88c07071b26e81f9ef9df75e5c">&#9670;&nbsp;</a></span>GameWindow()</h2>
+<a id="acdb986a4d8df487930c640a70b2f9945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdb986a4d8df487930c640a70b2f9945">&#9670;&nbsp;</a></span>GameWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,8 +178,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>showDebugPane</em> = <code>true</code>&#160;</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>SHOW_DEBUG_PANE</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -192,7 +195,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">WIDTH</td><td>The width of the window. </td></tr>
     <tr><td class="paramname">HEIGHT</td><td>The height of the window. </td></tr>
     <tr><td class="paramname">TITLE</td><td>A title for the window. </td></tr>
-    <tr><td class="paramname">showDebugPane</td><td>A boolean specifying whether the debug pane should be displayed. Defaults to true. </td></tr>
+    <tr><td class="paramname">SHOW_DEBUG_PANE</td><td>A boolean specifying whether the debug pane should be displayed. Defaults to true. </td></tr>
   </table>
   </dd>
 </dl>
@@ -365,6 +368,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Height of the game window. </p>
+
+</div>
+</div>
+<a id="a9384efb85d10684b643bad7ff553d39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9384efb85d10684b643bad7ff553d39b">&#9670;&nbsp;</a></span>m_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> GameAIDemos::GameWindow::m_logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging. </p>
 
 </div>
 </div>

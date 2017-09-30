@@ -1,9 +1,7 @@
 # Changes
 _List the changes made_
 
-* Added `GameWindow` class
-* Refactored `main()` to use `GameWindow`
-* Added DoxyGen config file and generated docs
+* Changes go here
 
 # Type of changes
 _Tick all that apply_
