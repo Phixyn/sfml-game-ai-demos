@@ -91,7 +91,9 @@ namespace GameAIDemos
 			/// Unique pointer to SFML RenderWindow instance.
 			/// </summary>
 			std::unique_ptr<sf::RenderWindow> m_window;
-
+			/// <summary>
+			/// Instance of <see cref="Logger">Logger</see> for logging.
+			/// </summary>
 			Logger m_logger;
 	};
 }
