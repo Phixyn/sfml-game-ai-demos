@@ -1,4 +1,4 @@
-#include "../include/GameWindow.hpp"
+#include "../include/Game.hpp"
 
 /// <summary>
 /// Entry point for the game.
@@ -9,17 +9,8 @@ int main()
 	const unsigned int WINDOW_HEIGHT = 600;
 	const std::string WINDOW_TITLE = "SFML Game AI Demos";
 
-	GameAIDemos::GameWindow gameWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
-	sf::CircleShape shape(50.f);
-	shape.setFillColor(sf::Color::Red);
-
-	while (gameWindow.isOpen())
-	{
-		gameWindow.handleEvents();
-		gameWindow.clear();
-		gameWindow.draw(shape);
-		gameWindow.render();
-	}
+	GameAIDemos::Game game(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
+	game.mainLoop();
 
 	return 0;
 }

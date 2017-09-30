@@ -34,16 +34,16 @@ void GameAIDemos::GameWindow::handleEvents()
 	{
 		switch (sfEvent.type)
 		{
-		case sf::Event::Closed:
-			m_logger.log("DEBUG", "Closing game window.");
-			m_window->close();
-			break;
-		case sf::Event::LostFocus:
-			m_hasFocus = false;
-			break;
-		case sf::Event::GainedFocus:
-			m_hasFocus = true;
-			break;
+			case sf::Event::Closed:
+				m_logger.log("DEBUG", "Closing game window.");
+				m_window->close();
+				break;
+			case sf::Event::LostFocus:
+				m_hasFocus = false;
+				break;
+			case sf::Event::GainedFocus:
+				m_hasFocus = true;
+				break;
 		}
 	}
 }
