@@ -5,6 +5,7 @@
 GameAIDemos::LevelScene::LevelScene(Game &game, std::string backgroundImagePath) :
 	Scene(game)
 {
+	m_logger.log("DEBUG", "Initializing level scene.");
 	setBackgroundImage(backgroundImagePath);
 }
 
@@ -29,10 +30,13 @@ void GameAIDemos::LevelScene::update(float deltaTime)
 /// </summary>
 void GameAIDemos::LevelScene::draw()
 {
-	// TODO
+	// TODO temporary placeholder shape
+	sf::CircleShape shape(50.f);
+	shape.setFillColor(sf::Color::Red);
+	m_game_ptr->m_gameWindow.draw(shape);
 
+	// TODO
 	// m_game_ptr->m_gameWindow.draw(m_backgroundSprite);
-	
 
 	// TODO: liveEntities
 	/*
@@ -57,6 +61,7 @@ void GameAIDemos::LevelScene::setBackgroundImage(std::string imageFilePath)
 	}
 
 	m_logger.log("INFO", "Loaded background image file: " + imageFilePath);
+	m_logger.log("DEBUG", "Applying background image to level scene.");
 	// TODO: Handle tileable backgrounds?
 	// m_backgroundTexture.setRepeated(true);
 	m_backgroundSprite.setTexture(m_backgroundTexture);

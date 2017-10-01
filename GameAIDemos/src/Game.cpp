@@ -7,15 +7,11 @@ GameAIDemos::Game::Game(const unsigned int WIDTH, const unsigned int HEIGHT, con
 }
 
 /// <summary>
-/// (TODO: list the steps).
+/// Handles user input, updates game state and renders the game scene.
 /// </summary>
 void GameAIDemos::Game::mainLoop()
 {
 	m_logger.log("DEBUG", "Entering main loop.");
-	// TODO temporary
-	sf::CircleShape shape(50.f);
-	shape.setFillColor(sf::Color::Red);
-
 	while (m_gameWindow.isOpen())
 	{
 		// (Re)start the clock and get the time elapsed since clock started,
@@ -47,8 +43,6 @@ void GameAIDemos::Game::mainLoop()
 		}
 		// (Re)draw scene
 		m_sceneQueue.front()->draw();
-		// TODO temporary
-		m_gameWindow.draw(shape);
 		// Render window
 		m_gameWindow.render();
 	}
@@ -62,6 +56,7 @@ void GameAIDemos::Game::mainLoop()
 /// </summary>
 void GameAIDemos::Game::addScene(std::unique_ptr<Scene> scene)
 {
+	m_logger.log("DEBUG", "Adding new scene to game.");
 	m_sceneQueue.push(std::move(scene));
 }
 
@@ -71,7 +66,15 @@ void GameAIDemos::Game::addScene(std::unique_ptr<Scene> scene)
 void GameAIDemos::Game::removeScene()
 {
 	if (!m_sceneQueue.empty())
+	{
+		m_logger.log("DEBUG", "Removing a scene from game.");
 		m_sceneQueue.pop();
+	}
+	else
+	{
+		m_logger.log("DEBUG", "Could not remove scene from game: scene queue is empty.");
+		return;
+	}
 }
 
 /// <summary>
@@ -80,6 +83,7 @@ void GameAIDemos::Game::removeScene()
 /// </summary>
 void GameAIDemos::Game::changeScene(std::unique_ptr<Scene> scene)
 {
+	m_logger.log("DEBUG", "Changing game scene.");
 	removeScene();
 	addScene(std::move(scene));
 }
