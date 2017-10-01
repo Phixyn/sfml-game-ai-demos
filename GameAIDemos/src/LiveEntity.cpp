@@ -3,15 +3,15 @@
 /// <summary>
 /// Calls the superclass constructor and initializes member variables.
 /// </summary>
-GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f position) :
-	Entity(position), m_velocity(0.0f, 0.0f), m_health(health)
+GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f position) :
+	Entity(size, position), m_health(health), m_velocity(0.0f, 0.0f)
 {
 	// TODO: give entities unique IDs and include this in log statement below
 	m_logger.log("DEBUG", "Initializing a live entity.");
 }
 
-GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f position, float speed) :
-	Entity(position), m_velocity(0.0f, 0.0f), m_health(health), m_speed(speed)
+GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed) :
+	Entity(size, position), m_velocity(0.0f, 0.0f), m_health(health), m_speed(speed)
 {
 	m_logger.log("DEBUG", "Initializing a live entity.");
 }
@@ -29,6 +29,17 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 void GameAIDemos::LiveEntity::draw()
 {
 	// TODO
+}
+
+void GameAIDemos::LiveEntity::setSpeed(float speed)
+{
+	m_logger.log("DEBUG", "Setting live entity speed.");
+	m_speed = speed;
+}
+
+float GameAIDemos::LiveEntity::getSpeed()
+{
+	return m_speed;
 }
 
 /// <summary>
@@ -86,14 +97,12 @@ void GameAIDemos::LiveEntity::setDead(bool dead)
 	m_dead = dead;
 }
 
-/* TODO not yet implemented
 sf::Vector2f GameAIDemos::LiveEntity::getDirection()
 {
-return m_direction;
+	return m_direction;
 }
 
 void GameAIDemos::LiveEntity::setDirection(sf::Vector2f direction)
 {
-m_direction = direction;
+	m_direction = direction;
 }
-*/

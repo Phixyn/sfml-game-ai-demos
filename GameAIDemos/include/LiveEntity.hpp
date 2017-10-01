@@ -20,11 +20,14 @@ namespace GameAIDemos
 			/// <param name="health">
 			/// The health points of the live entity.
 			/// </param>
+			/// <param name="size">
+			/// A SFML Vector2f containing the live entity's size.
+			/// </param>
 			/// <param name="position">
 			/// A SFML Vector2f containing the entity's position on the
 			/// game scene.
 			/// </param>
-			LiveEntity(int health, sf::Vector2f position);
+			LiveEntity(int health, sf::Vector2f size, sf::Vector2f position);
 
 			/// <summary>
 			/// Overloaded constructor taking an additional parameter for the
@@ -34,6 +37,9 @@ namespace GameAIDemos
 			/// <param name="health">
 			/// The health points of the live entity.
 			/// </param>
+			/// <param name="size">
+			/// A SFML Vector2f containing the live entity's size.
+			/// </param>
 			/// <param name="position">
 			/// A SFML Vector2f containing the entity's position on the
 			/// game scene.
@@ -41,7 +47,12 @@ namespace GameAIDemos
 			/// <param name="speed">
 			/// The movement speed of the live entity.
 			/// </param>
-			LiveEntity(int health, sf::Vector2f position, float speed);
+			LiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed);
+
+			// TODO Overloaded constructors with:
+			//  * velocity
+			//  * direction
+			//  * aggressive
 
 			/// <summary>
 			/// Handles events specific to the live entity.
@@ -61,6 +72,23 @@ namespace GameAIDemos
 			/// Draws the live entity.
 			/// </summary>
 			void draw() override;
+
+			/// <summary>
+			/// Sets the entity's speed.
+			/// </summary>
+			///
+			/// <param name="speed">
+			/// Float specifying the entity's speed.
+			/// </param>
+			void setSpeed(float speed);
+			/// <summary>
+			/// Returns the entity's current speed.
+			/// </summary>
+			///
+			/// <returns>
+			/// Float specifying the entity's speed.
+			/// </returns>
+			float getSpeed();
 
 			// TODO: animate method?
 			/// <summary>
@@ -105,7 +133,7 @@ namespace GameAIDemos
 
 			// TODO: Direction handling
 			/// <summary>
-			/// TODO: Not yet implemented.
+			/// Gets the entity's current direction.
 			/// </summary>
 			/// 
 			/// <returns>
@@ -114,19 +142,39 @@ namespace GameAIDemos
 			sf::Vector2f getDirection();
 
 			/// <summary>
-			/// Not yet implemented.
+			/// Sets the entity's direction.
 			/// </summary>
 			/// <param name="direction">
-			/// A SFML Vector2f containing the entity's direction.
+			/// A SFML Vector2f containing the entity's new direction.
 			/// </param>
 			void setDirection(sf::Vector2f direction);
 		protected:
+			/// <summary>
+			/// Entity's health points. 0 = dead.
+			/// </summary>
 			int m_health;
+			/// <summary>
+			/// Entity's movement speed.
+			/// </summary>
 			float m_speed;
+			/// <summary>
+			/// A boolean specifying if the live entity is aggressive.
+			/// If a live entity is aggressive, it may attack other entities
+			/// (such as the player).
+			/// </summary>
 			bool m_aggressive;
+			/// <summary>
+			/// A boolean specifying if the live entity is dead.
+			/// </summary>
 			bool m_dead;
+			/// <summary>
+			/// A SFML Vector2f containing the entity's velocity.
+			/// </summary>
 			sf::Vector2f m_velocity;
-			// sf::Vector2f m_direction;
+			/// <summary>
+			/// A SFML Vector2f containing the entity's direction.
+			/// </summary>
+			sf::Vector2f m_direction;
 	};
 }
 
