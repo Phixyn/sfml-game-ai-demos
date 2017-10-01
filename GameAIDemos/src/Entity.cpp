@@ -19,6 +19,31 @@ void GameAIDemos::Entity::setTexture(sf::Texture *texture)
 	m_rect.setTexture(texture);
 }
 
+void GameAIDemos::Entity::setColor(sf::Color &color)
+{
+	m_rect.setFillColor(color);
+}
+
+void GameAIDemos::Entity::setPosition(sf::Vector2f &position)
+{
+	m_rect.setPosition(position);
+}
+
+float GameAIDemos::Entity::getRectWidth()
+{
+	return m_rectWidth;
+}
+
+float GameAIDemos::Entity::getRectHeight()
+{
+	return m_rectHeight;
+}
+
+sf::Vector2f GameAIDemos::Entity::getPosition()
+{
+	return m_position;
+}
+
 /* TODO: Not yet implemented
 GameAIDemos::Collision GameAIDemos::Entity::getCollision()
 {

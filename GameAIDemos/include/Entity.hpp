@@ -51,6 +51,50 @@ namespace GameAIDemos
 			/// setTexture method.
 			/// </param>
 			void setTexture(sf::Texture *texture);
+			/// <summary>
+			/// Sets the entity's rectangle's color. Most likely temporary and
+			/// for debugging purposes.
+			/// </summary>
+			///
+			/// <param name="color">
+			/// A reference to a SFML Color object.
+			/// </param>
+			void setColor(sf::Color &color);
+			/// <summary>
+			/// Sets the position of the entity in the game scene.
+			/// </summary>
+			///
+			/// <param name="position">
+			/// A reference to a SFML Vector2f containing the new position
+			/// for the entity on the game scene.
+			/// </param>
+			void setPosition(sf::Vector2f &position);
+
+			/// <summary>
+			/// Gets the width of the entity's rectangle.
+			/// </summary>
+			///
+			/// <returns>
+			/// A float containing the rectangle's width.
+			/// </returns>
+			float getRectWidth();
+			/// <summary>
+			/// Gets the Height of the entity's rectangle.
+			/// </summary>
+			///
+			/// <returns>
+			/// A float containing the rectangle's Height.
+			/// </returns>
+			float getRectHeight();
+			/// <summary>
+			/// Gets the position of the entity in the game scene.
+			/// </summary>
+			///
+			/// <returns>
+			/// A SFML Vector2f containing the entity's position on the
+			/// game scene.
+			/// </returns>
+			sf::Vector2f getPosition();
 
 			/// <summary>
 			/// Returns a new instance of <see cref="Collision">Collision</see>
@@ -64,6 +108,8 @@ namespace GameAIDemos
 			/// </returns>
 			// Collision getCollision();
 
+			// Collision m_collision; // TODO: make this private or protected?
+		protected:
 			/// <summary>
 			/// Width of the entity's rectangle.
 			/// </summary>
@@ -76,9 +122,15 @@ namespace GameAIDemos
 			/// SFML RectangleShape instance for the entity's rectangle.
 			/// </summary>
 			sf::RectangleShape m_rect;
-			// Collision m_collision; // TODO: make this private or protected?
-		protected:
+			/// <summary>
+			/// SFML Vector2f instance containing the position of the entity.
+			/// </summary>
 			sf::Vector2f m_position;
+			/// <summary>
+			/// SFML Color instance for the entity's rectangle color.
+			/// </summary>
+			sf::Color m_color;
+
 			/// <summary>
 			/// Instance of <see cref="Logger">Logger</see> for logging.
 			/// </summary>
