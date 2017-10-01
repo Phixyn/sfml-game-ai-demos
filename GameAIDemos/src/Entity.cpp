@@ -3,11 +3,20 @@
 /// <summary>
 /// Initilizes the entity's <see cref="Collision">Collision</see> instance.
 /// </summary>
-GameAIDemos::Entity::Entity(sf::Vector2f position) :
-	m_position(position)
+GameAIDemos::Entity::Entity(sf::Vector2f size)
 //	, m_collision(m_rect)
 {
+	m_rectWidth = size.x;
+	m_rectHeight = size.y;
+	m_logger.log("DEBUG", "Creating a new entity.");
+	m_rect = sf::RectangleShape(sf::Vector2f(m_rectWidth, m_rectHeight));
+}
 
+GameAIDemos::Entity::Entity(sf::Vector2f size, sf::Vector2f position) :
+	Entity(size)
+{
+	m_position = position;
+	m_rect.setPosition(m_position);
 }
 
 /// <summary>

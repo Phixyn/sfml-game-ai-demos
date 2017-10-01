@@ -17,11 +17,24 @@ namespace GameAIDemos
 			/// Default constructor.
 			/// </summary>
 			///
+			/// <param name="size">
+			/// A SFML Vector2f containing the entity's size.
+			/// </param>
+			Entity(sf::Vector2f size);
+
+			/// <summary>
+			/// Overloaded constructor with an argument for the entity's
+			/// position in the game.
+			/// </summary>
+			///
+			/// <param name="size">
+			/// A SFML Vector2f containing the entity's size.
+			/// </param>
 			/// <param name="position">
 			/// A SFML Vector2f containing the entity's position on the
 			/// game scene.
 			/// </param>
-			Entity(sf::Vector2f position);
+			Entity(sf::Vector2f size, sf::Vector2f position);
 
 			/// <summary>
 			/// Pure virtual method to handle events of the entity.
@@ -109,6 +122,11 @@ namespace GameAIDemos
 			// Collision getCollision();
 
 			// Collision m_collision; // TODO: make this private or protected?
+
+			/// <summary>
+			/// SFML RectangleShape instance for the entity's rectangle.
+			/// </summary>
+			sf::RectangleShape m_rect;
 		protected:
 			/// <summary>
 			/// Width of the entity's rectangle.
@@ -118,10 +136,6 @@ namespace GameAIDemos
 			/// Height of the entity's rectangle.
 			/// </summary>
 			float m_rectHeight;
-			/// <summary>
-			/// SFML RectangleShape instance for the entity's rectangle.
-			/// </summary>
-			sf::RectangleShape m_rect;
 			/// <summary>
 			/// SFML Vector2f instance containing the position of the entity.
 			/// </summary>
