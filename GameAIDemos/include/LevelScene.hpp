@@ -54,6 +54,52 @@ namespace GameAIDemos
 			/// image file.
 			/// </param>
 			void setBackgroundImage(std::string imageFilePath);
+
+			/// <summary>
+			/// Spawns a new live entity in the level scene.
+			/// </summary>
+			///
+			/// <param name="entity">
+			/// Instance of <see cref="LiveEntity">LiveEntity</see> to be added
+			/// to the level scene.
+			/// </param>
+			/// <seealso cref="LiveEntity" />
+			void spawnLiveEntity(LiveEntity entity);
+			/// <summary>
+			/// Spawns a new live entity in the level scene.
+			/// </summary>
+			///
+			/// <param name="health">
+			/// The health points of the live entity.
+			/// </param>
+			/// <param name="size">
+			/// A SFML Vector2f containing the live entity's size.
+			/// </param>
+			/// <param name="position">
+			/// A SFML Vector2f containing the entity's position on the
+			/// game scene.
+			/// </param>
+			/// <seealso cref="LiveEntity" />
+			void spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position);
+			/// <summary>
+			/// Spawns a new live entity in the level scene.
+			/// </summary>
+			///
+			/// <param name="health">
+			/// The health points of the live entity.
+			/// </param>
+			/// <param name="size">
+			/// A SFML Vector2f containing the live entity's size.
+			/// </param>
+			/// <param name="position">
+			/// A SFML Vector2f containing the entity's position on the
+			/// game scene.
+			/// </param>
+			/// <param name="speed">
+			/// The movement speed of the live entity.
+			/// </param>
+			/// <seealso cref="LiveEntity" />
+			void spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed);
 		private:
 			/// <summary>
 			/// Size (in pixels) of the textures used by sprites in the scene.

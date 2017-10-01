@@ -7,12 +7,6 @@ GameAIDemos::LevelScene::LevelScene(Game &game, std::string backgroundImagePath)
 {
 	m_logger.log("DEBUG", "Initializing level scene.");
 	setBackgroundImage(backgroundImagePath);
-
-	// TODO temporary placeholder entities for testing
-	LiveEntity tempEntity = LiveEntity(100, sf::Vector2f(100.f, 100.f), sf::Vector2f(10.f, 10.f));
-	tempEntity.setColor(sf::Color(sf::Color::Red));
-	m_liveEntities.push_back(tempEntity);
-	m_liveEntities.push_back(LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(150.f, 150.f)));
 }
 
 void GameAIDemos::LevelScene::handleEvents()
@@ -72,4 +66,19 @@ void GameAIDemos::LevelScene::setBackgroundImage(std::string imageFilePath)
 	// m_backgroundSprite.setOrigin(m_game_ptr->m_gameWindow.m_view.getCenter().x, m_game_ptr->m_gameWindow.m_view.getCenter().y / 2.0f);
 	m_backgroundSprite.setOrigin(m_game_ptr->m_gameWindow.m_view.getCenter());
 	m_backgroundSprite.setTextureRect(sf::IntRect(0, 0, m_game_ptr->m_gameWindow.m_view.getSize().x, m_game_ptr->m_gameWindow.m_view.getSize().y));
+}
+
+void GameAIDemos::LevelScene::spawnLiveEntity(LiveEntity entity)
+{
+	m_liveEntities.push_back(entity);
+}
+
+void GameAIDemos::LevelScene::spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position)
+{
+	m_liveEntities.push_back(LiveEntity(health, size, position));
+}
+
+void GameAIDemos::LevelScene::spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed)
+{
+	m_liveEntities.push_back(LiveEntity(health, size, position, speed));
 }
