@@ -2,6 +2,7 @@
 #define LEVEL_SCENE_H
 
 #include "Scene.hpp"
+#include "LiveEntity.hpp"
 #include <SFML/Graphics.hpp>
 
 namespace GameAIDemos
@@ -59,7 +60,14 @@ namespace GameAIDemos
 			/// </summary>
 			float m_textureSize = 48;
 			// std::vector<GameAIDemos::TileEntity> m_tileEntities;
-			// std::vector<GameAIDemos::LiveEntity> m_liveEntities;
+			/// <summary>
+			/// Vector containing <see cref="LiveEntity">LiveEntity</see>
+			/// objects to be used in the scene.
+			/// </summary>
+			///
+			/// <seealso cref="Entity" />
+			/// <seealso cref="LiveEntity" />
+			std::vector<GameAIDemos::LiveEntity> m_liveEntities;
 			// std::vector<sf::RectangleShape> m_tileSprites;
 			/// <summary>
 			/// Map containing entries with an ID of a texture and an instance

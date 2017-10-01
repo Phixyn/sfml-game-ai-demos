@@ -7,11 +7,20 @@ GameAIDemos::LevelScene::LevelScene(Game &game, std::string backgroundImagePath)
 {
 	m_logger.log("DEBUG", "Initializing level scene.");
 	setBackgroundImage(backgroundImagePath);
+
+	// TODO temporary placeholder entities for testing
+	LiveEntity tempEntity = LiveEntity(100, sf::Vector2f(100.f, 100.f), sf::Vector2f(10.f, 10.f));
+	tempEntity.setColor(sf::Color(sf::Color::Red));
+	m_liveEntities.push_back(tempEntity);
+	m_liveEntities.push_back(LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(150.f, 150.f)));
 }
 
 void GameAIDemos::LevelScene::handleEvents()
 {
-	// TODO
+	for (LiveEntity &liveEntity : m_liveEntities)
+	{
+		liveEntity.handleEvents();
+	}
 }
 
 /// <summary>
@@ -20,7 +29,10 @@ void GameAIDemos::LevelScene::handleEvents()
 /// </summary>
 void GameAIDemos::LevelScene::update(float deltaTime)
 {
-	// TODO
+	for (LiveEntity &liveEntity : m_liveEntities)
+	{
+		liveEntity.update(deltaTime);
+	}
 }
 
 /// <summary>
@@ -30,21 +42,13 @@ void GameAIDemos::LevelScene::update(float deltaTime)
 /// </summary>
 void GameAIDemos::LevelScene::draw()
 {
-	// TODO temporary placeholder shape
-	sf::CircleShape shape(50.f);
-	shape.setFillColor(sf::Color::Red);
-	m_game_ptr->m_gameWindow.draw(shape);
-
 	// TODO
 	// m_game_ptr->m_gameWindow.draw(m_backgroundSprite);
 
-	// TODO: liveEntities
-	/*
-	for (LiveEntity* liveEntity : m_liveEntities)
+	for (LiveEntity &liveEntity : m_liveEntities)
 	{
-		m_game_ptr->m_gameWindow.drawRect(liveEntity->m_rect);
+		m_game_ptr->m_gameWindow.draw(liveEntity.m_rect);
 	}
-	*/
 }
 
 /// <summary>
