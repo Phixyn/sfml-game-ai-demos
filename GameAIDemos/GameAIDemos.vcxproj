@@ -154,13 +154,17 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameWindow.cpp" />
+    <ClCompile Include="src\LevelScene.cpp" />
     <ClCompile Include="src\Logger.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.hpp" />
     <ClInclude Include="include\GameWindow.hpp" />
+    <ClInclude Include="include\LevelScene.hpp" />
     <ClInclude Include="include\Logger.hpp" />
+    <ClInclude Include="include\Scene.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

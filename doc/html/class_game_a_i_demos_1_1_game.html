@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -102,8 +102,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae13f8726f8cb9fdc722452125aef6163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_game_a_i_demos_1_1_game_window.html" title="Class used to create and manage game windows. ">GameWindow</a> instance and member variables.  <a href="#ae13f8726f8cb9fdc722452125aef6163">More...</a><br /></td></tr>
 <tr class="separator:ae13f8726f8cb9fdc722452125aef6163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575c976a58afe7ce7f7541f5d261fd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a575c976a58afe7ce7f7541f5d261fd09">mainLoop</a> ()</td></tr>
-<tr class="memdesc:a575c976a58afe7ce7f7541f5d261fd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the game's main loop.  <a href="#a575c976a58afe7ce7f7541f5d261fd09">More...</a><br /></td></tr>
+<tr class="memdesc:a575c976a58afe7ce7f7541f5d261fd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the game's main loop.  <a href="#a575c976a58afe7ce7f7541f5d261fd09">More...</a><br /></td></tr>
 <tr class="separator:a575c976a58afe7ce7f7541f5d261fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0f2c064d83a6494606f558fdb037d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#abc0f2c064d83a6494606f558fdb037d4">addScene</a> (std::unique_ptr&lt; <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> &gt; scene)</td></tr>
+<tr class="memdesc:abc0f2c064d83a6494606f558fdb037d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new scene to the game.  <a href="#abc0f2c064d83a6494606f558fdb037d4">More...</a><br /></td></tr>
+<tr class="separator:abc0f2c064d83a6494606f558fdb037d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a7473c70172a3e0776d18cfb815a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a94a7473c70172a3e0776d18cfb815a4f">removeScene</a> ()</td></tr>
+<tr class="memdesc:a94a7473c70172a3e0776d18cfb815a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a scene from the game.  <a href="#a94a7473c70172a3e0776d18cfb815a4f">More...</a><br /></td></tr>
+<tr class="separator:a94a7473c70172a3e0776d18cfb815a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918ac3c7cd697dbe88010f678b09fb0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a918ac3c7cd697dbe88010f678b09fb0a">changeScene</a> (std::unique_ptr&lt; <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> &gt; scene)</td></tr>
+<tr class="memdesc:a918ac3c7cd697dbe88010f678b09fb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current scene in the game.  <a href="#a918ac3c7cd697dbe88010f678b09fb0a">More...</a><br /></td></tr>
+<tr class="separator:a918ac3c7cd697dbe88010f678b09fb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -122,6 +131,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a77c56cc00619a30109205cac55dc4470"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a77c56cc00619a30109205cac55dc4470">m_clock</a></td></tr>
 <tr class="memdesc:a77c56cc00619a30109205cac55dc4470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of SFML Clock used to measure time. Used to get a <a class="el" href="class_game_a_i_demos_1_1_game.html#a664be75bd208071fc971ed2fd238a46c">delta time</a>.  <a href="#a77c56cc00619a30109205cac55dc4470">More...</a><br /></td></tr>
 <tr class="separator:a77c56cc00619a30109205cac55dc4470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee225d0f81d25a21b0dd3c870ac22f6"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::unique_ptr&lt; <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#aeee225d0f81d25a21b0dd3c870ac22f6">m_sceneQueue</a></td></tr>
+<tr class="memdesc:aeee225d0f81d25a21b0dd3c870ac22f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue of unique pointers to <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> instances.  <a href="#aeee225d0f81d25a21b0dd3c870ac22f6">More...</a><br /></td></tr>
+<tr class="separator:aeee225d0f81d25a21b0dd3c870ac22f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7808372c5a1edf6e070f76bda07fbff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#ab7808372c5a1edf6e070f76bda07fbff">m_logger</a></td></tr>
 <tr class="memdesc:ab7808372c5a1edf6e070f76bda07fbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="#ab7808372c5a1edf6e070f76bda07fbff">More...</a><br /></td></tr>
 <tr class="separator:ab7808372c5a1edf6e070f76bda07fbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +194,62 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc0f2c064d83a6494606f558fdb037d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0f2c064d83a6494606f558fdb037d4">&#9670;&nbsp;</a></span>addScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::addScene </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> &gt;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new scene to the game. </p>
+<p>Adds a pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> to the game's scene pointer queue. std::move() is used as to not push a copy of the pointer, but rather the pointer itself. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a></dd></dl>
+
+</div>
+</div>
+<a id="a918ac3c7cd697dbe88010f678b09fb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918ac3c7cd697dbe88010f678b09fb0a">&#9670;&nbsp;</a></span>changeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::changeScene </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> &gt;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the current scene in the game. </p>
+<p>Changes to a new scene in the game by removing the top scene and adding a new scene to the queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a></dd></dl>
+
+</div>
+</div>
 <a id="a575c976a58afe7ce7f7541f5d261fd09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a575c976a58afe7ce7f7541f5d261fd09">&#9670;&nbsp;</a></span>mainLoop()</h2>
 
@@ -197,8 +265,29 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles the game's main loop. </p>
-<p>(TODO: list the steps). </p>
+<p>Performs the game's main loop. </p>
+<p>Handles user input, updates game state and renders the game scene. </p>
+
+</div>
+</div>
+<a id="a94a7473c70172a3e0776d18cfb815a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a7473c70172a3e0776d18cfb815a4f">&#9670;&nbsp;</a></span>removeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::removeScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a scene from the game. </p>
+<p>Calls pop() on the <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> pointer queue. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a></dd></dl>
 
 </div>
 </div>
@@ -312,6 +401,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging. </p>
+
+</div>
+</div>
+<a id="aeee225d0f81d25a21b0dd3c870ac22f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee225d0f81d25a21b0dd3c870ac22f6">&#9670;&nbsp;</a></span>m_sceneQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;std::unique_ptr&lt;<a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a>&gt; &gt; GameAIDemos::Game::m_sceneQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue of unique pointers to <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> instances. </p>
 
 </div>
 </div>

@@ -2,7 +2,9 @@
 
 **Author:** Alpeche Pancha
 
-**Version:** 0.0.1
+**Version:** 0.0.5
+
+Follow the project's sprint planning on [Taiga.](https://tree.taiga.io/project/phixyn-sfml-game-ai-demos/)
 
 ## Building
 
@@ -18,7 +20,7 @@
 
 ## Documentation
 
-* [ ] To-do
+HTML documentation can be found in the `doc/html` folder. Open `index.html` in a web browser to get started.
 
 ## Credits
 

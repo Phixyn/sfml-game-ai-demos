@@ -50,8 +50,9 @@ namespace GameAIDemos
 			/// <summary>
 			/// <para> Arithmetic type capable of representing times. </para>
 			/// <para> time() returns the current time of the system as time
-			/// since epoch. The argument for this function can be a pointer to a
-			/// std::time_t object to store the time, or a null pointer. </para>
+			/// since epoch. The argument for this function can be a pointer
+			/// to a std::time_t object to store the time, or a null pointer.
+			/// </para>
 			/// <para> See also:
 			/// <list type="bullet">
 			/// <item> http://en.cppreference.com/w/cpp/chrono/c/time_t </item>
@@ -61,13 +62,13 @@ namespace GameAIDemos
 			/// </summary>
 			std::time_t m_timeT = std::time(nullptr);
 			/// <summary>
-			/// <para> localtime() converts a given time since epoch into calendar
-			/// time, expressed in local time, in the struct tm format. The result
-			/// is stored in a struct tm. </para>
+			/// <para> localtime() converts a given time since epoch into
+			/// calendar time, expressed in local time, in the struct tm
+			/// format. The result is stored in a struct tm. </para>
 			/// <para> localtime_s() is Microsoft's thread-safe version of this
-			/// function. Its first argument is a pointer to the time structure to
-			/// store the result in. The second argument is a pointer to the time
-			/// since epoch time_t to be used. </para>
+			/// function. Its first argument is a pointer to the time structure
+			/// to store the result in. The second argument is a pointer to the
+			/// time since epoch time_t to be used. </para>
 			/// <para> See also:
 			/// <list type="bullet">
 			/// <item>
