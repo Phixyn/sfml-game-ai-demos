@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['handleevents',['handleEvents',['../class_game_a_i_demos_1_1_game_window.html#aaf9b6b1d6832906239000550f3ca04b2',1,'GameAIDemos::GameWindow']]],
-  ['hasfocus',['hasFocus',['../class_game_a_i_demos_1_1_game_window.html#ae26f6f8c89c7ad8c654610089b58d1cc',1,'GameAIDemos::GameWindow']]]
+  ['game',['Game',['../class_game_a_i_demos_1_1_game.html',1,'GameAIDemos::Game'],['../class_game_a_i_demos_1_1_game.html#ae13f8726f8cb9fdc722452125aef6163',1,'GameAIDemos::Game::Game()']]],
+  ['gameaidemos',['GameAIDemos',['../namespace_game_a_i_demos.html',1,'']]],
+  ['gamewindow',['GameWindow',['../class_game_a_i_demos_1_1_game_window.html',1,'GameAIDemos::GameWindow'],['../class_game_a_i_demos_1_1_game_window.html#acdb986a4d8df487930c640a70b2f9945',1,'GameAIDemos::GameWindow::GameWindow()']]]
 ];
