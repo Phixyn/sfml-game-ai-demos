@@ -32,7 +32,7 @@ namespace GameAIDemos
 			Game(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool DEBUG = true);
 
 			/// <summary>
-			/// Handles the game's main loop.
+			/// Performs the game's main loop.
 			/// </summary>
 			void mainLoop();
 			/// <summary>
@@ -45,6 +45,7 @@ namespace GameAIDemos
 			/// <summary>
 			/// Removes a scene from the game.
 			/// </summary>
+			///
 			/// <seealso cref="Scene" />
 			void removeScene();
 			/// <summary>
