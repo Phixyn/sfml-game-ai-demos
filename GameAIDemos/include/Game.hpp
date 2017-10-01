@@ -2,6 +2,8 @@
 #define GAME_H
 
 #include "GameWindow.hpp"
+#include "Scene.hpp"
+#include <queue>
 
 /// <summary>
 /// Namespace for the game AI demos.
@@ -33,6 +35,25 @@ namespace GameAIDemos
 			/// Handles the game's main loop.
 			/// </summary>
 			void mainLoop();
+			/// <summary>
+			/// Adds a new scene to the game.
+			/// </summary>
+			///
+			/// <param name="scene"> A unique pointer to a Scene. </param>
+			/// <seealso cref="Scene" />
+			void addScene(std::unique_ptr<Scene> scene);
+			/// <summary>
+			/// Removes a scene from the game.
+			/// </summary>
+			/// <seealso cref="Scene" />
+			void removeScene();
+			/// <summary>
+			/// Changes the current scene in the game.
+			/// </summary>
+			///
+			/// <param name="scene"> A unique pointer to a Scene. </param>
+			/// <seealso cref="Scene" />
+			void changeScene(std::unique_ptr<Scene> scene);
 
 			/// <summary>
 			/// <see cref="GameWindow">GameWindow</see> instance for the game.
@@ -52,6 +73,11 @@ namespace GameAIDemos
 			/// a <see cref="m_deltaTime">delta time</see>.
 			/// </summary>
 			sf::Clock m_clock;
+			/// <summary>
+			/// Queue of unique pointers to <see cref="Scene">Scene</see>
+			/// instances.
+			/// </summary>
+			std::queue<std::unique_ptr<Scene>> m_sceneQueue;
 			/// <summary>
 			/// Instance of <see cref="Logger">Logger</see> for logging.
 			/// </summary>
