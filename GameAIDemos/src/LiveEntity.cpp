@@ -11,7 +11,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 }
 
 GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed) :
-	Entity(size, position), m_velocity(0.0f, 0.0f), m_health(health), m_speed(speed)
+	Entity(size, position), m_health(health), m_velocity(0.0f, 0.0f), m_speed(speed)
 {
 	m_logger.log("DEBUG", "Initializing a live entity.");
 }
