@@ -2,7 +2,6 @@
 #define LEVEL_SCENE_H
 
 #include "Scene.hpp"
-#include "Logger.hpp"
 #include <SFML/Graphics.hpp>
 
 namespace GameAIDemos
@@ -75,10 +74,6 @@ namespace GameAIDemos
 			/// SFML Sprite object for the level's background sprite.
 			/// </summary>
 			sf::Sprite m_backgroundSprite;
-			/// <summary>
-			/// Instance of <see cref="Logger">Logger</see> for logging.
-			/// </summary>
-			Logger m_logger;
 	};
 }
 
