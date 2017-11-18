@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['levelscene',['LevelScene',['../class_game_a_i_demos_1_1_level_scene.html',1,'GameAIDemos::LevelScene'],['../class_game_a_i_demos_1_1_level_scene.html#ae9fa14c50007a555455e91b5ac029421',1,'GameAIDemos::LevelScene::LevelScene()']]],
-  ['log',['log',['../class_game_a_i_demos_1_1_logger.html#a578f66daaf3b848a3743a84d6b210bc2',1,'GameAIDemos::Logger']]],
-  ['logger',['Logger',['../class_game_a_i_demos_1_1_logger.html',1,'GameAIDemos::Logger'],['../class_game_a_i_demos_1_1_logger.html#a07b87102a84830a2cc4f8527c85e9f3a',1,'GameAIDemos::Logger::Logger()']]]
+  ['isaggressive',['isAggressive',['../class_game_a_i_demos_1_1_live_entity.html#ace93f2c843f1b4854842b0b7434b2464',1,'GameAIDemos::LiveEntity']]],
+  ['isdead',['isDead',['../class_game_a_i_demos_1_1_live_entity.html#a44221dc9f2b77346e6aed8b70e754adc',1,'GameAIDemos::LiveEntity']]],
+  ['isopen',['isOpen',['../class_game_a_i_demos_1_1_game_window.html#a3e550bd5ce2f074c3526c96ff47ec648',1,'GameAIDemos::GameWindow']]]
 ];

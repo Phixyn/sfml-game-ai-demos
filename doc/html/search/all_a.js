@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update',['update',['../class_game_a_i_demos_1_1_level_scene.html#a033f6f8d58a4523b7f9764437a53479b',1,'GameAIDemos::LevelScene::update()'],['../class_game_a_i_demos_1_1_scene.html#a80c0d89fa43eeb5de8367019ab721293',1,'GameAIDemos::Scene::update()']]]
+  ['removescene',['removeScene',['../class_game_a_i_demos_1_1_game.html#a94a7473c70172a3e0776d18cfb815a4f',1,'GameAIDemos::Game']]],
+  ['render',['render',['../class_game_a_i_demos_1_1_game_window.html#acc33e5d7e85c642e51187f3af8d6c909',1,'GameAIDemos::GameWindow']]]
 ];

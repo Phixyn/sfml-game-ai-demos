@@ -1,6 +1,8 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include "Logger.hpp"
+
 namespace GameAIDemos
 {
 	// Forward declaration for the Game class.
@@ -46,6 +48,10 @@ namespace GameAIDemos
 			/// class.
 			/// </summary>
 			Game *m_game_ptr;
+			/// <summary>
+			/// Instance of <see cref="Logger">Logger</see> for logging.
+			/// </summary>
+			Logger m_logger;
 	};
 }
 

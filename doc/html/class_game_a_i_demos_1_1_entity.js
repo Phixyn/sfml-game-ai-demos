@@ -1,0 +1,28 @@
+var class_game_a_i_demos_1_1_entity =
+[
+    [ "Entity", "class_game_a_i_demos_1_1_entity.html#a69b99310a79d279eccf3ba4b37a61edf", null ],
+    [ "Entity", "class_game_a_i_demos_1_1_entity.html#ac2b2ce44d824169556b1bc121a727895", null ],
+    [ "Entity", "class_game_a_i_demos_1_1_entity.html#af5df8b5efea1bcb6b336a7b7325a1a33", null ],
+    [ "Entity", "class_game_a_i_demos_1_1_entity.html#a2e631b724cc51d6f10f46a39e1edc8cd", null ],
+    [ "draw", "class_game_a_i_demos_1_1_entity.html#a9ea6baf5fa8d166f5ca0d8c5cfc4d03c", null ],
+    [ "getPosition", "class_game_a_i_demos_1_1_entity.html#a136888200c025e2d714e8b97ab01f778", null ],
+    [ "getRect", "class_game_a_i_demos_1_1_entity.html#a60bd95f0eda286c64013d2ebdc6ee655", null ],
+    [ "getRectHeight", "class_game_a_i_demos_1_1_entity.html#a5ec9ff9971ca8b1a9d7b4a59009180bb", null ],
+    [ "getRectWidth", "class_game_a_i_demos_1_1_entity.html#aa8414de7542ed90c06494a90af36998e", null ],
+    [ "getSprite", "class_game_a_i_demos_1_1_entity.html#ab6ed570f863403478de860e724e4fde7", null ],
+    [ "handleEvents", "class_game_a_i_demos_1_1_entity.html#a17fe019de9499a8d115a3e133c3461b6", null ],
+    [ "setColor", "class_game_a_i_demos_1_1_entity.html#a714f83075e424d1ecd4e90bc937490e0", null ],
+    [ "setPosition", "class_game_a_i_demos_1_1_entity.html#a5feadceb43c0397fc873f27dc633b771", null ],
+    [ "setSpriteColor", "class_game_a_i_demos_1_1_entity.html#a8a81264c6a37a266a03e639685fb252e", null ],
+    [ "setTexture", "class_game_a_i_demos_1_1_entity.html#ac9ed7faca2d1247f36c47b2d5c12b283", null ],
+    [ "setTexture", "class_game_a_i_demos_1_1_entity.html#a40657a37d2eb1c1037ecbaa2fddbf1ab", null ],
+    [ "update", "class_game_a_i_demos_1_1_entity.html#a76b033002fc3109a7b53548932534c60", null ],
+    [ "m_color", "class_game_a_i_demos_1_1_entity.html#aeb76e57ed49364d914da940786d9d634", null ],
+    [ "m_logger", "class_game_a_i_demos_1_1_entity.html#a93af1f90613e2a696de25302fb27e40b", null ],
+    [ "m_position", "class_game_a_i_demos_1_1_entity.html#a07ae9a88d2d509dc657d1ad73a09ed63", null ],
+    [ "m_rect", "class_game_a_i_demos_1_1_entity.html#a7df57c49b8c36d02d09e6388fac4a8d4", null ],
+    [ "m_rectHeight", "class_game_a_i_demos_1_1_entity.html#aa85bf97b0e01676db9ee0b564a11fd9f", null ],
+    [ "m_rectWidth", "class_game_a_i_demos_1_1_entity.html#ac190522daaccfcceede3daf187b49333", null ],
+    [ "m_sprite", "class_game_a_i_demos_1_1_entity.html#a815e4227ea621958144d1a0186299750", null ],
+    [ "m_texture", "class_game_a_i_demos_1_1_entity.html#a9e51c2752610e8ee7166dc8d3e22af04", null ]
+];

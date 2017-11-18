@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['game',['Game',['../class_game_a_i_demos_1_1_game.html#ae13f8726f8cb9fdc722452125aef6163',1,'GameAIDemos::Game']]],
-  ['gamewindow',['GameWindow',['../class_game_a_i_demos_1_1_game_window.html#acdb986a4d8df487930c640a70b2f9945',1,'GameAIDemos::GameWindow']]]
+  ['entity',['Entity',['../class_game_a_i_demos_1_1_entity.html#a69b99310a79d279eccf3ba4b37a61edf',1,'GameAIDemos::Entity::Entity(sf::Vector2f size)'],['../class_game_a_i_demos_1_1_entity.html#ac2b2ce44d824169556b1bc121a727895',1,'GameAIDemos::Entity::Entity(sf::Vector2f size, sf::Vector2f position)'],['../class_game_a_i_demos_1_1_entity.html#af5df8b5efea1bcb6b336a7b7325a1a33',1,'GameAIDemos::Entity::Entity(sf::Vector2f size, std::string textureFilePath)'],['../class_game_a_i_demos_1_1_entity.html#a2e631b724cc51d6f10f46a39e1edc8cd',1,'GameAIDemos::Entity::Entity(sf::Vector2f size, sf::Vector2f position, std::string textureFilePath)']]]
 ];
