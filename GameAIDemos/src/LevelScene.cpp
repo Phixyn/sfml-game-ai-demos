@@ -41,7 +41,7 @@ void GameAIDemos::LevelScene::draw()
 
 	for (LiveEntity &liveEntity : m_liveEntities)
 	{
-		m_game_ptr->m_gameWindow.draw(liveEntity.m_rect);
+		m_game_ptr->m_gameWindow.draw(liveEntity.getSprite());
 	}
 }
 
