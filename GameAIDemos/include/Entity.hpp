@@ -114,7 +114,7 @@ namespace GameAIDemos
 			/// <param name="color">
 			/// A reference to a SFML Color object.
 			/// </param>
-			void setColor(sf::Color &color);
+			void setColor(sf::Color color);
 			/// <summary>
 			/// Sets the entity's sprite's color tint.
 			/// </summary>
@@ -122,7 +122,7 @@ namespace GameAIDemos
 			/// <param name="color">
 			/// A reference to a SFML Color object.
 			/// </param>
-			void setSpriteColor(sf::Color &color);
+			void setSpriteColor(sf::Color color);
 			/// <summary>
 			/// Sets the position of the entity in the game scene.
 			/// </summary>

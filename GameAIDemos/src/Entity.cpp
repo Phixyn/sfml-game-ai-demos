@@ -58,12 +58,12 @@ void GameAIDemos::Entity::setTexture(std::string textureFilePath)
 	m_sprite.setTexture(m_texture);
 }
 
-void GameAIDemos::Entity::setColor(sf::Color &color)
+void GameAIDemos::Entity::setColor(sf::Color color)
 {
 	m_rect.setFillColor(color);
 }
 
-void GameAIDemos::Entity::setSpriteColor(sf::Color &color)
+void GameAIDemos::Entity::setSpriteColor(sf::Color color)
 {
 	m_sprite.setColor(color);
 }

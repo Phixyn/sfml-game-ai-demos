@@ -16,7 +16,6 @@ int main()
 	// TODO temporary placeholder entities for testing
 	GameAIDemos::LiveEntity tempEntity = GameAIDemos::LiveEntity(100, sf::Vector2f(100.f, 100.f), sf::Vector2f(10.f, 10.f));
 	tempEntity.setTexture(ENTITY_TEXTURE);
-	tempEntity.setColor(sf::Color(sf::Color::Red));
 	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(150.f, 150.f));
 	tempEntity2.setTexture(ENTITY_TEXTURE);
 	GameAIDemos::LiveEntity tempEntity3 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(250.f, 250.f));

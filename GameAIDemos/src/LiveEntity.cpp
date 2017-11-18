@@ -8,6 +8,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 {
 	// TODO: give entities unique IDs and include this in log statement below
 	m_logger.log("DEBUG", "Initializing a live entity.");
+	// setSpriteColor(sf::Color::Red);
 }
 
 GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed) :
