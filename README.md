@@ -2,7 +2,7 @@
 
 **Author:** Alpeche Pancha
 
-**Version:** 0.0.5
+**Version:** 0.1.0
 
 Follow the project's sprint planning on [Taiga.](https://tree.taiga.io/project/phixyn-sfml-game-ai-demos/)
 
