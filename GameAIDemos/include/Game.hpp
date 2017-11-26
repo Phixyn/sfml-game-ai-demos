@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "GameWindow.hpp"
 #include "Scene.hpp"
+#include <memory>
 #include <queue>
 
 /// <summary>
@@ -18,7 +18,7 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Initializes the GameWindow instance and member variables.
+			/// Initializes the Game instance and member variables.
 			/// </summary>
 			///
 			/// <param name="WIDTH"> The width of the game window. </param>
@@ -96,6 +96,11 @@ namespace GameAIDemos
 			/// SFML View instance for the game window.
 			/// </summary>
 			sf::View m_view;
+			/// <summary>
+			/// Unique pointer to SFML RenderWindow instance.
+			/// TODO this and View can be made private maybe?
+			/// </summary>
+			std::unique_ptr<sf::RenderWindow> m_window;
 		private:
 			/// <summary> Width of the game window. </summary>
 			unsigned int m_width;
@@ -103,7 +108,6 @@ namespace GameAIDemos
 			unsigned int m_height;
 			/// <summary> Title of the game window seen in titlebar. </summary>
 			std::string m_title;
-
 			/// <summary>
 			/// Boolean specifying if the window has focus.
 			/// This member variable is set in handleEvents() method.
@@ -124,10 +128,6 @@ namespace GameAIDemos
 			/// a <see cref="m_deltaTime">delta time</see>.
 			/// </summary>
 			sf::Clock m_clock;
-			/// <summary>
-			/// Unique pointer to SFML RenderWindow instance.
-			/// </summary>
-			std::unique_ptr<sf::RenderWindow> m_window;
 			/// <summary>
 			/// Queue of unique pointers to <see cref="Scene">Scene</see>
 			/// instances.
