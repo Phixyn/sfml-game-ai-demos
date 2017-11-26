@@ -154,7 +154,7 @@
   <ItemGroup>
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\GameWindow.cpp" />
+    <ClCompile Include="src\InfoPanel.cpp" />
     <ClCompile Include="src\LevelScene.cpp" />
     <ClCompile Include="src\LiveEntity.cpp" />
     <ClCompile Include="src\Logger.cpp" />
@@ -163,8 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Entity.hpp" />
+    <ClInclude Include="include\InfoPanel.hpp" />
     <ClInclude Include="include\Game.hpp" />
-    <ClInclude Include="include\GameWindow.hpp" />
     <ClInclude Include="include\LevelScene.hpp" />
     <ClInclude Include="include\LiveEntity.hpp" />
     <ClInclude Include="include\Logger.hpp" />
