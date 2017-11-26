@@ -18,8 +18,10 @@ int main()
 	tempEntity.setTexture(ENTITY_TEXTURE);
 	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(150.f, 150.f));
 	tempEntity2.setTexture(ENTITY_TEXTURE);
+	tempEntity2.setVelocity(sf::Vector2f(0.25f, 0.0f));
 	GameAIDemos::LiveEntity tempEntity3 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(250.f, 250.f));
 	tempEntity3.setTexture(ENTITY_TEXTURE);
+	tempEntity3.setVelocity(sf::Vector2f(0.25f, 0.0f));
 
 	// Create game and level scene instances
 	GameAIDemos::Game game(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
