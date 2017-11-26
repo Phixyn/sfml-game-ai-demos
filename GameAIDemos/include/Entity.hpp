@@ -253,7 +253,7 @@ namespace GameAIDemos
 			/// </summary>
 			InfoPanel m_infoPanel;
 			/// <summary>
-			/// A boolean indicating if the entity's info panel should be
+			/// A boolean specifying if the entity's info panel should be
 			/// displayed in the UI. An info panel displays useful information
 			/// about an entity.
 			/// </summary>
