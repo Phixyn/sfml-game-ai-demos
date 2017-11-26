@@ -11,7 +11,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	m_logger.log("DEBUG", "Initializing a live entity.");
 	// setSpriteColor(sf::Color::Red);
 	std::ostringstream entityInfoSS;
-	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nSpeed: " << m_speed << "\nVelocity X: " << m_velocity.x << "\nVelocity Y: " << m_velocity.y;
+	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
@@ -29,6 +29,23 @@ void GameAIDemos::LiveEntity::handleEvents(sf::Event sfEvent)
 void GameAIDemos::LiveEntity::update(float deltaTime)
 {
 	// TODO
+	// sf::Vector2f toNormalize = getPosition() - m_target.getPosition();
+	// float vectorLength = sqrt((toNormalize.x * toNormalize.x) + (toNormalize.y * toNormalize.y));
+	// sf::Vector2f normalizedVector(toNormalize.x / vectorLength, toNormalize.y / vectorLength);
+
+	// sf::Vector2f desired_velocity = (getPosition() - m_target.getPosition()) * (0.1f * deltaTime);
+	// sf::Vector2f desired_velocity = normalizedVector * (0.1f * deltaTime);
+	// sf::Vector2f steering = desired_velocity - velocity;
+	// sf::Vector2f pos = getPosition() + steering;
+	// setPosition(getPosition() + m_velocity);
+	m_sprite.move(m_velocity);
+
+	// We must also move the associated InfoPanel
+	m_infoPanel.setPanelPosition(m_infoPanel.getPanelPosition() + m_velocity);
+	// Update the text in the InfoPanel
+	std::ostringstream entityInfoSS;
+	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
+	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
 void GameAIDemos::LiveEntity::draw()
@@ -100,6 +117,17 @@ void GameAIDemos::LiveEntity::setDead(bool dead)
 	// TODO: give entities unique IDs and include this in log statement below
 	m_logger.log("DEBUG", "Entity: setting m_dead.");
 	m_dead = dead;
+}
+
+sf::Vector2f GameAIDemos::LiveEntity::getVelocity()
+{
+	return m_velocity;
+}
+
+void GameAIDemos::LiveEntity::setVelocity(sf::Vector2f velocity)
+{
+	m_logger.log("DEBUG", "Setting entity velocity");
+	m_velocity = velocity;
 }
 
 sf::Vector2f GameAIDemos::LiveEntity::getDirection()
