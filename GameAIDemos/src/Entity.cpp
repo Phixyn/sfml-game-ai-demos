@@ -92,7 +92,7 @@ float GameAIDemos::Entity::getRectHeight()
 
 sf::Vector2f GameAIDemos::Entity::getPosition()
 {
-	return m_position;
+	return m_sprite.getPosition();
 }
 
 sf::RectangleShape GameAIDemos::Entity::getRect()
