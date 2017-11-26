@@ -16,8 +16,10 @@ GameAIDemos::Entity::Entity(sf::Vector2f size, sf::Vector2f position) :
 	Entity(size)
 {
 	m_position = position;
+	// TODO Rect no longer needed?
 	m_rect.setPosition(m_position);
 	m_sprite.setPosition(m_position);
+	m_infoPanel.setPanelPosition(m_position - sf::Vector2f(0, ((m_rectHeight / 2.0f) + m_infoPanel.getPanelSize().y)));
 }
 
 GameAIDemos::Entity::Entity(sf::Vector2f size, std::string textureFilePath) :
@@ -73,6 +75,11 @@ void GameAIDemos::Entity::setPosition(sf::Vector2f &position)
 	m_sprite.setPosition(position);
 }
 
+void GameAIDemos::Entity::toggleInfoPanel()
+{
+	m_displayInfoPanel = !m_displayInfoPanel;
+}
+
 float GameAIDemos::Entity::getRectWidth()
 {
 	return m_rectWidth;
@@ -96,6 +103,16 @@ sf::RectangleShape GameAIDemos::Entity::getRect()
 sf::Sprite GameAIDemos::Entity::getSprite()
 {
 	return m_sprite;
+}
+
+GameAIDemos::InfoPanel GameAIDemos::Entity::getInfoPanel()
+{
+	return m_infoPanel;
+}
+
+bool GameAIDemos::Entity::isInfoPanelEnabled()
+{
+	return m_displayInfoPanel;
 }
 
 /* TODO: Not yet implemented
