@@ -2,6 +2,7 @@
 #define SCENE_H
 
 #include "Logger.hpp"
+#include <SFML/Graphics.hpp>
 
 namespace GameAIDemos
 {
@@ -27,7 +28,11 @@ namespace GameAIDemos
 			/// <summary>
 			/// Pure virtual method to handle events in the scene.
 			/// </summary>
-			virtual void handleEvents() = 0;
+			///
+			/// <param name="sfEvent">
+			/// A SFML event (e.g. generated user input) instance.
+			/// </param>
+			virtual void handleEvents(sf::Event sfEvent) = 0;
 
 			/// <summary>
 			/// Pure virtual method to update the scene.

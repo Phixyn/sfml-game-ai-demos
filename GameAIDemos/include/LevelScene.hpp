@@ -3,7 +3,7 @@
 
 #include "Scene.hpp"
 #include "LiveEntity.hpp"
-#include <SFML/Graphics.hpp>
+#include "InfoPanel.hpp"
 
 namespace GameAIDemos
 {
@@ -29,7 +29,11 @@ namespace GameAIDemos
 			/// <summary>
 			/// Handles events specific to the level scene.
 			/// </summary>
-			void handleEvents() override;
+			///
+			/// <param name="sfEvent">
+			/// A SFML event (e.g. generated user input) instance.
+			/// </param>
+			void handleEvents(sf::Event sfEvent) override;
 
 			/// <summary>
 			/// Updates the level scene.
