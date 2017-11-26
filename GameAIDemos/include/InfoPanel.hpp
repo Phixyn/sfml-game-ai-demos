@@ -54,6 +54,15 @@ namespace GameAIDemos
 			/// </returns>
 			sf::Vector2f getPanelSize();
 			/// <summary>
+			/// Gets the position of the panel.
+			/// </summary>
+			///
+			/// <returns>
+			/// A SFML Vector containing the position of the panel in the
+			/// game window.
+			/// </returns>
+			sf::Vector2f getPanelPosition();
+			/// <summary>
 			/// Gets the text being currently displayed in the panel.
 			/// </summary>
 			///

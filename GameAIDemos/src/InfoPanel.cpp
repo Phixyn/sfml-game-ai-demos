@@ -44,6 +44,11 @@ sf::Vector2f GameAIDemos::InfoPanel::getPanelSize()
 	return m_panelRect.getSize();
 }
 
+sf::Vector2f GameAIDemos::InfoPanel::getPanelPosition()
+{
+	return m_panelPosition;
+}
+
 std::string GameAIDemos::InfoPanel::getTextString()
 {
 	return m_panelTextString;
