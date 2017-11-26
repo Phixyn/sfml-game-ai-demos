@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "GameWindow.hpp"
 #include "Scene.hpp"
+#include <memory>
 #include <queue>
 
 /// <summary>
@@ -18,18 +18,54 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Initializes the GameWindow instance and member variables.
+			/// Initializes the Game instance and member variables.
 			/// </summary>
 			///
 			/// <param name="WIDTH"> The width of the game window. </param>
 			/// <param name="HEIGHT"> The height of the game window. </param>
 			/// <param name="TITLE"> A title for the game window. </param>
-			/// <param name="DEBUG">
-			/// A boolean specifying if the game is to be run in debug mode.
-			/// Defaults to true.
+			/// <param name="SHOW_DEBUG_PANE"> A boolean specifying whether the
+			/// debug pane should be displayed. Defaults to true. </param>
+			Game(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool SHOW_DEBUG_PANE = true);
+
+			/// <summary>
+			/// Clears the window by calling the clear method on the SFML
+			/// RenderWindow instance.
+			/// </summary>
+			void clear();
+
+			/// <summary>
+			/// Resets the view (<see cref="m_view">m_view</see>) inside the
+			/// window and calls the display method of the SFML RenderWindow
+			/// to render the window.
+			/// </summary>
+			void render();
+
+			/// <summary>
+			/// Draws a SFML Drawable object on the window.
+			/// </summary>
+			///
+			/// <param name="drawable">
+			/// Reference to the SFML Drawable instance to be drawn on the
+			/// window.
 			/// </param>
-			/// <seealso cref="GameWindow" />
-			Game(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool DEBUG = true);
+			void draw(const sf::Drawable &drawable);
+
+			/// <summary>
+			/// Polls the SFML Window for events received in the window, and
+			/// handles them appropriately.
+			/// </summary>
+			void handleEvents();
+
+			/// <returns>
+			/// A boolean indicating if the window is open.
+			/// </returns>
+			bool isOpen();
+
+			/// <returns>
+			/// A boolean indicating if the window has focus.
+			/// </returns>
+			bool hasFocus();
 
 			/// <summary>
 			/// Performs the game's main loop.
@@ -57,18 +93,36 @@ namespace GameAIDemos
 			void changeScene(std::unique_ptr<Scene> scene);
 
 			/// <summary>
-			/// <see cref="GameWindow">GameWindow</see> instance for the game.
+			/// SFML View instance for the game window.
 			/// </summary>
-			GameWindow m_gameWindow;
+			sf::View m_view;
+			/// <summary>
+			/// Unique pointer to SFML RenderWindow instance.
+			/// TODO this and View can be made private maybe?
+			/// </summary>
+			std::unique_ptr<sf::RenderWindow> m_window;
 		private:
+			/// <summary> Width of the game window. </summary>
+			unsigned int m_width;
+			/// <summary> Height of the game window. </summary>
+			unsigned int m_height;
+			/// <summary> Title of the game window seen in titlebar. </summary>
+			std::string m_title;
+			/// <summary>
+			/// Boolean specifying if the window has focus.
+			/// This member variable is set in handleEvents() method.
+			/// </summary>
+			bool m_hasFocus;
+
 			/// <summary>
 			/// The delta time for the game's update frequency rate.
 			/// </summary>
 			float m_deltaTime;
 			/// <summary>
-			/// Boolean specifying if the game should run in debug mode.
+			/// Boolean specifying if the debug pane should be displayed in the
+			/// game window. Defaults to true in the constructor.
 			/// </summary>
-			bool m_debugMode;
+			bool m_showDebugPane;
 			/// <summary>
 			/// Instance of SFML Clock used to measure time. Used to get
 			/// a <see cref="m_deltaTime">delta time</see>.

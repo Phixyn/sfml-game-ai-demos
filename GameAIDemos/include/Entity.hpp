@@ -1,8 +1,8 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include "InfoPanel.hpp"
 #include "Logger.hpp"
-#include <SFML/Graphics.hpp>
 
 namespace GameAIDemos
 {
@@ -71,7 +71,11 @@ namespace GameAIDemos
 			/// <summary>
 			/// Pure virtual method to handle events of the entity.
 			/// </summary>
-			virtual void handleEvents() = 0;
+			///
+			/// <param name="sfEvent">
+			/// A SFML event (e.g. generated user input) instance.
+			/// </param>
+			virtual void handleEvents(sf::Event sfEvent) = 0;
 
 			/// <summary>
 			/// Pure virtual method to update the entity.
@@ -132,6 +136,11 @@ namespace GameAIDemos
 			/// for the entity on the game scene.
 			/// </param>
 			void setPosition(sf::Vector2f &position);
+			/// <summary>
+			/// Toggles the entity's information panel on or off, depending on
+			/// its current state.
+			/// </summary>
+			void toggleInfoPanel();
 
 			/// <summary>
 			/// Gets the width of the entity's rectangle.
@@ -176,6 +185,24 @@ namespace GameAIDemos
 			/// A SFML Sprite instance of the entity.
 			/// </returns>
 			sf::Sprite getSprite();
+			/// <summary>
+			/// Gets the entity's InfoPanel object.
+			/// </summary>
+			///
+			/// <returns>
+			/// A <see cref="InfoPanel">InfoPanel</see> instance of the entity.
+			/// </returns>
+			GameAIDemos::InfoPanel getInfoPanel();
+			/// <summary>
+			/// Returns a boolean indicating if this entity's info panel UI
+			/// element is enabled and being displayed in the UI.
+			/// </summary>
+			///
+			/// <returns>
+			/// A boolean indicating if the entity's info panel is enabled.
+			/// </returns>
+			/// <seealso cref="InfoPanel" />
+			bool isInfoPanelEnabled();
 
 			/// <summary>
 			/// Returns a new instance of <see cref="Collision">Collision</see>
@@ -220,6 +247,18 @@ namespace GameAIDemos
 			/// </summary>
 			sf::Color m_color;
 
+			/// <summary>
+			/// Instance of <see cref="InfoPanel">InfoPanel</see> used for
+			/// displaying entity information on screen.
+			/// </summary>
+			InfoPanel m_infoPanel;
+			/// <summary>
+			/// A boolean specifying if the entity's info panel should be
+			/// displayed in the UI. An info panel displays useful information
+			/// about an entity.
+			/// </summary>
+			/// <seealso cref="InfoPanel" />
+			bool m_displayInfoPanel = false;
 			/// <summary>
 			/// Instance of <see cref="Logger">Logger</see> for logging.
 			/// </summary>

@@ -57,7 +57,11 @@ namespace GameAIDemos
 			/// <summary>
 			/// Handles events specific to the live entity.
 			/// </summary>
-			void handleEvents() override;
+			///
+			/// <param name="sfEvent">
+			/// A SFML event (e.g. generated user input) instance.
+			/// </param>
+			void handleEvents(sf::Event sfEvent) override;
 
 			/// <summary>
 			/// Updates the live entity.
@@ -130,6 +134,23 @@ namespace GameAIDemos
 			/// A boolean specifying if the entity is dead.
 			/// </param>
 			void setDead(bool dead);
+
+			/// <summary>
+			/// Gets the entity's current velocity vector.
+			/// </summary>
+			///
+			/// <returns>
+			/// A SFML Vector2f containing the entity's velocity.
+			/// </returns>
+			sf::Vector2f getVelocity();
+
+			/// <summary>
+			/// Sets the entity's velocity vector.
+			/// </summary>
+			/// <param name="velocity">
+			/// A SFML Vector2f containing the entity's new velocity.
+			/// </param>
+			void setVelocity(sf::Vector2f velocity);
 
 			// TODO: Direction handling
 			/// <summary>

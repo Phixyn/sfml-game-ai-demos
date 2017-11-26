@@ -9,11 +9,35 @@ GameAIDemos::LevelScene::LevelScene(Game &game, std::string backgroundImagePath)
 	setBackgroundImage(backgroundImagePath);
 }
 
-void GameAIDemos::LevelScene::handleEvents()
+void GameAIDemos::LevelScene::handleEvents(sf::Event sfEvent)
 {
+	// Handle events for live entities in this scene
 	for (LiveEntity &liveEntity : m_liveEntities)
 	{
-		liveEntity.handleEvents();
+		if (sfEvent.type == sf::Event::MouseButtonPressed &&
+			sfEvent.mouseButton.button == sf::Mouse::Left)
+		{
+			// Get mouse position relative to the game window
+			sf::Vector2i mouseClickPos = sf::Mouse::getPosition(*m_game_ptr->m_window);
+			// Position of live entity's sprite
+			sf::Vector2f liveEntityPos = liveEntity.getSprite().getPosition();
+
+			// Check if mouse click was within the entity's sprite
+			if (mouseClickPos.x > liveEntityPos.x
+				&& mouseClickPos.x < liveEntityPos.x + liveEntity.getRectWidth()
+				&& mouseClickPos.y > liveEntityPos.y
+				&& mouseClickPos.y < liveEntityPos.y + liveEntity.getRectHeight())
+			{
+				m_logger.log("DEBUG", "Received mouse click on sprite.");
+				std::ostringstream oss;
+				oss << sf::Mouse::getPosition(*m_game_ptr->m_window).x << " " << sf::Mouse::getPosition(*m_game_ptr->m_window).y;
+				m_logger.log("DEBUG", oss.str());
+				// TODO we should handle the event in the entity instead of here?
+				// TODO Let the entity know that there was a mouse click on it, and let it decide what to do with it
+				// liveEntity.handleEvents();
+				liveEntity.toggleInfoPanel();
+			}
+		}
 	}
 }
 
@@ -37,11 +61,16 @@ void GameAIDemos::LevelScene::update(float deltaTime)
 void GameAIDemos::LevelScene::draw()
 {
 	// TODO
-	// m_game_ptr->m_gameWindow.draw(m_backgroundSprite);
+	// m_game_ptr->draw(m_backgroundSprite);
 
 	for (LiveEntity &liveEntity : m_liveEntities)
 	{
-		m_game_ptr->m_gameWindow.draw(liveEntity.getSprite());
+		m_game_ptr->draw(liveEntity.getSprite());
+		if (liveEntity.isInfoPanelEnabled())
+		{
+			m_game_ptr->draw(liveEntity.getInfoPanel().getRect());
+			m_game_ptr->draw(liveEntity.getInfoPanel().getSFText());
+		}
 	}
 }
 
@@ -63,9 +92,9 @@ void GameAIDemos::LevelScene::setBackgroundImage(std::string imageFilePath)
 	// TODO: Handle tileable backgrounds?
 	// m_backgroundTexture.setRepeated(true);
 	m_backgroundSprite.setTexture(m_backgroundTexture);
-	// m_backgroundSprite.setOrigin(m_game_ptr->m_gameWindow.m_view.getCenter().x, m_game_ptr->m_gameWindow.m_view.getCenter().y / 2.0f);
-	m_backgroundSprite.setOrigin(m_game_ptr->m_gameWindow.m_view.getCenter());
-	m_backgroundSprite.setTextureRect(sf::IntRect(0, 0, m_game_ptr->m_gameWindow.m_view.getSize().x, m_game_ptr->m_gameWindow.m_view.getSize().y));
+	// m_backgroundSprite.setOrigin(m_game_ptr->m_view.getCenter().x, m_game_ptr->m_view.getCenter().y / 2.0f);
+	m_backgroundSprite.setOrigin(m_game_ptr->m_view.getCenter());
+	m_backgroundSprite.setTextureRect(sf::IntRect(0, 0, m_game_ptr->m_view.getSize().x, m_game_ptr->m_view.getSize().y));
 }
 
 void GameAIDemos::LevelScene::spawnLiveEntity(LiveEntity entity)
