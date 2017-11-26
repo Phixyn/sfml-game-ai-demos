@@ -7,6 +7,7 @@ GameAIDemos::Game::Game(const unsigned int WIDTH, const unsigned int HEIGHT, con
 	m_logger.log("INFO", "Initializing game.");
 	m_logger.log("DEBUG", "Creating RenderWindow instance.");
 	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), TITLE, sf::Style::Close);
+	m_window->setFramerateLimit(60);
 	m_window->requestFocus();
 }
 
