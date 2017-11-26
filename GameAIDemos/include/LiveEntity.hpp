@@ -135,6 +135,23 @@ namespace GameAIDemos
 			/// </param>
 			void setDead(bool dead);
 
+			/// <summary>
+			/// Gets the entity's current velocity vector.
+			/// </summary>
+			///
+			/// <returns>
+			/// A SFML Vector2f containing the entity's velocity.
+			/// </returns>
+			sf::Vector2f getVelocity();
+
+			/// <summary>
+			/// Sets the entity's velocity vector.
+			/// </summary>
+			/// <param name="velocity">
+			/// A SFML Vector2f containing the entity's new velocity.
+			/// </param>
+			void setVelocity(sf::Vector2f velocity);
+
 			// TODO: Direction handling
 			/// <summary>
 			/// Gets the entity's current direction.
