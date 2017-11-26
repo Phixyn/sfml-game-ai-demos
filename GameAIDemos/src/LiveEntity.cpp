@@ -1,4 +1,5 @@
 #include "../include/LiveEntity.hpp"
+#include <sstream>
 
 /// <summary>
 /// Calls the superclass constructor and initializes member variables.
@@ -9,6 +10,9 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	// TODO: give entities unique IDs and include this in log statement below
 	m_logger.log("DEBUG", "Initializing a live entity.");
 	// setSpriteColor(sf::Color::Red);
+	std::ostringstream entityInfoSS;
+	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nSpeed: " << m_speed << "\nVelocity X: " << m_velocity.x << "\nVelocity Y: " << m_velocity.y;
+	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
 GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed) :
@@ -17,7 +21,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	m_logger.log("DEBUG", "Initializing a live entity.");
 }
 
-void GameAIDemos::LiveEntity::handleEvents()
+void GameAIDemos::LiveEntity::handleEvents(sf::Event sfEvent)
 {
 	// TODO
 }

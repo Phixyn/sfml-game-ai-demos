@@ -57,7 +57,11 @@ namespace GameAIDemos
 			/// <summary>
 			/// Handles events specific to the live entity.
 			/// </summary>
-			void handleEvents() override;
+			///
+			/// <param name="sfEvent">
+			/// A SFML event (e.g. generated user input) instance.
+			/// </param>
+			void handleEvents(sf::Event sfEvent) override;
 
 			/// <summary>
 			/// Updates the live entity.
