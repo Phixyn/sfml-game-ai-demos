@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">v0.2.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -109,9 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90c71af56347a4ab94efb3c1a46f8f89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">Scene</a> (<a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;game)</td></tr>
 <tr class="memdesc:a90c71af56347a4ab94efb3c1a46f8f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a90c71af56347a4ab94efb3c1a46f8f89">More...</a><br /></td></tr>
 <tr class="separator:a90c71af56347a4ab94efb3c1a46f8f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e46b6d41bb639512ccde0bfe032f16b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a6e46b6d41bb639512ccde0bfe032f16b">handleEvents</a> ()=0</td></tr>
-<tr class="memdesc:a6e46b6d41bb639512ccde0bfe032f16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to handle events in the scene.  <a href="#a6e46b6d41bb639512ccde0bfe032f16b">More...</a><br /></td></tr>
-<tr class="separator:a6e46b6d41bb639512ccde0bfe032f16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa564a4a34e06d947ae95615ac2e660"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a0fa564a4a34e06d947ae95615ac2e660">handleEvents</a> (sf::Event sfEvent)=0</td></tr>
+<tr class="memdesc:a0fa564a4a34e06d947ae95615ac2e660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to handle events in the scene.  <a href="#a0fa564a4a34e06d947ae95615ac2e660">More...</a><br /></td></tr>
+<tr class="separator:a0fa564a4a34e06d947ae95615ac2e660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80c0d89fa43eeb5de8367019ab721293"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a80c0d89fa43eeb5de8367019ab721293">update</a> (float deltaTime)=0</td></tr>
 <tr class="memdesc:a80c0d89fa43eeb5de8367019ab721293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to update the scene.  <a href="#a80c0d89fa43eeb5de8367019ab721293">More...</a><br /></td></tr>
 <tr class="separator:a80c0d89fa43eeb5de8367019ab721293"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,8 +188,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e46b6d41bb639512ccde0bfe032f16b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e46b6d41bb639512ccde0bfe032f16b">&#9670;&nbsp;</a></span>handleEvents()</h2>
+<a id="a0fa564a4a34e06d947ae95615ac2e660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa564a4a34e06d947ae95615ac2e660">&#9670;&nbsp;</a></span>handleEvents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +200,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void GameAIDemos::Scene::handleEvents </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">sf::Event&#160;</td>
+          <td class="paramname"><em>sfEvent</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -212,8 +213,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pure virtual method to handle events in the scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sfEvent</td><td>A SFML event (e.g. generated user input) instance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a3fbc2892010bb07c7b7f417959159640">GameAIDemos::LevelScene</a>.</p>
+<p>Implemented in <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a9f5af32bdb8ba8a4c2feab1bc4788096">GameAIDemos::LevelScene</a>.</p>
 
 </div>
 </div>

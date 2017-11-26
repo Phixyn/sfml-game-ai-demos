@@ -2,7 +2,7 @@ var class_game_a_i_demos_1_1_level_scene =
 [
     [ "LevelScene", "class_game_a_i_demos_1_1_level_scene.html#ae9fa14c50007a555455e91b5ac029421", null ],
     [ "draw", "class_game_a_i_demos_1_1_level_scene.html#a19e5b75a64c21c937b5de4a825f4f73b", null ],
-    [ "handleEvents", "class_game_a_i_demos_1_1_level_scene.html#a3fbc2892010bb07c7b7f417959159640", null ],
+    [ "handleEvents", "class_game_a_i_demos_1_1_level_scene.html#a9f5af32bdb8ba8a4c2feab1bc4788096", null ],
     [ "setBackgroundImage", "class_game_a_i_demos_1_1_level_scene.html#a56445a6d6e83738b645d63f7019da7a7", null ],
     [ "spawnLiveEntity", "class_game_a_i_demos_1_1_level_scene.html#acc41b2955b56de3b273d04783c6ac2b9", null ],
     [ "spawnLiveEntity", "class_game_a_i_demos_1_1_level_scene.html#a695c3c79ed9ae2ebb1e5c0ba1bab57b8", null ],

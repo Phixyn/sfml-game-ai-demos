@@ -1,14 +1,25 @@
 var class_game_a_i_demos_1_1_game =
 [
-    [ "Game", "class_game_a_i_demos_1_1_game.html#ae13f8726f8cb9fdc722452125aef6163", null ],
+    [ "Game", "class_game_a_i_demos_1_1_game.html#a6417ec453fee39ccde4964ae7a61e884", null ],
     [ "addScene", "class_game_a_i_demos_1_1_game.html#abc0f2c064d83a6494606f558fdb037d4", null ],
     [ "changeScene", "class_game_a_i_demos_1_1_game.html#a918ac3c7cd697dbe88010f678b09fb0a", null ],
+    [ "clear", "class_game_a_i_demos_1_1_game.html#a63e862ab1096186aa1dcb5b9628987e9", null ],
+    [ "draw", "class_game_a_i_demos_1_1_game.html#a7e6384bd9a82b036071dca18a15a126a", null ],
+    [ "handleEvents", "class_game_a_i_demos_1_1_game.html#a9a015c81f4166be9171667ce0ff07ce2", null ],
+    [ "hasFocus", "class_game_a_i_demos_1_1_game.html#ae00e53203d02ae9122eeb89e93c5b309", null ],
+    [ "isOpen", "class_game_a_i_demos_1_1_game.html#a1f002ef53fd1875870847575d3cf0145", null ],
     [ "mainLoop", "class_game_a_i_demos_1_1_game.html#a575c976a58afe7ce7f7541f5d261fd09", null ],
     [ "removeScene", "class_game_a_i_demos_1_1_game.html#a94a7473c70172a3e0776d18cfb815a4f", null ],
+    [ "render", "class_game_a_i_demos_1_1_game.html#ab78c2daf1a22004ee1b332e3824bf8e5", null ],
     [ "m_clock", "class_game_a_i_demos_1_1_game.html#a77c56cc00619a30109205cac55dc4470", null ],
-    [ "m_debugMode", "class_game_a_i_demos_1_1_game.html#ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1", null ],
     [ "m_deltaTime", "class_game_a_i_demos_1_1_game.html#a664be75bd208071fc971ed2fd238a46c", null ],
-    [ "m_gameWindow", "class_game_a_i_demos_1_1_game.html#a1f8d9b6940c23dd5d9d96500432b47f4", null ],
+    [ "m_hasFocus", "class_game_a_i_demos_1_1_game.html#a354450c449aec021bb9ad13761a903b9", null ],
+    [ "m_height", "class_game_a_i_demos_1_1_game.html#accc0351c2131e71a5011fcc4371ed14f", null ],
     [ "m_logger", "class_game_a_i_demos_1_1_game.html#ab7808372c5a1edf6e070f76bda07fbff", null ],
-    [ "m_sceneQueue", "class_game_a_i_demos_1_1_game.html#aeee225d0f81d25a21b0dd3c870ac22f6", null ]
+    [ "m_sceneQueue", "class_game_a_i_demos_1_1_game.html#aeee225d0f81d25a21b0dd3c870ac22f6", null ],
+    [ "m_showDebugPane", "class_game_a_i_demos_1_1_game.html#a5519f38157afa878aa8ef6cde859d676", null ],
+    [ "m_title", "class_game_a_i_demos_1_1_game.html#a5282a44c7a9339fa3e4572f6bee99d9a", null ],
+    [ "m_view", "class_game_a_i_demos_1_1_game.html#a1c4b4b63696518744fd00d61589b4157", null ],
+    [ "m_width", "class_game_a_i_demos_1_1_game.html#aa5250a1e607f7f6c08ccea1ac7bd7813", null ],
+    [ "m_window", "class_game_a_i_demos_1_1_game.html#a6eda70620a699a1ce36f52c2ede94d45", null ]
 ];

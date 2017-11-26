@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">v0.2.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -118,9 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e631b724cc51d6f10f46a39e1edc8cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a2e631b724cc51d6f10f46a39e1edc8cd">Entity</a> (sf::Vector2f size, sf::Vector2f position, std::string textureFilePath)</td></tr>
 <tr class="memdesc:a2e631b724cc51d6f10f46a39e1edc8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor with an argument for position and texture file.  <a href="#a2e631b724cc51d6f10f46a39e1edc8cd">More...</a><br /></td></tr>
 <tr class="separator:a2e631b724cc51d6f10f46a39e1edc8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17fe019de9499a8d115a3e133c3461b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a17fe019de9499a8d115a3e133c3461b6">handleEvents</a> ()=0</td></tr>
-<tr class="memdesc:a17fe019de9499a8d115a3e133c3461b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to handle events of the entity.  <a href="#a17fe019de9499a8d115a3e133c3461b6">More...</a><br /></td></tr>
-<tr class="separator:a17fe019de9499a8d115a3e133c3461b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deba6b6b5b29394948575f8b0430da3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a4deba6b6b5b29394948575f8b0430da3">handleEvents</a> (sf::Event sfEvent)=0</td></tr>
+<tr class="memdesc:a4deba6b6b5b29394948575f8b0430da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to handle events of the entity.  <a href="#a4deba6b6b5b29394948575f8b0430da3">More...</a><br /></td></tr>
+<tr class="separator:a4deba6b6b5b29394948575f8b0430da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76b033002fc3109a7b53548932534c60"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a76b033002fc3109a7b53548932534c60">update</a> (float deltaTime)=0</td></tr>
 <tr class="memdesc:a76b033002fc3109a7b53548932534c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to update the entity.  <a href="#a76b033002fc3109a7b53548932534c60">More...</a><br /></td></tr>
 <tr class="separator:a76b033002fc3109a7b53548932534c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5feadceb43c0397fc873f27dc633b771"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a5feadceb43c0397fc873f27dc633b771">setPosition</a> (sf::Vector2f &amp;position)</td></tr>
 <tr class="memdesc:a5feadceb43c0397fc873f27dc633b771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the entity in the game scene.  <a href="#a5feadceb43c0397fc873f27dc633b771">More...</a><br /></td></tr>
 <tr class="separator:a5feadceb43c0397fc873f27dc633b771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6015a440a054785dbefb20b184af3252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a6015a440a054785dbefb20b184af3252">toggleInfoPanel</a> ()</td></tr>
+<tr class="memdesc:a6015a440a054785dbefb20b184af3252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the entity's information panel on or off, depending on its current state.  <a href="#a6015a440a054785dbefb20b184af3252">More...</a><br /></td></tr>
+<tr class="separator:a6015a440a054785dbefb20b184af3252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8414de7542ed90c06494a90af36998e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#aa8414de7542ed90c06494a90af36998e">getRectWidth</a> ()</td></tr>
 <tr class="memdesc:aa8414de7542ed90c06494a90af36998e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the width of the entity's rectangle.  <a href="#aa8414de7542ed90c06494a90af36998e">More...</a><br /></td></tr>
 <tr class="separator:aa8414de7542ed90c06494a90af36998e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +160,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6ed570f863403478de860e724e4fde7"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#ab6ed570f863403478de860e724e4fde7">getSprite</a> ()</td></tr>
 <tr class="memdesc:ab6ed570f863403478de860e724e4fde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the entity's sprite.  <a href="#ab6ed570f863403478de860e724e4fde7">More...</a><br /></td></tr>
 <tr class="separator:ab6ed570f863403478de860e724e4fde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedfd23b669fa8957ed4fdbb5c380c60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html">GameAIDemos::InfoPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#abedfd23b669fa8957ed4fdbb5c380c60">getInfoPanel</a> ()</td></tr>
+<tr class="memdesc:abedfd23b669fa8957ed4fdbb5c380c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the entity's <a class="el" href="class_game_a_i_demos_1_1_info_panel.html" title="A class for information panel UI elements. An info panel element in the UI is a simple rectangle with...">InfoPanel</a> object.  <a href="#abedfd23b669fa8957ed4fdbb5c380c60">More...</a><br /></td></tr>
+<tr class="separator:abedfd23b669fa8957ed4fdbb5c380c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62281e1c927e5b4c092dfc08c4d2f045"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a62281e1c927e5b4c092dfc08c4d2f045">isInfoPanelEnabled</a> ()</td></tr>
+<tr class="memdesc:a62281e1c927e5b4c092dfc08c4d2f045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a boolean indicating if this entity's info panel UI element is enabled and being displayed in the UI.  <a href="#a62281e1c927e5b4c092dfc08c4d2f045">More...</a><br /></td></tr>
+<tr class="separator:a62281e1c927e5b4c092dfc08c4d2f045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -181,6 +190,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aeb76e57ed49364d914da940786d9d634"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#aeb76e57ed49364d914da940786d9d634">m_color</a></td></tr>
 <tr class="memdesc:aeb76e57ed49364d914da940786d9d634"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML Color instance for the entity's rectangle color.  <a href="#aeb76e57ed49364d914da940786d9d634">More...</a><br /></td></tr>
 <tr class="separator:aeb76e57ed49364d914da940786d9d634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb7cbbf4a99c50464d9bcd26793b866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a3cb7cbbf4a99c50464d9bcd26793b866">m_infoPanel</a></td></tr>
+<tr class="memdesc:a3cb7cbbf4a99c50464d9bcd26793b866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a> used for displaying entity information on screen.  <a href="#a3cb7cbbf4a99c50464d9bcd26793b866">More...</a><br /></td></tr>
+<tr class="separator:a3cb7cbbf4a99c50464d9bcd26793b866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd9b92dc7ffab09bacdfef21a9c3f79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a1bd9b92dc7ffab09bacdfef21a9c3f79">m_displayInfoPanel</a> = false</td></tr>
+<tr class="memdesc:a1bd9b92dc7ffab09bacdfef21a9c3f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean specifying if the entity's info panel should be displayed in the UI. An info panel displays useful information about an entity.  <a href="#a1bd9b92dc7ffab09bacdfef21a9c3f79">More...</a><br /></td></tr>
+<tr class="separator:a1bd9b92dc7ffab09bacdfef21a9c3f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93af1f90613e2a696de25302fb27e40b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html#a93af1f90613e2a696de25302fb27e40b">m_logger</a></td></tr>
 <tr class="memdesc:a93af1f90613e2a696de25302fb27e40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="#a93af1f90613e2a696de25302fb27e40b">More...</a><br /></td></tr>
 <tr class="separator:a93af1f90613e2a696de25302fb27e40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -363,6 +378,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="abedfd23b669fa8957ed4fdbb5c380c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedfd23b669fa8957ed4fdbb5c380c60">&#9670;&nbsp;</a></span>getInfoPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html">GameAIDemos::InfoPanel</a> GameAIDemos::Entity::getInfoPanel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the entity's <a class="el" href="class_game_a_i_demos_1_1_info_panel.html" title="A class for information panel UI elements. An info panel element in the UI is a simple rectangle with...">InfoPanel</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a> instance of the entity. </dd></dl>
+
+</div>
+</div>
 <a id="a136888200c025e2d714e8b97ab01f778"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a136888200c025e2d714e8b97ab01f778">&#9670;&nbsp;</a></span>getPosition()</h2>
 
@@ -463,8 +498,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a17fe019de9499a8d115a3e133c3461b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17fe019de9499a8d115a3e133c3461b6">&#9670;&nbsp;</a></span>handleEvents()</h2>
+<a id="a4deba6b6b5b29394948575f8b0430da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4deba6b6b5b29394948575f8b0430da3">&#9670;&nbsp;</a></span>handleEvents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +510,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void GameAIDemos::Entity::handleEvents </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">sf::Event&#160;</td>
+          <td class="paramname"><em>sfEvent</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -487,8 +523,35 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pure virtual method to handle events of the entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sfEvent</td><td>A SFML event (e.g. generated user input) instance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#ab605e2f2692b39c2be146fd81e960b91">GameAIDemos::LiveEntity</a>.</p>
+<p>Implemented in <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a4e629edfe69a7352e7bf07420c8448e8">GameAIDemos::LiveEntity</a>.</p>
+
+</div>
+</div>
+<a id="a62281e1c927e5b4c092dfc08c4d2f045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62281e1c927e5b4c092dfc08c4d2f045">&#9670;&nbsp;</a></span>isInfoPanelEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameAIDemos::Entity::isInfoPanelEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a boolean indicating if this entity's info panel UI element is enabled and being displayed in the UI. </p>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the entity's info panel is enabled. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_info_panel.html" title="A class for information panel UI elements. An info panel element in the UI is a simple rectangle with...">InfoPanel</a></dd></dl>
 
 </div>
 </div>
@@ -623,6 +686,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6015a440a054785dbefb20b184af3252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6015a440a054785dbefb20b184af3252">&#9670;&nbsp;</a></span>toggleInfoPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Entity::toggleInfoPanel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Toggles the entity's information panel on or off, depending on its current state. </p>
+
+</div>
+</div>
 <a id="a76b033002fc3109a7b53548932534c60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76b033002fc3109a7b53548932534c60">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -681,6 +763,55 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>SFML Color instance for the entity's rectangle color. </p>
+
+</div>
+</div>
+<a id="a1bd9b92dc7ffab09bacdfef21a9c3f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd9b92dc7ffab09bacdfef21a9c3f79">&#9670;&nbsp;</a></span>m_displayInfoPanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameAIDemos::Entity::m_displayInfoPanel = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A boolean specifying if the entity's info panel should be displayed in the UI. An info panel displays useful information about an entity. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_info_panel.html" title="A class for information panel UI elements. An info panel element in the UI is a simple rectangle with...">InfoPanel</a></dd></dl>
+
+</div>
+</div>
+<a id="a3cb7cbbf4a99c50464d9bcd26793b866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb7cbbf4a99c50464d9bcd26793b866">&#9670;&nbsp;</a></span>m_infoPanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a> GameAIDemos::Entity::m_infoPanel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instance of <a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a> used for displaying entity information on screen. </p>
 
 </div>
 </div>

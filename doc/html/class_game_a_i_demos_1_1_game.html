@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">v0.2.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -98,9 +98,25 @@ $(document).ready(function(){initNavTree('class_game_a_i_demos_1_1_game.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae13f8726f8cb9fdc722452125aef6163"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#ae13f8726f8cb9fdc722452125aef6163">Game</a> (const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool DEBUG=true)</td></tr>
-<tr class="memdesc:ae13f8726f8cb9fdc722452125aef6163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_game_a_i_demos_1_1_game_window.html" title="Class used to create and manage game windows. ">GameWindow</a> instance and member variables.  <a href="#ae13f8726f8cb9fdc722452125aef6163">More...</a><br /></td></tr>
-<tr class="separator:ae13f8726f8cb9fdc722452125aef6163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6417ec453fee39ccde4964ae7a61e884"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a6417ec453fee39ccde4964ae7a61e884">Game</a> (const unsigned int WIDTH, const unsigned int HEIGHT, const std::string TITLE, const bool SHOW_DEBUG_PANE=true)</td></tr>
+<tr class="memdesc:a6417ec453fee39ccde4964ae7a61e884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_game_a_i_demos_1_1_game.html" title="Main game class used to initialize the game, create a game window and add scenes to it...">Game</a> instance and member variables.  <a href="#a6417ec453fee39ccde4964ae7a61e884">More...</a><br /></td></tr>
+<tr class="separator:a6417ec453fee39ccde4964ae7a61e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e862ab1096186aa1dcb5b9628987e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a63e862ab1096186aa1dcb5b9628987e9">clear</a> ()</td></tr>
+<tr class="memdesc:a63e862ab1096186aa1dcb5b9628987e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the window by calling the clear method on the SFML RenderWindow instance.  <a href="#a63e862ab1096186aa1dcb5b9628987e9">More...</a><br /></td></tr>
+<tr class="separator:a63e862ab1096186aa1dcb5b9628987e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78c2daf1a22004ee1b332e3824bf8e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#ab78c2daf1a22004ee1b332e3824bf8e5">render</a> ()</td></tr>
+<tr class="memdesc:ab78c2daf1a22004ee1b332e3824bf8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the view (<a class="el" href="class_game_a_i_demos_1_1_game.html#a1c4b4b63696518744fd00d61589b4157">m_view</a>) inside the window and calls the display method of the SFML RenderWindow to render the window.  <a href="#ab78c2daf1a22004ee1b332e3824bf8e5">More...</a><br /></td></tr>
+<tr class="separator:ab78c2daf1a22004ee1b332e3824bf8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6384bd9a82b036071dca18a15a126a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a7e6384bd9a82b036071dca18a15a126a">draw</a> (const sf::Drawable &amp;drawable)</td></tr>
+<tr class="memdesc:a7e6384bd9a82b036071dca18a15a126a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a SFML Drawable object on the window.  <a href="#a7e6384bd9a82b036071dca18a15a126a">More...</a><br /></td></tr>
+<tr class="separator:a7e6384bd9a82b036071dca18a15a126a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a015c81f4166be9171667ce0ff07ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a9a015c81f4166be9171667ce0ff07ce2">handleEvents</a> ()</td></tr>
+<tr class="memdesc:a9a015c81f4166be9171667ce0ff07ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls the SFML Window for events received in the window, and handles them appropriately.  <a href="#a9a015c81f4166be9171667ce0ff07ce2">More...</a><br /></td></tr>
+<tr class="separator:a9a015c81f4166be9171667ce0ff07ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f002ef53fd1875870847575d3cf0145"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a1f002ef53fd1875870847575d3cf0145">isOpen</a> ()</td></tr>
+<tr class="separator:a1f002ef53fd1875870847575d3cf0145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00e53203d02ae9122eeb89e93c5b309"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#ae00e53203d02ae9122eeb89e93c5b309">hasFocus</a> ()</td></tr>
+<tr class="separator:ae00e53203d02ae9122eeb89e93c5b309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575c976a58afe7ce7f7541f5d261fd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a575c976a58afe7ce7f7541f5d261fd09">mainLoop</a> ()</td></tr>
 <tr class="memdesc:a575c976a58afe7ce7f7541f5d261fd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the game's main loop.  <a href="#a575c976a58afe7ce7f7541f5d261fd09">More...</a><br /></td></tr>
 <tr class="separator:a575c976a58afe7ce7f7541f5d261fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,18 +132,33 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1f8d9b6940c23dd5d9d96500432b47f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_game_window.html">GameWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a1f8d9b6940c23dd5d9d96500432b47f4">m_gameWindow</a></td></tr>
-<tr class="memdesc:a1f8d9b6940c23dd5d9d96500432b47f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_game_a_i_demos_1_1_game_window.html">GameWindow</a> instance for the game.  <a href="#a1f8d9b6940c23dd5d9d96500432b47f4">More...</a><br /></td></tr>
-<tr class="separator:a1f8d9b6940c23dd5d9d96500432b47f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4b4b63696518744fd00d61589b4157"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a1c4b4b63696518744fd00d61589b4157">m_view</a></td></tr>
+<tr class="memdesc:a1c4b4b63696518744fd00d61589b4157"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML View instance for the game window.  <a href="#a1c4b4b63696518744fd00d61589b4157">More...</a><br /></td></tr>
+<tr class="separator:a1c4b4b63696518744fd00d61589b4157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eda70620a699a1ce36f52c2ede94d45"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; sf::RenderWindow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a6eda70620a699a1ce36f52c2ede94d45">m_window</a></td></tr>
+<tr class="memdesc:a6eda70620a699a1ce36f52c2ede94d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique pointer to SFML RenderWindow instance. TODO this and View can be made private maybe?  <a href="#a6eda70620a699a1ce36f52c2ede94d45">More...</a><br /></td></tr>
+<tr class="separator:a6eda70620a699a1ce36f52c2ede94d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:aa5250a1e607f7f6c08ccea1ac7bd7813"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#aa5250a1e607f7f6c08ccea1ac7bd7813">m_width</a></td></tr>
+<tr class="memdesc:aa5250a1e607f7f6c08ccea1ac7bd7813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the game window.  <a href="#aa5250a1e607f7f6c08ccea1ac7bd7813">More...</a><br /></td></tr>
+<tr class="separator:aa5250a1e607f7f6c08ccea1ac7bd7813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc0351c2131e71a5011fcc4371ed14f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#accc0351c2131e71a5011fcc4371ed14f">m_height</a></td></tr>
+<tr class="memdesc:accc0351c2131e71a5011fcc4371ed14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the game window.  <a href="#accc0351c2131e71a5011fcc4371ed14f">More...</a><br /></td></tr>
+<tr class="separator:accc0351c2131e71a5011fcc4371ed14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5282a44c7a9339fa3e4572f6bee99d9a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a5282a44c7a9339fa3e4572f6bee99d9a">m_title</a></td></tr>
+<tr class="memdesc:a5282a44c7a9339fa3e4572f6bee99d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Title of the game window seen in titlebar.  <a href="#a5282a44c7a9339fa3e4572f6bee99d9a">More...</a><br /></td></tr>
+<tr class="separator:a5282a44c7a9339fa3e4572f6bee99d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354450c449aec021bb9ad13761a903b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a354450c449aec021bb9ad13761a903b9">m_hasFocus</a></td></tr>
+<tr class="memdesc:a354450c449aec021bb9ad13761a903b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game.html#a9a015c81f4166be9171667ce0ff07ce2" title="Polls the SFML Window for events received in the window, and handles them appropriately. ">handleEvents()</a> method.  <a href="#a354450c449aec021bb9ad13761a903b9">More...</a><br /></td></tr>
+<tr class="separator:a354450c449aec021bb9ad13761a903b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664be75bd208071fc971ed2fd238a46c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a664be75bd208071fc971ed2fd238a46c">m_deltaTime</a></td></tr>
 <tr class="memdesc:a664be75bd208071fc971ed2fd238a46c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The delta time for the game's update frequency rate.  <a href="#a664be75bd208071fc971ed2fd238a46c">More...</a><br /></td></tr>
 <tr class="separator:a664be75bd208071fc971ed2fd238a46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1">m_debugMode</a></td></tr>
-<tr class="memdesc:ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the game should run in debug mode.  <a href="#ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1">More...</a><br /></td></tr>
-<tr class="separator:ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5519f38157afa878aa8ef6cde859d676"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a5519f38157afa878aa8ef6cde859d676">m_showDebugPane</a></td></tr>
+<tr class="memdesc:a5519f38157afa878aa8ef6cde859d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean specifying if the debug pane should be displayed in the game window. Defaults to true in the constructor.  <a href="#a5519f38157afa878aa8ef6cde859d676">More...</a><br /></td></tr>
+<tr class="separator:a5519f38157afa878aa8ef6cde859d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c56cc00619a30109205cac55dc4470"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a77c56cc00619a30109205cac55dc4470">m_clock</a></td></tr>
 <tr class="memdesc:a77c56cc00619a30109205cac55dc4470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of SFML Clock used to measure time. Used to get a <a class="el" href="class_game_a_i_demos_1_1_game.html#a664be75bd208071fc971ed2fd238a46c">delta time</a>.  <a href="#a77c56cc00619a30109205cac55dc4470">More...</a><br /></td></tr>
 <tr class="separator:a77c56cc00619a30109205cac55dc4470"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,8 +172,8 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main game class used to initialize the game, create a game window and add scenes to it. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae13f8726f8cb9fdc722452125aef6163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae13f8726f8cb9fdc722452125aef6163">&#9670;&nbsp;</a></span>Game()</h2>
+<a id="a6417ec453fee39ccde4964ae7a61e884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6417ec453fee39ccde4964ae7a61e884">&#9670;&nbsp;</a></span>Game()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +200,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>DEBUG</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>SHOW_DEBUG_PANE</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -179,17 +210,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the <a class="el" href="class_game_a_i_demos_1_1_game_window.html" title="Class used to create and manage game windows. ">GameWindow</a> instance and member variables. </p>
+<p>Initializes the <a class="el" href="class_game_a_i_demos_1_1_game.html" title="Main game class used to initialize the game, create a game window and add scenes to it...">Game</a> instance and member variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">WIDTH</td><td>The width of the game window. </td></tr>
     <tr><td class="paramname">HEIGHT</td><td>The height of the game window. </td></tr>
     <tr><td class="paramname">TITLE</td><td>A title for the game window. </td></tr>
-    <tr><td class="paramname">DEBUG</td><td>A boolean specifying if the game is to be run in debug mode. Defaults to true. </td></tr>
+    <tr><td class="paramname">SHOW_DEBUG_PANE</td><td>A boolean specifying whether the debug pane should be displayed. Defaults to true. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_game_window.html" title="Class used to create and manage game windows. ">GameWindow</a></dd></dl>
 
 </div>
 </div>
@@ -250,6 +280,106 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a63e862ab1096186aa1dcb5b9628987e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e862ab1096186aa1dcb5b9628987e9">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the window by calling the clear method on the SFML RenderWindow instance. </p>
+
+</div>
+</div>
+<a id="a7e6384bd9a82b036071dca18a15a126a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6384bd9a82b036071dca18a15a126a">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::draw </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Drawable &amp;&#160;</td>
+          <td class="paramname"><em>drawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a SFML Drawable object on the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawable</td><td>Reference to the SFML Drawable instance to be drawn on the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9a015c81f4166be9171667ce0ff07ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a015c81f4166be9171667ce0ff07ce2">&#9670;&nbsp;</a></span>handleEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::handleEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Polls the SFML Window for events received in the window, and handles them appropriately. </p>
+
+</div>
+</div>
+<a id="ae00e53203d02ae9122eeb89e93c5b309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00e53203d02ae9122eeb89e93c5b309">&#9670;&nbsp;</a></span>hasFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameAIDemos::Game::hasFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the window has focus. </dd></dl>
+
+</div>
+</div>
+<a id="a1f002ef53fd1875870847575d3cf0145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f002ef53fd1875870847575d3cf0145">&#9670;&nbsp;</a></span>isOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameAIDemos::Game::isOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the window is open. </dd></dl>
+
+</div>
+</div>
 <a id="a575c976a58afe7ce7f7541f5d261fd09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a575c976a58afe7ce7f7541f5d261fd09">&#9670;&nbsp;</a></span>mainLoop()</h2>
 
@@ -291,6 +421,25 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab78c2daf1a22004ee1b332e3824bf8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78c2daf1a22004ee1b332e3824bf8e5">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameAIDemos::Game::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the view (<a class="el" href="class_game_a_i_demos_1_1_game.html#a1c4b4b63696518744fd00d61589b4157">m_view</a>) inside the window and calls the display method of the SFML RenderWindow to render the window. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a77c56cc00619a30109205cac55dc4470"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77c56cc00619a30109205cac55dc4470">&#9670;&nbsp;</a></span>m_clock</h2>
@@ -313,30 +462,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Instance of SFML Clock used to measure time. Used to get a <a class="el" href="class_game_a_i_demos_1_1_game.html#a664be75bd208071fc971ed2fd238a46c">delta time</a>. </p>
-
-</div>
-</div>
-<a id="ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0a6e9f1922fcf6f1e3e9d6f6fa31cd1">&#9670;&nbsp;</a></span>m_debugMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool GameAIDemos::Game::m_debugMode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Boolean specifying if the game should run in debug mode. </p>
 
 </div>
 </div>
@@ -364,19 +489,51 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f8d9b6940c23dd5d9d96500432b47f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f8d9b6940c23dd5d9d96500432b47f4">&#9670;&nbsp;</a></span>m_gameWindow</h2>
+<a id="a354450c449aec021bb9ad13761a903b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354450c449aec021bb9ad13761a903b9">&#9670;&nbsp;</a></span>m_hasFocus</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_game_a_i_demos_1_1_game_window.html">GameWindow</a> GameAIDemos::Game::m_gameWindow</td>
+          <td class="memname">bool GameAIDemos::Game::m_hasFocus</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_game_a_i_demos_1_1_game_window.html">GameWindow</a> instance for the game. </p>
+<p>Boolean specifying if the window has focus. This member variable is set in <a class="el" href="class_game_a_i_demos_1_1_game.html#a9a015c81f4166be9171667ce0ff07ce2" title="Polls the SFML Window for events received in the window, and handles them appropriately. ">handleEvents()</a> method. </p>
+
+</div>
+</div>
+<a id="accc0351c2131e71a5011fcc4371ed14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc0351c2131e71a5011fcc4371ed14f">&#9670;&nbsp;</a></span>m_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int GameAIDemos::Game::m_height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Height of the game window. </p>
 
 </div>
 </div>
@@ -425,6 +582,110 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Queue of unique pointers to <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> instances. </p>
+
+</div>
+</div>
+<a id="a5519f38157afa878aa8ef6cde859d676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5519f38157afa878aa8ef6cde859d676">&#9670;&nbsp;</a></span>m_showDebugPane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameAIDemos::Game::m_showDebugPane</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean specifying if the debug pane should be displayed in the game window. Defaults to true in the constructor. </p>
+
+</div>
+</div>
+<a id="a5282a44c7a9339fa3e4572f6bee99d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5282a44c7a9339fa3e4572f6bee99d9a">&#9670;&nbsp;</a></span>m_title</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameAIDemos::Game::m_title</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Title of the game window seen in titlebar. </p>
+
+</div>
+</div>
+<a id="a1c4b4b63696518744fd00d61589b4157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4b4b63696518744fd00d61589b4157">&#9670;&nbsp;</a></span>m_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::View GameAIDemos::Game::m_view</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SFML View instance for the game window. </p>
+
+</div>
+</div>
+<a id="aa5250a1e607f7f6c08ccea1ac7bd7813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5250a1e607f7f6c08ccea1ac7bd7813">&#9670;&nbsp;</a></span>m_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int GameAIDemos::Game::m_width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Width of the game window. </p>
+
+</div>
+</div>
+<a id="a6eda70620a699a1ce36f52c2ede94d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eda70620a699a1ce36f52c2ede94d45">&#9670;&nbsp;</a></span>m_window</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;sf::RenderWindow&gt; GameAIDemos::Game::m_window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unique pointer to SFML RenderWindow instance. TODO this and View can be made private maybe? </p>
 
 </div>
 </div>
