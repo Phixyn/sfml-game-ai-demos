@@ -2,6 +2,7 @@
 #define ENTITY_H
 
 #include "InfoPanel.hpp"
+#include "BaseEntityState.hpp"
 #include "Logger.hpp"
 
 namespace GameAIDemos
@@ -205,6 +206,27 @@ namespace GameAIDemos
 			bool isInfoPanelEnabled();
 
 			/// <summary>
+			/// Returns an instance of the BaseEntityState subclass for this
+			/// entity's current state.
+			/// </summary>
+			///
+			/// <returns>
+			/// An instance of the current state of the entity.
+			/// </returns>
+			/// <seealso cref="BaseEntityState" />
+			BaseEntityState* getState();
+			/// <summary>
+			/// Sets the entity's current state. Exits the entity's current
+			/// state, sets the state and enters the new state.
+			/// </summary>
+			///
+			/// <param name="state">
+			/// A pointer to a new state object.
+			/// </param>
+			/// <seealso cref="BaseEntityState" />
+			void setState(BaseEntityState* state);
+
+			/// <summary>
 			/// Returns a new instance of <see cref="Collision">Collision</see>
 			/// for this entity, which can be used to handle and solve
 			/// collisions between this entity and other entities in the game.
@@ -259,6 +281,14 @@ namespace GameAIDemos
 			/// </summary>
 			/// <seealso cref="InfoPanel" />
 			bool m_displayInfoPanel = false;
+			/// <summary>
+			/// An instance of a BaseEntityState subclass, representing the
+			/// current state of this entity.
+			/// about an entity.
+			/// </summary>
+			/// <seealso cref="BaseEntityState" />
+			BaseEntityState* m_state;
+
 			/// <summary>
 			/// Instance of <see cref="Logger">Logger</see> for logging.
 			/// </summary>
