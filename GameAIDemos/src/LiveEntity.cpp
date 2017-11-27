@@ -11,7 +11,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	m_logger.log("DEBUG", "Initializing a live entity.");
 	// setSpriteColor(sf::Color::Red);
 	std::ostringstream entityInfoSS;
-	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
+	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
@@ -44,7 +44,7 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 	m_infoPanel.setPanelPosition(m_infoPanel.getPanelPosition() + m_velocity);
 	// Update the text in the InfoPanel
 	std::ostringstream entityInfoSS;
-	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
+	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
