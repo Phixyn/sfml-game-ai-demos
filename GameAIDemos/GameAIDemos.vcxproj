@@ -152,7 +152,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AttackEntityState.cpp" />
     <ClCompile Include="src\BaseEntityState.cpp" />
+    <ClCompile Include="src\DefendEntityState.cpp" />
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\IdleEntityState.cpp" />
@@ -164,7 +166,9 @@
     <ClCompile Include="src\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AttackEntityState.hpp" />
     <ClInclude Include="include\BaseEntityState.hpp" />
+    <ClInclude Include="include\DefendEntityState.hpp" />
     <ClInclude Include="include\Entity.hpp" />
     <ClInclude Include="include\IdleEntityState.hpp" />
     <ClInclude Include="include\InfoPanel.hpp" />
