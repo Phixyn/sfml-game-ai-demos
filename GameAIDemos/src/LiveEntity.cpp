@@ -1,4 +1,5 @@
 #include "../include/LiveEntity.hpp"
+#include "../include/DeadEntityState.hpp"
 #include <sstream>
 
 /// <summary>
@@ -46,11 +47,30 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 	std::ostringstream entityInfoSS;
 	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
+
+	m_health--;
+	m_state->update();
+	if (m_health <= 0 && !m_dead)
+	{
+		setDead(true);
+		// TODO Could be a part of setDead()
+		setState(new DeadEntityState());
+	}
 }
 
 void GameAIDemos::LiveEntity::draw()
 {
 	// TODO
+}
+
+void GameAIDemos::LiveEntity::setHealth(int health)
+{
+	m_health = health;
+}
+
+int GameAIDemos::LiveEntity::getHealth()
+{
+	return m_health;
 }
 
 void GameAIDemos::LiveEntity::setSpeed(float speed)
