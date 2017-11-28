@@ -127,8 +127,10 @@ void GameAIDemos::Entity::setState(BaseEntityState* state)
 {
 	// Don't try to use null pointers
 	if (state == nullptr)
+	{
 		m_logger.log("ERROR", "Entity::setState() received null pointer.");
 		return;
+	}
 
 	m_state->exit();
 	m_state = state;
