@@ -206,6 +206,22 @@ namespace GameAIDemos
 			bool isInfoPanelEnabled();
 
 			/// <summary>
+			/// Returns a boolean indicating if this entity has been selected
+			/// by the user via a mouse click.
+			/// </summary>
+			///
+			/// <returns>
+			/// A boolean indicating if the entity is currently selected.
+			/// </returns>
+			bool isSelected();
+
+			/// <summary>
+			/// Toggles the entity's selected state to true or false, depending
+			/// on its current value.
+			/// </summary>
+			void toggleSelected();
+
+			/// <summary>
 			/// Returns an instance of the BaseEntityState subclass for this
 			/// entity's current state.
 			/// </summary>
@@ -281,6 +297,13 @@ namespace GameAIDemos
 			/// </summary>
 			/// <seealso cref="InfoPanel" />
 			bool m_displayInfoPanel = false;
+
+			/// <summary>
+			/// A boolean specifying if the entity is currently selected by the
+			/// user.
+			/// </summary>
+			bool m_isSelected = false;
+
 			/// <summary>
 			/// An instance of a BaseEntityState subclass, representing the
 			/// current state of this entity.

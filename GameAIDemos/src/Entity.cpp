@@ -118,6 +118,16 @@ bool GameAIDemos::Entity::isInfoPanelEnabled()
 	return m_displayInfoPanel;
 }
 
+bool GameAIDemos::Entity::isSelected()
+{
+	return m_isSelected;
+}
+
+void GameAIDemos::Entity::toggleSelected()
+{
+	m_isSelected = !m_isSelected;
+}
+
 GameAIDemos::BaseEntityState* GameAIDemos::Entity::getState()
 {
 	return m_state;
