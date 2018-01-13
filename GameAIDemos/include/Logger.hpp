@@ -47,41 +47,6 @@ namespace GameAIDemos
 			/// </para>
 			/// </summary>
 			struct tm m_timeInfo;
-			/// <summary>
-			/// <para> Arithmetic type capable of representing times. </para>
-			/// <para> time() returns the current time of the system as time
-			/// since epoch. The argument for this function can be a pointer
-			/// to a std::time_t object to store the time, or a null pointer.
-			/// </para>
-			/// <para> See also:
-			/// <list type="bullet">
-			/// <item> http://en.cppreference.com/w/cpp/chrono/c/time_t </item>
-			/// <item> http://en.cppreference.com/w/cpp/chrono/c/time </item>
-			/// </list>
-			/// </para>
-			/// </summary>
-			std::time_t m_timeT = std::time(nullptr);
-			/// <summary>
-			/// <para> localtime() converts a given time since epoch into
-			/// calendar time, expressed in local time, in the struct tm
-			/// format. The result is stored in a struct tm. </para>
-			/// <para> localtime_s() is Microsoft's thread-safe version of this
-			/// function. Its first argument is a pointer to the time structure
-			/// to store the result in. The second argument is a pointer to the
-			/// time since epoch time_t to be used. </para>
-			/// <para> See also:
-			/// <list type="bullet">
-			/// <item>
-			/// https://msdn.microsoft.com/en-us/library/a442x3ye(v=vs.140).aspx
-			/// </item>
-			/// </list>
-			/// </para>
-			/// </summary>
-			/// <seealso cref="m_timeInfo" />
-			/// <seealso cref="m_timeT" />
-			// TODO: Note localtime_s() can be called in the constructor and
-			// its return value does not need to be stored here.
-			errno_t m_localtime = localtime_s(&m_timeInfo, &m_timeT);
 	};
 }
 
