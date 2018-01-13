@@ -78,6 +78,22 @@ namespace GameAIDemos
 			void draw() override;
 
 			/// <summary>
+			/// TODO
+			/// </summary>
+			///
+			/// <param name="health">
+			/// TODO
+			/// </param>
+			void setHealth(int health);
+			/// <summary>
+			/// TODO
+			/// </summary>
+			///
+			/// <returns>
+			/// TODO
+			/// </returns>
+			int getHealth();
+			/// <summary>
 			/// Sets the entity's speed.
 			/// </summary>
 			///
@@ -187,7 +203,7 @@ namespace GameAIDemos
 			/// <summary>
 			/// A boolean specifying if the live entity is dead.
 			/// </summary>
-			bool m_dead;
+			bool m_dead = false;
 			/// <summary>
 			/// A SFML Vector2f containing the entity's velocity.
 			/// </summary>

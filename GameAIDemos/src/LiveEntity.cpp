@@ -1,4 +1,8 @@
 #include "../include/LiveEntity.hpp"
+#include "../include/AttackEntityState.hpp"
+#include "../include/DefendEntityState.hpp"
+#include "../include/DeadEntityState.hpp"
+#include "../include/IdleEntityState.hpp"
 #include <sstream>
 
 /// <summary>
@@ -11,7 +15,7 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	m_logger.log("DEBUG", "Initializing a live entity.");
 	// setSpriteColor(sf::Color::Red);
 	std::ostringstream entityInfoSS;
-	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
+	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 }
 
@@ -23,7 +27,25 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 
 void GameAIDemos::LiveEntity::handleEvents(sf::Event sfEvent)
 {
-	// TODO
+	// TODO expand this
+
+	if (sfEvent.type == sf::Event::KeyPressed && m_isSelected)
+	{
+		switch (sfEvent.key.code)
+		{
+			case sf::Keyboard::D:
+				setState(new DefendEntityState());
+				break;
+			case sf::Keyboard::A:
+				setState(new AttackEntityState());
+				break;
+			case sf::Keyboard::I:
+				setState(new IdleEntityState());
+				break;
+			default:
+				break;
+		}
+	}
 }
 
 void GameAIDemos::LiveEntity::update(float deltaTime)
@@ -44,13 +66,31 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 	m_infoPanel.setPanelPosition(m_infoPanel.getPanelPosition() + m_velocity);
 	// Update the text in the InfoPanel
 	std::ostringstream entityInfoSS;
-	entityInfoSS << "State: Idle\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
+	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
+
+	m_state->update();
+	if (m_health <= 0 && !m_dead)
+	{
+		setDead(true);
+		// TODO Could be a part of setDead()
+		setState(new DeadEntityState());
+	}
 }
 
 void GameAIDemos::LiveEntity::draw()
 {
 	// TODO
+}
+
+void GameAIDemos::LiveEntity::setHealth(int health)
+{
+	m_health = health;
+}
+
+int GameAIDemos::LiveEntity::getHealth()
+{
+	return m_health;
 }
 
 void GameAIDemos::LiveEntity::setSpeed(float speed)

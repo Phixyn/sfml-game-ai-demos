@@ -1,5 +1,7 @@
 #include "../include/Game.hpp"
 #include "../include/LevelScene.hpp"
+#include "../include/DefendEntityState.hpp"
+#include "../include/AttackEntityState.hpp"
 
 /// <summary>
 /// Entry point for the game.
@@ -13,15 +15,17 @@ int main()
 	const std::string BACKGROUND_IMAGE = "assets/background.png";
 	const std::string ENTITY_TEXTURE = "assets/boid.png";
 
-	// TODO temporary placeholder entities for testing
-	GameAIDemos::LiveEntity tempEntity = GameAIDemos::LiveEntity(100, sf::Vector2f(100.f, 100.f), sf::Vector2f(10.f, 10.f));
+	// Placeholder entities for testing / demo
+	GameAIDemos::LiveEntity tempEntity = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(10.f, 150.f));
 	tempEntity.setTexture(ENTITY_TEXTURE);
-	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(150.f, 150.f));
+	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(150.f, 150.f));
 	tempEntity2.setTexture(ENTITY_TEXTURE);
 	tempEntity2.setVelocity(sf::Vector2f(0.25f, 0.0f));
-	GameAIDemos::LiveEntity tempEntity3 = GameAIDemos::LiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(250.f, 250.f));
+	tempEntity2.setState(new GameAIDemos::DefendEntityState());
+	GameAIDemos::LiveEntity tempEntity3 = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(250.f, 250.f));
 	tempEntity3.setTexture(ENTITY_TEXTURE);
 	tempEntity3.setVelocity(sf::Vector2f(0.25f, 0.0f));
+	tempEntity3.setState(new GameAIDemos::AttackEntityState(&tempEntity2));
 
 	// Create game and level scene instances
 	GameAIDemos::Game game(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
