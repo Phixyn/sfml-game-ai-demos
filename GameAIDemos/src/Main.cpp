@@ -15,7 +15,7 @@ int main()
 	const std::string BACKGROUND_IMAGE = "assets/background.png";
 	const std::string ENTITY_TEXTURE = "assets/boid.png";
 
-	// TODO temporary placeholder entities for testing
+	// Placeholder entities for testing / demo
 	GameAIDemos::LiveEntity tempEntity = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(10.f, 150.f));
 	tempEntity.setTexture(ENTITY_TEXTURE);
 	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(150.f, 150.f));

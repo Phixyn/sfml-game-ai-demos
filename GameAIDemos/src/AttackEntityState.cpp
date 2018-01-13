@@ -18,10 +18,12 @@ void GameAIDemos::AttackEntityState::update()
 {
 	// m_target->setHealth(m_target->getHealth() - 1);
 	// std::cout << m_target->getHealth() << std::endl;
+	/*
 	if (m_target->isDead())
 	{
 		exit();
 	}
+	*/
 }
 
 void GameAIDemos::AttackEntityState::exit()
