@@ -1,5 +1,8 @@
 #include "../include/LiveEntity.hpp"
+#include "../include/AttackEntityState.hpp"
+#include "../include/DefendEntityState.hpp"
 #include "../include/DeadEntityState.hpp"
+#include "../include/IdleEntityState.hpp"
 #include <sstream>
 
 /// <summary>
@@ -24,7 +27,25 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 
 void GameAIDemos::LiveEntity::handleEvents(sf::Event sfEvent)
 {
-	// TODO
+	// TODO expand this
+
+	if (sfEvent.type == sf::Event::KeyPressed && m_isSelected)
+	{
+		switch (sfEvent.key.code)
+		{
+			case sf::Keyboard::D:
+				setState(new DefendEntityState());
+				break;
+			case sf::Keyboard::A:
+				setState(new AttackEntityState());
+				break;
+			case sf::Keyboard::I:
+				setState(new IdleEntityState());
+				break;
+			default:
+				break;
+		}
+	}
 }
 
 void GameAIDemos::LiveEntity::update(float deltaTime)
@@ -48,7 +69,6 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 
-	m_health--;
 	m_state->update();
 	if (m_health <= 0 && !m_dead)
 	{

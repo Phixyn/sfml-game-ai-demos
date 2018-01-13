@@ -34,9 +34,16 @@ void GameAIDemos::LevelScene::handleEvents(sf::Event sfEvent)
 				m_logger.log("DEBUG", oss.str());
 				// TODO we should handle the event in the entity instead of here?
 				// TODO Let the entity know that there was a mouse click on it, and let it decide what to do with it
-				// liveEntity.handleEvents();
+				// liveEntity.handleEvents(sfEvent);
 				liveEntity.toggleInfoPanel();
+				liveEntity.toggleSelected();
 			}
+		}
+		else
+		{
+			// TODO we should handle the event in the entity instead of here?
+			// TODO Let the entity know that there was a mouse click on it, and let it decide what to do with it
+			liveEntity.handleEvents(sfEvent);
 		}
 	}
 }
