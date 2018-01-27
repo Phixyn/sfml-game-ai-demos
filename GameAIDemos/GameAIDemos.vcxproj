@@ -152,11 +152,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\AttackEntityState.cpp" />
+    <ClCompile Include="src\AgentEntity.cpp" />
     <ClCompile Include="src\BaseEntityState.cpp" />
     <ClCompile Include="src\DeadEntityState.cpp" />
-    <ClCompile Include="src\DefendEntityState.cpp" />
     <ClCompile Include="src\Entity.cpp" />
+    <ClCompile Include="src\FleeEntityState.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\IdleEntityState.cpp" />
     <ClCompile Include="src\InfoPanel.cpp" />
@@ -164,21 +164,25 @@
     <ClCompile Include="src\LiveEntity.cpp" />
     <ClCompile Include="src\Logger.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\PlayerEntity.cpp" />
     <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\SeekEntityState.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AttackEntityState.hpp" />
+    <ClInclude Include="include\AgentEntity.hpp" />
     <ClInclude Include="include\BaseEntityState.hpp" />
     <ClInclude Include="include\DeadEntityState.hpp" />
-    <ClInclude Include="include\DefendEntityState.hpp" />
     <ClInclude Include="include\Entity.hpp" />
+    <ClInclude Include="include\FleeEntityState.hpp" />
     <ClInclude Include="include\IdleEntityState.hpp" />
     <ClInclude Include="include\InfoPanel.hpp" />
     <ClInclude Include="include\Game.hpp" />
     <ClInclude Include="include\LevelScene.hpp" />
     <ClInclude Include="include\LiveEntity.hpp" />
     <ClInclude Include="include\Logger.hpp" />
+    <ClInclude Include="include\PlayerEntity.hpp" />
     <ClInclude Include="include\Scene.hpp" />
+    <ClInclude Include="include\SeekEntityState.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

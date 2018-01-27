@@ -41,7 +41,8 @@ namespace GameAIDemos
 			void exit();
 
 			/// <summary>
-			/// Returns a pointer to a new state.
+			/// Implementation of the getNewState() virtual method for the
+			/// dead state. Returns a pointer to a new state.
 			/// </summary>
 			///
 			/// <returns>

@@ -2,7 +2,7 @@
 #include "../include/IdleEntityState.hpp"
 
 /// <summary>
-/// Initilizes the entity's <see cref="Collision">Collision</see> instance.
+/// Initilizes the entity's <see cref="Collision">Collision</see> object.
 /// </summary>
 GameAIDemos::Entity::Entity(sf::Vector2f size)
 //	, m_collision(m_rect)
@@ -11,7 +11,6 @@ GameAIDemos::Entity::Entity(sf::Vector2f size)
 	m_rectHeight = size.y;
 	m_logger.log("DEBUG", "Creating a new entity.");
 	m_rect = sf::RectangleShape(sf::Vector2f(m_rectWidth, m_rectHeight));
-	// IdleEntityState* idleState;
 	m_state = new IdleEntityState();
 }
 
@@ -75,6 +74,7 @@ void GameAIDemos::Entity::setSpriteColor(sf::Color color)
 
 void GameAIDemos::Entity::setPosition(sf::Vector2f &position)
 {
+	m_position = position;
 	m_sprite.setPosition(position);
 }
 
@@ -108,7 +108,7 @@ sf::Sprite GameAIDemos::Entity::getSprite()
 	return m_sprite;
 }
 
-GameAIDemos::InfoPanel GameAIDemos::Entity::getInfoPanel()
+GameAIDemos::InfoPanel& GameAIDemos::Entity::getInfoPanel()
 {
 	return m_infoPanel;
 }

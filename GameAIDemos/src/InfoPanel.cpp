@@ -22,7 +22,7 @@ GameAIDemos::InfoPanel::InfoPanel()
 	m_panelText.setString("State: Idle\nHealth: 100");
 
 	// Set up the panel's rectangle
-	m_panelRect = sf::RectangleShape(sf::Vector2f(150, 125));
+	m_panelRect = sf::RectangleShape(sf::Vector2f(150.0f, 125.0f));
 	m_panelRect.setFillColor(sf::Color::Transparent);
 	m_panelRect.setOutlineColor(sf::Color::Red);
 	m_panelRect.setOutlineThickness(2);
@@ -60,7 +60,7 @@ void GameAIDemos::InfoPanel::setTextString(std::string textString)
 	m_panelText.setString(m_panelTextString);
 }
 
-void GameAIDemos::InfoPanel::setPanelPosition(sf::Vector2f position)
+void GameAIDemos::InfoPanel::setPanelPosition(sf::Vector2f& position)
 {
 	m_panelPosition = position;
 	m_panelRect.setPosition(m_panelPosition);

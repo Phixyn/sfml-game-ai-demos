@@ -16,12 +16,13 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Default constructor.
+			/// Default constructor taking an argument for a reference to a
+			/// <see cref="Game">Game</see> object.
 			/// </summary>
 			///
 			/// <param name="game">
-			/// A pointer to an instance of the <see cref="Game">Game</see>
-			/// class.
+			/// A pointer to a <see cref="Game">Game</see> object, used to
+			/// access game properties and methods.
 			/// </param>
 			Scene(Game &game);
 
@@ -49,8 +50,8 @@ namespace GameAIDemos
 			virtual void draw() = 0;
 		protected:
 			/// <summary>
-			/// Pointer to an instance of the <see cref="Game">Game</see>
-			/// class.
+			/// Pointer to a <see cref="Game">Game</see> object, used to
+			/// access game properties and methods.
 			/// </summary>
 			Game *m_game_ptr;
 			/// <summary>

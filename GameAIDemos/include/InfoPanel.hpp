@@ -9,10 +9,10 @@ namespace GameAIDemos
 {
 	/// <summary>
 	/// A class for information panel UI elements. An info panel element in
-	/// the UI is a  simple rectangle with text displayed inside it. This
+	/// the UI is a simple rectangle with text displayed inside it. This
 	/// can be used to display game information, tooltips, HUD elements
 	/// and more. It may also be attached to entities to display their
-	/// vital information.
+	/// information, such as health and current state.
 	/// </summary>
 	class InfoPanel
 	{
@@ -87,7 +87,7 @@ namespace GameAIDemos
 			/// A SFML Vector containing the new position for this panel in the
 			/// game window.
 			/// </param>
-			void setPanelPosition(sf::Vector2f position);
+			void setPanelPosition(sf::Vector2f& position);
 		private:
 			/// <summary>
 			/// A string containing the text that will be displayed in this
@@ -100,25 +100,28 @@ namespace GameAIDemos
 			sf::Vector2f m_panelPosition;
 			/// <summary>
 			/// An offset in relation to the text's position within the panel's
-			/// rectangle. Effectively acts as a "padding" for the text.
+			/// rectangle. Effectively acts as a "padding" for the text inside
+			/// the rectangle.
 			/// </summary>
 			sf::Vector2f m_panelTextOffset;
 			/// <summary>
-			/// The position of the text in the panel.
+			/// The position of the text inside the panel.
 			/// </summary>
 			sf::Vector2f m_panelTextPosition;
 			/// <summary>
-			/// A SFML Font instance for the panel's text font.
+			/// A SFML Font object for the panel's text font.
 			/// </summary>
 			sf::Font m_panelFont;
 			/// <summary>
-			/// A SFML Text instance for the panel's text.
+			/// A SFML Text object for the panel's text.
 			/// </summary>
 			sf::Text m_panelText;
 			/// <summary>
-			/// A SFML RectangleShape instance for the panel's outline.
+			/// A SFML RectangleShape object for the panel's outline and
+			/// background.
 			/// </summary>
 			sf::RectangleShape m_panelRect;
+
 			/// <summary>
 			/// Instance of <see cref="Logger">Logger</see> for logging.
 			/// </summary>

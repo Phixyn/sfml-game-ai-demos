@@ -6,8 +6,9 @@
 namespace GameAIDemos
 {
 	/// <summary>
-	/// Base state class for entities. A state defines an entity's current
-	/// actions in the game.
+	/// Base state class for entities in the game. A state defines an entity's
+	/// current actions in the game. For example, an entity can be fleeing from
+	/// another entity, or seeking an entity.
 	/// </summary>
 	class BaseEntityState
 	{
@@ -20,6 +21,10 @@ namespace GameAIDemos
 			/// Overloaded constructor which takes a string parameter for the
 			/// name of the state.
 			/// </summary>
+			///
+			/// <param name="stateName">
+			/// The name of this state.
+			/// </param>
 			BaseEntityState(std::string stateName);
 			/// <summary>
 			/// Default destructor.
@@ -56,7 +61,6 @@ namespace GameAIDemos
 			/// A string containing the state's name.
 			/// </returns>
 			std::string getStateName();
-
 		private:
 			/// <summary>
 			/// The name of the state.
