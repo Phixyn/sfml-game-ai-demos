@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['changescene',['changeScene',['../class_game_a_i_demos_1_1_game.html#a918ac3c7cd697dbe88010f678b09fb0a',1,'GameAIDemos::Game']]],
-  ['clear',['clear',['../class_game_a_i_demos_1_1_game.html#a63e862ab1096186aa1dcb5b9628987e9',1,'GameAIDemos::Game']]]
+  ['baseentitystate',['BaseEntityState',['../class_game_a_i_demos_1_1_base_entity_state.html#aafb6fb52df58b4479c08f82158702cd7',1,'GameAIDemos::BaseEntityState::BaseEntityState()'],['../class_game_a_i_demos_1_1_base_entity_state.html#aceb741e7643c587ff85dbeb3c8a4de70',1,'GameAIDemos::BaseEntityState::BaseEntityState(std::string stateName)']]]
 ];

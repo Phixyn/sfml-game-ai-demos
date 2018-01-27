@@ -7,7 +7,7 @@ var class_game_a_i_demos_1_1_info_panel =
     [ "getRect", "class_game_a_i_demos_1_1_info_panel.html#a7c51960acc47a4c985a976ea751819fd", null ],
     [ "getSFText", "class_game_a_i_demos_1_1_info_panel.html#a359d38102ae8722e807d68e842831800", null ],
     [ "getTextString", "class_game_a_i_demos_1_1_info_panel.html#a2692044ee9805ae00e8d058e7f294a36", null ],
-    [ "setPanelPosition", "class_game_a_i_demos_1_1_info_panel.html#aa57b1499658a77db024e62910ba8061b", null ],
+    [ "setPanelPosition", "class_game_a_i_demos_1_1_info_panel.html#a55e75744f727275b75e5828794fc8525", null ],
     [ "setTextString", "class_game_a_i_demos_1_1_info_panel.html#a0c84791080e490e326f83518a5b40699", null ],
     [ "m_logger", "class_game_a_i_demos_1_1_info_panel.html#ae70edbc555b3a3929d3cf3c225e19a41", null ],
     [ "m_panelFont", "class_game_a_i_demos_1_1_info_panel.html#af1941758ff1bb5d71b3f63b7e2321183", null ],

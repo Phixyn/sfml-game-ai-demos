@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -83,6 +83,14 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <div class="contents">
 &#160;
 
+<h3><a id="index_e"></a>- e -</h3><ul>
+<li>ENTITY_TEXTURE
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#a347e46cbce8c7ca7b566f2b43bf98b24">GameAIDemos::AgentEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_player_entity.html#a5aa368f61af5f08b04d242bb17f0cf89">GameAIDemos::PlayerEntity</a>
+</li>
+</ul>
+
+
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>m_aggressive
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a576728abc90e9cc0e09133bebfe78293">GameAIDemos::LiveEntity</a>
@@ -126,20 +134,23 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_infoPanel
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a3cb7cbbf4a99c50464d9bcd26793b866">GameAIDemos::Entity</a>
 </li>
+<li>m_isSelected
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a9ec811c0693973a16bd008e5e396ad75">GameAIDemos::Entity</a>
+</li>
 <li>m_levelTextures
 : <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a15837ec8461773ddcf499fd9ed975268">GameAIDemos::LevelScene</a>
 </li>
 <li>m_liveEntities
-: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a4ce65dcf740c6373d5cdaeb717de0d69">GameAIDemos::LevelScene</a>
-</li>
-<li>m_localtime
-: <a class="el" href="class_game_a_i_demos_1_1_logger.html#ac3456197a8cec83d93ac052d3cf69b65">GameAIDemos::Logger</a>
+: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ac577dbb8e26b5ace1e397507cb4c801a">GameAIDemos::LevelScene</a>
 </li>
 <li>m_logger
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a93af1f90613e2a696de25302fb27e40b">GameAIDemos::Entity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_game.html#ab7808372c5a1edf6e070f76bda07fbff">GameAIDemos::Game</a>
 , <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#ae70edbc555b3a3929d3cf3c225e19a41">GameAIDemos::InfoPanel</a>
 , <a class="el" href="class_game_a_i_demos_1_1_scene.html#ad396212d0f45cdf67065622360a745bd">GameAIDemos::Scene</a>
+</li>
+<li>m_maxSpeed
+: <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a1082bbfa94f9d9edf404e24d87861640">GameAIDemos::LiveEntity</a>
 </li>
 <li>m_panelFont
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#af1941758ff1bb5d71b3f63b7e2321183">GameAIDemos::InfoPanel</a>
@@ -162,6 +173,14 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_panelTextString
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#aea99f3330b2b3a4786f0af6462145949">GameAIDemos::InfoPanel</a>
 </li>
+<li>m_playerEntity
+: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a519a2c021bd784f4f4f53f09869822dc">GameAIDemos::LevelScene</a>
+</li>
+<li>m_playerPtr
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#af1e41acd1d7a6d73bf9e9ba51b5f631c">GameAIDemos::AgentEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#ab7136ee7970bf9e9641ae936d82e68b1">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a087eeb50ff1819118179f555abc3b75f">GameAIDemos::SeekEntityState</a>
+</li>
 <li>m_position
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a07ae9a88d2d509dc657d1ad73a09ed63">GameAIDemos::Entity</a>
 </li>
@@ -183,11 +202,22 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_showTimestamps
 : <a class="el" href="class_game_a_i_demos_1_1_logger.html#a2e4c7dfd8481f6980a36a7997d30d0e7">GameAIDemos::Logger</a>
 </li>
+<li>m_sourcePtr
+: <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a7b19e1727cec9f31a310a8541d24eac4">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a4dc52a6a806e8c3647942429e321e360">GameAIDemos::IdleEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#aab1b4ee04a542448dc23ae3689e0a6db">GameAIDemos::SeekEntityState</a>
+</li>
 <li>m_speed
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a5d6af183c0b729777b07c6bcec242429">GameAIDemos::LiveEntity</a>
 </li>
 <li>m_sprite
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a815e4227ea621958144d1a0186299750">GameAIDemos::Entity</a>
+</li>
+<li>m_state
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a96f0d195fb12cd932fe2b607a7e62c74">GameAIDemos::Entity</a>
+</li>
+<li>m_stateName
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#a4a6a5a54dbd352bf959d9a17a0a8d8d3">GameAIDemos::BaseEntityState</a>
 </li>
 <li>m_texture
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a9e51c2752610e8ee7166dc8d3e22af04">GameAIDemos::Entity</a>
@@ -197,9 +227,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_timeInfo
 : <a class="el" href="class_game_a_i_demos_1_1_logger.html#a30264d4ec76840cc8dc3555b1220e5da">GameAIDemos::Logger</a>
-</li>
-<li>m_timeT
-: <a class="el" href="class_game_a_i_demos_1_1_logger.html#adcb9b0b6d5198d0389932988d3f35b0e">GameAIDemos::Logger</a>
 </li>
 <li>m_title
 : <a class="el" href="class_game_a_i_demos_1_1_game.html#a5282a44c7a9339fa3e4572f6bee99d9a">GameAIDemos::Game</a>

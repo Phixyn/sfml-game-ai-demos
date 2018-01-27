@@ -4,6 +4,8 @@ var class_game_a_i_demos_1_1_live_entity =
     [ "LiveEntity", "class_game_a_i_demos_1_1_live_entity.html#a9d33feb99d977600318eaf3769c7ff5a", null ],
     [ "draw", "class_game_a_i_demos_1_1_live_entity.html#aad046af014ec8d2b34c4483b81b386e7", null ],
     [ "getDirection", "class_game_a_i_demos_1_1_live_entity.html#accf3ff2bf6049c2be8f27a72de8a28ff", null ],
+    [ "getHealth", "class_game_a_i_demos_1_1_live_entity.html#ad1846e06938cf94ffba14199a9809eee", null ],
+    [ "getMaxSpeed", "class_game_a_i_demos_1_1_live_entity.html#a0fa9f9331a4cef96c45c53a8dd666e4d", null ],
     [ "getSpeed", "class_game_a_i_demos_1_1_live_entity.html#a0fc1392f56615571d0e5a771042578bc", null ],
     [ "getVelocity", "class_game_a_i_demos_1_1_live_entity.html#a113738fdb1439516c86602dc3e1c6314", null ],
     [ "handleEvents", "class_game_a_i_demos_1_1_live_entity.html#a4e629edfe69a7352e7bf07420c8448e8", null ],
@@ -12,6 +14,8 @@ var class_game_a_i_demos_1_1_live_entity =
     [ "onCollision", "class_game_a_i_demos_1_1_live_entity.html#ad23da80a5595988da9f785baae159699", null ],
     [ "setDead", "class_game_a_i_demos_1_1_live_entity.html#a00c7e5a0d2616971b2520a845e6fd44f", null ],
     [ "setDirection", "class_game_a_i_demos_1_1_live_entity.html#a5881d5a21e26cb4852a2ffdf7c83b6f8", null ],
+    [ "setHealth", "class_game_a_i_demos_1_1_live_entity.html#a57860c61c856597f97711cf5d733c7e4", null ],
+    [ "setMaxSpeed", "class_game_a_i_demos_1_1_live_entity.html#a42778ab739d6bb0ace937f9e627b1b46", null ],
     [ "setSpeed", "class_game_a_i_demos_1_1_live_entity.html#a1a222bd442518383efd66272ba1ce493", null ],
     [ "setVelocity", "class_game_a_i_demos_1_1_live_entity.html#a26dc8c4cc67490565dc024a29a04a888", null ],
     [ "update", "class_game_a_i_demos_1_1_live_entity.html#aed20bb214cdcf4767647251a101b05ff", null ],
@@ -19,6 +23,7 @@ var class_game_a_i_demos_1_1_live_entity =
     [ "m_dead", "class_game_a_i_demos_1_1_live_entity.html#aea02ed01923ac93aa803585109dd2aa2", null ],
     [ "m_direction", "class_game_a_i_demos_1_1_live_entity.html#abf3764ac07fb3a6b8189bf6e54a7abea", null ],
     [ "m_health", "class_game_a_i_demos_1_1_live_entity.html#ab7c7bef185ac360034e123ab03744c33", null ],
+    [ "m_maxSpeed", "class_game_a_i_demos_1_1_live_entity.html#a1082bbfa94f9d9edf404e24d87861640", null ],
     [ "m_speed", "class_game_a_i_demos_1_1_live_entity.html#a5d6af183c0b729777b07c6bcec242429", null ],
     [ "m_velocity", "class_game_a_i_demos_1_1_live_entity.html#a029cf4410bcfcc6ce4c4df0c7ce7a536", null ]
 ];

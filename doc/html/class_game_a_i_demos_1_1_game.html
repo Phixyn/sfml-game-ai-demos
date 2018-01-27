@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -136,7 +136,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a1c4b4b63696518744fd00d61589b4157"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML View instance for the game window.  <a href="#a1c4b4b63696518744fd00d61589b4157">More...</a><br /></td></tr>
 <tr class="separator:a1c4b4b63696518744fd00d61589b4157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eda70620a699a1ce36f52c2ede94d45"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; sf::RenderWindow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html#a6eda70620a699a1ce36f52c2ede94d45">m_window</a></td></tr>
-<tr class="memdesc:a6eda70620a699a1ce36f52c2ede94d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique pointer to SFML RenderWindow instance. TODO this and View can be made private maybe?  <a href="#a6eda70620a699a1ce36f52c2ede94d45">More...</a><br /></td></tr>
+<tr class="memdesc:a6eda70620a699a1ce36f52c2ede94d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique pointer to a SFML RenderWindow object. TODO this and m_view can be made private maybe?  <a href="#a6eda70620a699a1ce36f52c2ede94d45">More...</a><br /></td></tr>
 <tr class="separator:a6eda70620a699a1ce36f52c2ede94d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -244,7 +244,7 @@ Private Attributes</h2></td></tr>
 <p>Adds a pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> to the game's scene pointer queue. std::move() is used as to not push a copy of the pointer, but rather the pointer itself. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a>. </td></tr>
+    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -272,7 +272,7 @@ Private Attributes</h2></td></tr>
 <p>Changes to a new scene in the game by removing the top scene and adding a new scene to the queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html" title="A class for scenes and scene management. Scenes can be anything from levels to main menu screens...">Scene</a>. </td></tr>
+    <tr><td class="paramname">scene</td><td>A unique pointer to a <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,7 +318,7 @@ Private Attributes</h2></td></tr>
 <p>Draws a SFML Drawable object on the window. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">drawable</td><td>Reference to the SFML Drawable instance to be drawn on the window. </td></tr>
+    <tr><td class="paramname">drawable</td><td>Reference to the SFML Drawable object to be drawn on the window. </td></tr>
   </table>
   </dd>
 </dl>
@@ -685,13 +685,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unique pointer to SFML RenderWindow instance. TODO this and View can be made private maybe? </p>
+<p>Unique pointer to a SFML RenderWindow object. TODO this and m_view can be made private maybe? </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/include/<a class="el" href="_game_8hpp_source.html">Game.hpp</a></li>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/src/Game.cpp</li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/include/<a class="el" href="_game_8hpp_source.html">Game.hpp</a></li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/src/Game.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
