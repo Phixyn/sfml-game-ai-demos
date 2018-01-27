@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -106,9 +106,9 @@ Inheritance diagram for GameAIDemos::LevelScene:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9fa14c50007a555455e91b5ac029421"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ae9fa14c50007a555455e91b5ac029421">LevelScene</a> (<a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;game, std::string backgroundImagePath)</td></tr>
-<tr class="memdesc:ae9fa14c50007a555455e91b5ac029421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ae9fa14c50007a555455e91b5ac029421">More...</a><br /></td></tr>
-<tr class="separator:ae9fa14c50007a555455e91b5ac029421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14730323b380ed4cd6a9ff8f5e743e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#aa14730323b380ed4cd6a9ff8f5e743e4">LevelScene</a> (<a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;game, <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> &amp;player, std::string backgroundImagePath)</td></tr>
+<tr class="memdesc:aa14730323b380ed4cd6a9ff8f5e743e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor taking arguments for a reference to <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> and <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> objects, as well as a string containing the file path for a background image to be used in the level scene.  <a href="#aa14730323b380ed4cd6a9ff8f5e743e4">More...</a><br /></td></tr>
+<tr class="separator:aa14730323b380ed4cd6a9ff8f5e743e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5af32bdb8ba8a4c2feab1bc4788096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a9f5af32bdb8ba8a4c2feab1bc4788096">handleEvents</a> (sf::Event sfEvent) override</td></tr>
 <tr class="memdesc:a9f5af32bdb8ba8a4c2feab1bc4788096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles events specific to the level scene.  <a href="#a9f5af32bdb8ba8a4c2feab1bc4788096">More...</a><br /></td></tr>
 <tr class="separator:a9f5af32bdb8ba8a4c2feab1bc4788096"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,18 +121,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a56445a6d6e83738b645d63f7019da7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a56445a6d6e83738b645d63f7019da7a7">setBackgroundImage</a> (std::string imageFilePath)</td></tr>
 <tr class="memdesc:a56445a6d6e83738b645d63f7019da7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scene's background image.  <a href="#a56445a6d6e83738b645d63f7019da7a7">More...</a><br /></td></tr>
 <tr class="separator:a56445a6d6e83738b645d63f7019da7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc41b2955b56de3b273d04783c6ac2b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#acc41b2955b56de3b273d04783c6ac2b9">spawnLiveEntity</a> (<a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> entity)</td></tr>
-<tr class="memdesc:acc41b2955b56de3b273d04783c6ac2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene.  <a href="#acc41b2955b56de3b273d04783c6ac2b9">More...</a><br /></td></tr>
-<tr class="separator:acc41b2955b56de3b273d04783c6ac2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8a5558afd7592fdbdf7b8292c725a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#afc8a5558afd7592fdbdf7b8292c725a3">spawnLiveEntity</a> (<a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> &amp;entity)</td></tr>
+<tr class="memdesc:afc8a5558afd7592fdbdf7b8292c725a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene and adds it to the <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ac577dbb8e26b5ace1e397507cb4c801a">m_liveEntities</a> vector.  <a href="#afc8a5558afd7592fdbdf7b8292c725a3">More...</a><br /></td></tr>
+<tr class="separator:afc8a5558afd7592fdbdf7b8292c725a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a695c3c79ed9ae2ebb1e5c0ba1bab57b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a695c3c79ed9ae2ebb1e5c0ba1bab57b8">spawnLiveEntity</a> (int health, sf::Vector2f size, sf::Vector2f position)</td></tr>
-<tr class="memdesc:a695c3c79ed9ae2ebb1e5c0ba1bab57b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene.  <a href="#a695c3c79ed9ae2ebb1e5c0ba1bab57b8">More...</a><br /></td></tr>
+<tr class="memdesc:a695c3c79ed9ae2ebb1e5c0ba1bab57b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene and adds it to the m_liveEntities vector.  <a href="#a695c3c79ed9ae2ebb1e5c0ba1bab57b8">More...</a><br /></td></tr>
 <tr class="separator:a695c3c79ed9ae2ebb1e5c0ba1bab57b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e2d864f4c13d0379f554e41dd5d73a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a81e2d864f4c13d0379f554e41dd5d73a">spawnLiveEntity</a> (int health, sf::Vector2f size, sf::Vector2f position, float speed)</td></tr>
-<tr class="memdesc:a81e2d864f4c13d0379f554e41dd5d73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene.  <a href="#a81e2d864f4c13d0379f554e41dd5d73a">More...</a><br /></td></tr>
+<tr class="memdesc:a81e2d864f4c13d0379f554e41dd5d73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new live entity in the level scene and adds it to the m_liveEntities vector.  <a href="#a81e2d864f4c13d0379f554e41dd5d73a">More...</a><br /></td></tr>
 <tr class="separator:a81e2d864f4c13d0379f554e41dd5d73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_a_i_demos_1_1_scene"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_a_i_demos_1_1_scene')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game_a_i_demos_1_1_scene.html">GameAIDemos::Scene</a></td></tr>
 <tr class="memitem:a90c71af56347a4ab94efb3c1a46f8f89 inherit pub_methods_class_game_a_i_demos_1_1_scene"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">Scene</a> (<a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;game)</td></tr>
-<tr class="memdesc:a90c71af56347a4ab94efb3c1a46f8f89 inherit pub_methods_class_game_a_i_demos_1_1_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">More...</a><br /></td></tr>
+<tr class="memdesc:a90c71af56347a4ab94efb3c1a46f8f89 inherit pub_methods_class_game_a_i_demos_1_1_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor taking an argument for a reference to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object.  <a href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">More...</a><br /></td></tr>
 <tr class="separator:a90c71af56347a4ab94efb3c1a46f8f89 inherit pub_methods_class_game_a_i_demos_1_1_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -140,9 +140,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a56acc0e6422f1a09642e66dd3adba1ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a56acc0e6422f1a09642e66dd3adba1ab">m_textureSize</a> = 48</td></tr>
 <tr class="memdesc:a56acc0e6422f1a09642e66dd3adba1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size (in pixels) of the textures used by sprites in the scene.  <a href="#a56acc0e6422f1a09642e66dd3adba1ab">More...</a><br /></td></tr>
 <tr class="separator:a56acc0e6422f1a09642e66dd3adba1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce65dcf740c6373d5cdaeb717de0d69"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">GameAIDemos::LiveEntity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a4ce65dcf740c6373d5cdaeb717de0d69">m_liveEntities</a></td></tr>
-<tr class="memdesc:a4ce65dcf740c6373d5cdaeb717de0d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector containing <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> objects to be used in the scene.  <a href="#a4ce65dcf740c6373d5cdaeb717de0d69">More...</a><br /></td></tr>
-<tr class="separator:a4ce65dcf740c6373d5cdaeb717de0d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac577dbb8e26b5ace1e397507cb4c801a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">GameAIDemos::LiveEntity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ac577dbb8e26b5ace1e397507cb4c801a">m_liveEntities</a></td></tr>
+<tr class="memdesc:ac577dbb8e26b5ace1e397507cb4c801a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector containing <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> objects present in the scene.  <a href="#ac577dbb8e26b5ace1e397507cb4c801a">More...</a><br /></td></tr>
+<tr class="separator:ac577dbb8e26b5ace1e397507cb4c801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15837ec8461773ddcf499fd9ed975268"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, sf::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a15837ec8461773ddcf499fd9ed975268">m_levelTextures</a></td></tr>
 <tr class="memdesc:a15837ec8461773ddcf499fd9ed975268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map containing entries with an ID of a texture and an instance of SFML Texture.  <a href="#a15837ec8461773ddcf499fd9ed975268">More...</a><br /></td></tr>
 <tr class="separator:a15837ec8461773ddcf499fd9ed975268"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,12 +152,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:acb4063dabbb58cd43bdc59fa68b3dab6"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#acb4063dabbb58cd43bdc59fa68b3dab6">m_backgroundSprite</a></td></tr>
 <tr class="memdesc:acb4063dabbb58cd43bdc59fa68b3dab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML Sprite object for the level's background sprite.  <a href="#acb4063dabbb58cd43bdc59fa68b3dab6">More...</a><br /></td></tr>
 <tr class="separator:acb4063dabbb58cd43bdc59fa68b3dab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519a2c021bd784f4f4f53f09869822dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a519a2c021bd784f4f4f53f09869822dc">m_playerEntity</a></td></tr>
+<tr class="memdesc:a519a2c021bd784f4f4f53f09869822dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> object, necessary to access information about the player (such as its position), in order to draw or update them in the scene.  <a href="#a519a2c021bd784f4f4f53f09869822dc">More...</a><br /></td></tr>
+<tr class="separator:a519a2c021bd784f4f4f53f09869822dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_game_a_i_demos_1_1_scene"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_game_a_i_demos_1_1_scene')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_game_a_i_demos_1_1_scene.html">GameAIDemos::Scene</a></td></tr>
 <tr class="memitem:adf9fab83a0b05c1769c56b001b309a86 inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#adf9fab83a0b05c1769c56b001b309a86">m_game_ptr</a></td></tr>
-<tr class="memdesc:adf9fab83a0b05c1769c56b001b309a86 inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to an instance of the <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> class.  <a href="class_game_a_i_demos_1_1_scene.html#adf9fab83a0b05c1769c56b001b309a86">More...</a><br /></td></tr>
+<tr class="memdesc:adf9fab83a0b05c1769c56b001b309a86 inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object, used to access game properties and methods.  <a href="class_game_a_i_demos_1_1_scene.html#adf9fab83a0b05c1769c56b001b309a86">More...</a><br /></td></tr>
 <tr class="separator:adf9fab83a0b05c1769c56b001b309a86 inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad396212d0f45cdf67065622360a745bd inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#ad396212d0f45cdf67065622360a745bd">m_logger</a></td></tr>
 <tr class="memdesc:ad396212d0f45cdf67065622360a745bd inherit pro_attribs_class_game_a_i_demos_1_1_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="class_game_a_i_demos_1_1_scene.html#ad396212d0f45cdf67065622360a745bd">More...</a><br /></td></tr>
@@ -166,8 +169,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Subclass of <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> for game AI demo levels. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae9fa14c50007a555455e91b5ac029421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9fa14c50007a555455e91b5ac029421">&#9670;&nbsp;</a></span>LevelScene()</h2>
+<a id="aa14730323b380ed4cd6a9ff8f5e743e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14730323b380ed4cd6a9ff8f5e743e4">&#9670;&nbsp;</a></span>LevelScene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +180,12 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;&#160;</td>
           <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -192,10 +201,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor. </p>
+<p>Default constructor taking arguments for a reference to <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> and <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> objects, as well as a string containing the file path for a background image to be used in the level scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">game</td><td>A pointer to an instance of the <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> class. </td></tr>
+    <tr><td class="paramname">game</td><td>A pointer to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object, used to access game properties and methods. </td></tr>
+    <tr><td class="paramname">player</td><td>A pointer to a <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> object, used to access player properties and methods. </td></tr>
     <tr><td class="paramname">backgroundImagePath</td><td>A string containing the path for the background image file. </td></tr>
   </table>
   </dd>
@@ -262,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Handles events specific to the level scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sfEvent</td><td>A SFML event (e.g. generated user input) instance. </td></tr>
+    <tr><td class="paramname">sfEvent</td><td>A SFML event (e.g. generated user input) object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,8 +308,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acc41b2955b56de3b273d04783c6ac2b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc41b2955b56de3b273d04783c6ac2b9">&#9670;&nbsp;</a></span>spawnLiveEntity() <span class="overload">[1/3]</span></h2>
+<a id="afc8a5558afd7592fdbdf7b8292c725a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8a5558afd7592fdbdf7b8292c725a3">&#9670;&nbsp;</a></span>spawnLiveEntity() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,14 +317,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void GameAIDemos::LevelScene::spawnLiveEntity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> &amp;&#160;</td>
           <td class="paramname"><em>entity</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Spawns a new live entity in the level scene. </p>
+<p>Spawns a new live entity in the level scene and adds it to the <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ac577dbb8e26b5ace1e397507cb4c801a">m_liveEntities</a> vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">entity</td><td>Instance of <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> to be added to the level scene. </td></tr>
@@ -357,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Spawns a new live entity in the level scene. </p>
+<p>Spawns a new live entity in the level scene and adds it to the m_liveEntities vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">health</td><td>The health points of the live entity. </td></tr>
@@ -408,7 +418,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Spawns a new live entity in the level scene. </p>
+<p>Spawns a new live entity in the level scene and adds it to the m_liveEntities vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">health</td><td>The health points of the live entity. </td></tr>
@@ -533,8 +543,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ce65dcf740c6373d5cdaeb717de0d69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ce65dcf740c6373d5cdaeb717de0d69">&#9670;&nbsp;</a></span>m_liveEntities</h2>
+<a id="ac577dbb8e26b5ace1e397507cb4c801a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac577dbb8e26b5ace1e397507cb4c801a">&#9670;&nbsp;</a></span>m_liveEntities</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +553,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_game_a_i_demos_1_1_live_entity.html">GameAIDemos::LiveEntity</a>&gt; GameAIDemos::LevelScene::m_liveEntities</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_game_a_i_demos_1_1_live_entity.html">GameAIDemos::LiveEntity</a>*&gt; GameAIDemos::LevelScene::m_liveEntities</td>
         </tr>
       </table>
   </td>
@@ -553,8 +563,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Vector containing <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> objects to be used in the scene. </p>
+<p>Vector containing <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> objects present in the scene. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_entity.html" title="Class for game entities such as items, NPCs, tiles and the player character. ">Entity</a>, <a class="el" href="class_game_a_i_demos_1_1_live_entity.html" title="Subclass of Entity for live entities. Examples of live entities are NPCs, monsters and a player chara...">LiveEntity</a></dd></dl>
+
+</div>
+</div>
+<a id="a519a2c021bd784f4f4f53f09869822dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519a2c021bd784f4f4f53f09869822dc">&#9670;&nbsp;</a></span>m_playerEntity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a>* GameAIDemos::LevelScene::m_playerEntity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A pointer to a <a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a> object, necessary to access information about the player (such as its position), in order to draw or update them in the scene. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_player_entity.html" title="Subclass of LiveEntity for the player character entity. ">PlayerEntity</a></dd></dl>
 
 </div>
 </div>
@@ -583,8 +618,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/include/<a class="el" href="_level_scene_8hpp_source.html">LevelScene.hpp</a></li>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/src/LevelScene.cpp</li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/include/<a class="el" href="_level_scene_8hpp_source.html">LevelScene.hpp</a></li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/src/LevelScene.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

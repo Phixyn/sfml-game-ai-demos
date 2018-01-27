@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('class_game_a_i_demos_1_1_info_panel.ht
 </div><!--header-->
 <div class="contents">
 
-<p>A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their vital information.  
+<p>A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their information, such as health and current state.  
  <a href="class_game_a_i_demos_1_1_info_panel.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_info_panel_8hpp_source.html">InfoPanel.hpp</a>&gt;</code></p>
@@ -121,9 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c84791080e490e326f83518a5b40699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a0c84791080e490e326f83518a5b40699">setTextString</a> (std::string textString)</td></tr>
 <tr class="memdesc:a0c84791080e490e326f83518a5b40699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the text displayed inside this panel.  <a href="#a0c84791080e490e326f83518a5b40699">More...</a><br /></td></tr>
 <tr class="separator:a0c84791080e490e326f83518a5b40699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa57b1499658a77db024e62910ba8061b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#aa57b1499658a77db024e62910ba8061b">setPanelPosition</a> (sf::Vector2f position)</td></tr>
-<tr class="memdesc:aa57b1499658a77db024e62910ba8061b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this panel's position in the game window.  <a href="#aa57b1499658a77db024e62910ba8061b">More...</a><br /></td></tr>
-<tr class="separator:aa57b1499658a77db024e62910ba8061b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e75744f727275b75e5828794fc8525"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a55e75744f727275b75e5828794fc8525">setPanelPosition</a> (sf::Vector2f &amp;position)</td></tr>
+<tr class="memdesc:a55e75744f727275b75e5828794fc8525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this panel's position in the game window.  <a href="#a55e75744f727275b75e5828794fc8525">More...</a><br /></td></tr>
+<tr class="separator:a55e75744f727275b75e5828794fc8525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -134,26 +134,26 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a6dba65a771e7354002cc34c8a3c26fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of this panel in the game window.  <a href="#a6dba65a771e7354002cc34c8a3c26fd3">More...</a><br /></td></tr>
 <tr class="separator:a6dba65a771e7354002cc34c8a3c26fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d086bcfeca74f040b5bdc1f0936611"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a62d086bcfeca74f040b5bdc1f0936611">m_panelTextOffset</a></td></tr>
-<tr class="memdesc:a62d086bcfeca74f040b5bdc1f0936611"><td class="mdescLeft">&#160;</td><td class="mdescRight">An offset in relation to the text's position within the panel's rectangle. Effectively acts as a "padding" for the text.  <a href="#a62d086bcfeca74f040b5bdc1f0936611">More...</a><br /></td></tr>
+<tr class="memdesc:a62d086bcfeca74f040b5bdc1f0936611"><td class="mdescLeft">&#160;</td><td class="mdescRight">An offset in relation to the text's position within the panel's rectangle. Effectively acts as a "padding" for the text inside the rectangle.  <a href="#a62d086bcfeca74f040b5bdc1f0936611">More...</a><br /></td></tr>
 <tr class="separator:a62d086bcfeca74f040b5bdc1f0936611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6377c7e4113dbf27145c88b7c05b6e8f"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a6377c7e4113dbf27145c88b7c05b6e8f">m_panelTextPosition</a></td></tr>
-<tr class="memdesc:a6377c7e4113dbf27145c88b7c05b6e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the text in the panel.  <a href="#a6377c7e4113dbf27145c88b7c05b6e8f">More...</a><br /></td></tr>
+<tr class="memdesc:a6377c7e4113dbf27145c88b7c05b6e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the text inside the panel.  <a href="#a6377c7e4113dbf27145c88b7c05b6e8f">More...</a><br /></td></tr>
 <tr class="separator:a6377c7e4113dbf27145c88b7c05b6e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1941758ff1bb5d71b3f63b7e2321183"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#af1941758ff1bb5d71b3f63b7e2321183">m_panelFont</a></td></tr>
-<tr class="memdesc:af1941758ff1bb5d71b3f63b7e2321183"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML Font instance for the panel's text font.  <a href="#af1941758ff1bb5d71b3f63b7e2321183">More...</a><br /></td></tr>
+<tr class="memdesc:af1941758ff1bb5d71b3f63b7e2321183"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML Font object for the panel's text font.  <a href="#af1941758ff1bb5d71b3f63b7e2321183">More...</a><br /></td></tr>
 <tr class="separator:af1941758ff1bb5d71b3f63b7e2321183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe6373c3ec9ffbead5d4e9f27d463169"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#afe6373c3ec9ffbead5d4e9f27d463169">m_panelText</a></td></tr>
-<tr class="memdesc:afe6373c3ec9ffbead5d4e9f27d463169"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML Text instance for the panel's text.  <a href="#afe6373c3ec9ffbead5d4e9f27d463169">More...</a><br /></td></tr>
+<tr class="memdesc:afe6373c3ec9ffbead5d4e9f27d463169"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML Text object for the panel's text.  <a href="#afe6373c3ec9ffbead5d4e9f27d463169">More...</a><br /></td></tr>
 <tr class="separator:afe6373c3ec9ffbead5d4e9f27d463169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff2b72e58bc18fcf8f2fe9a75668babe"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#aff2b72e58bc18fcf8f2fe9a75668babe">m_panelRect</a></td></tr>
-<tr class="memdesc:aff2b72e58bc18fcf8f2fe9a75668babe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML RectangleShape instance for the panel's outline.  <a href="#aff2b72e58bc18fcf8f2fe9a75668babe">More...</a><br /></td></tr>
+<tr class="memdesc:aff2b72e58bc18fcf8f2fe9a75668babe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A SFML RectangleShape object for the panel's outline and background.  <a href="#aff2b72e58bc18fcf8f2fe9a75668babe">More...</a><br /></td></tr>
 <tr class="separator:aff2b72e58bc18fcf8f2fe9a75668babe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae70edbc555b3a3929d3cf3c225e19a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html#ae70edbc555b3a3929d3cf3c225e19a41">m_logger</a></td></tr>
 <tr class="memdesc:ae70edbc555b3a3929d3cf3c225e19a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="#ae70edbc555b3a3929d3cf3c225e19a41">More...</a><br /></td></tr>
 <tr class="separator:ae70edbc555b3a3929d3cf3c225e19a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their vital information. </p>
+<div class="textblock"><p>A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their information, such as health and current state. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a454c732a70878ff46ad75aa7ce34b1bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a454c732a70878ff46ad75aa7ce34b1bf">&#9670;&nbsp;</a></span>InfoPanel()</h2>
@@ -302,8 +302,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa57b1499658a77db024e62910ba8061b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa57b1499658a77db024e62910ba8061b">&#9670;&nbsp;</a></span>setPanelPosition()</h2>
+<a id="a55e75744f727275b75e5828794fc8525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e75744f727275b75e5828794fc8525">&#9670;&nbsp;</a></span>setPanelPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +311,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void GameAIDemos::InfoPanel::setPanelPosition </td>
           <td>(</td>
-          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramtype">sf::Vector2f &amp;&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
@@ -399,7 +399,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A SFML Font instance for the panel's text font. </p>
+<p>A SFML Font object for the panel's text font. </p>
 
 </div>
 </div>
@@ -447,7 +447,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A SFML RectangleShape instance for the panel's outline. </p>
+<p>A SFML RectangleShape object for the panel's outline and background. </p>
 
 </div>
 </div>
@@ -471,7 +471,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A SFML Text instance for the panel's text. </p>
+<p>A SFML Text object for the panel's text. </p>
 
 </div>
 </div>
@@ -495,7 +495,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>An offset in relation to the text's position within the panel's rectangle. Effectively acts as a "padding" for the text. </p>
+<p>An offset in relation to the text's position within the panel's rectangle. Effectively acts as a "padding" for the text inside the rectangle. </p>
 
 </div>
 </div>
@@ -519,7 +519,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The position of the text in the panel. </p>
+<p>The position of the text inside the panel. </p>
 
 </div>
 </div>
@@ -548,8 +548,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/include/<a class="el" href="_info_panel_8hpp_source.html">InfoPanel.hpp</a></li>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/src/InfoPanel.cpp</li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/include/<a class="el" href="_info_panel_8hpp_source.html">InfoPanel.hpp</a></li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/src/InfoPanel.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

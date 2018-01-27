@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -87,6 +87,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>addScene()
 : <a class="el" href="class_game_a_i_demos_1_1_game.html#abc0f2c064d83a6494606f558fdb037d4">GameAIDemos::Game</a>
 </li>
+<li>AgentEntity()
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#a1a34bbc2b7fd41121d9274b40d2987e8">GameAIDemos::AgentEntity</a>
+</li>
+</ul>
+
+
+<h3><a id="index_b"></a>- b -</h3><ul>
+<li>BaseEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#aafb6fb52df58b4479c08f82158702cd7">GameAIDemos::BaseEntityState</a>
+</li>
 </ul>
 
 
@@ -101,19 +111,45 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>DeadEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#af168c3f046f85e570109737ccce252f2">GameAIDemos::DeadEntityState</a>
+</li>
 <li>draw()
-: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a9ea6baf5fa8d166f5ca0d8c5cfc4d03c">GameAIDemos::Entity</a>
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#a722e156684542161b26987ca28c16b5b">GameAIDemos::AgentEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_entity.html#a9ea6baf5fa8d166f5ca0d8c5cfc4d03c">GameAIDemos::Entity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_game.html#a7e6384bd9a82b036071dca18a15a126a">GameAIDemos::Game</a>
 , <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a19e5b75a64c21c937b5de4a825f4f73b">GameAIDemos::LevelScene</a>
 , <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#aad046af014ec8d2b34c4483b81b386e7">GameAIDemos::LiveEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_player_entity.html#a095b7e96d2e2cdeb16c5c95847995785">GameAIDemos::PlayerEntity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_scene.html#a47b7cad07e41827933104fd15ca3af72">GameAIDemos::Scene</a>
 </li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>enter()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#af880b48cb0f25d57fe8f20999f2c5da8">GameAIDemos::BaseEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#a27a9bda28cf5fc19f78de9731899c62e">GameAIDemos::DeadEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a5387fc96fb9607b0207c4ec27a273ccc">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a50a175efb57b0b627cd9414cc2c6d6d0">GameAIDemos::IdleEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a752c6c256f2024a4b9b30bad59a93d9d">GameAIDemos::SeekEntityState</a>
+</li>
 <li>Entity()
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a69b99310a79d279eccf3ba4b37a61edf">GameAIDemos::Entity</a>
+</li>
+<li>exit()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#a528c47c5148801a5d436c3a76b69bbe8">GameAIDemos::BaseEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#a0ed64c68c977da38007cf957d886476b">GameAIDemos::DeadEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a516690068e3db9ba7e5fdf5adba3d350">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#ad7919d012aebf8e416cb0d0673d45f93">GameAIDemos::IdleEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a9a09cbf33ce880a144dd64641cd862cc">GameAIDemos::SeekEntityState</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>FleeEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a35a081ddee09ce01a363913a5b79b63e">GameAIDemos::FleeEntityState</a>
 </li>
 </ul>
 
@@ -125,8 +161,21 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getDirection()
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#accf3ff2bf6049c2be8f27a72de8a28ff">GameAIDemos::LiveEntity</a>
 </li>
+<li>getHealth()
+: <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#ad1846e06938cf94ffba14199a9809eee">GameAIDemos::LiveEntity</a>
+</li>
 <li>getInfoPanel()
-: <a class="el" href="class_game_a_i_demos_1_1_entity.html#abedfd23b669fa8957ed4fdbb5c380c60">GameAIDemos::Entity</a>
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a6806975158a5412ec5fd012ac2926ec0">GameAIDemos::Entity</a>
+</li>
+<li>getMaxSpeed()
+: <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a0fa9f9331a4cef96c45c53a8dd666e4d">GameAIDemos::LiveEntity</a>
+</li>
+<li>getNewState()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#ab96b3e22a9831749616bd782fc911ac3">GameAIDemos::BaseEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#a33007504121c17e51f7b4e51496e1825">GameAIDemos::DeadEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a03aa38774d3132fd39c2bf90f656c522">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a3c297f33eb4e4b704c27a5bcb0b02cf9">GameAIDemos::IdleEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a6d8affd7623bc24362d179fac67d3c3c">GameAIDemos::SeekEntityState</a>
 </li>
 <li>getPanelPosition()
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a1ffbeaa87819637f69db38bd482f1328">GameAIDemos::InfoPanel</a>
@@ -156,6 +205,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getSprite()
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#ab6ed570f863403478de860e724e4fde7">GameAIDemos::Entity</a>
 </li>
+<li>getState()
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a1cd1c371cc18794d48acec67e8a34381">GameAIDemos::Entity</a>
+</li>
+<li>getStateName()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#acd6aa075deadd4be2c52e1906875679b">GameAIDemos::BaseEntityState</a>
+</li>
 <li>getTextString()
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a2692044ee9805ae00e8d058e7f294a36">GameAIDemos::InfoPanel</a>
 </li>
@@ -167,10 +222,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>handleEvents()
-: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a4deba6b6b5b29394948575f8b0430da3">GameAIDemos::Entity</a>
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#ae79756a765b5337100cd4f66803f8f9f">GameAIDemos::AgentEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_entity.html#a4deba6b6b5b29394948575f8b0430da3">GameAIDemos::Entity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_game.html#a9a015c81f4166be9171667ce0ff07ce2">GameAIDemos::Game</a>
 , <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a9f5af32bdb8ba8a4c2feab1bc4788096">GameAIDemos::LevelScene</a>
 , <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a4e629edfe69a7352e7bf07420c8448e8">GameAIDemos::LiveEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_player_entity.html#a45954ae71ba0156027d99a34b9a16f28">GameAIDemos::PlayerEntity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_scene.html#a0fa564a4a34e06d947ae95615ac2e660">GameAIDemos::Scene</a>
 </li>
 <li>hasFocus()
@@ -180,6 +237,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>IdleEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a3441b1d615146e1f5e71dbd2298d548e">GameAIDemos::IdleEntityState</a>
+</li>
 <li>InfoPanel()
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a454c732a70878ff46ad75aa7ce34b1bf">GameAIDemos::InfoPanel</a>
 </li>
@@ -195,12 +255,15 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>isOpen()
 : <a class="el" href="class_game_a_i_demos_1_1_game.html#a1f002ef53fd1875870847575d3cf0145">GameAIDemos::Game</a>
 </li>
+<li>isSelected()
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a3b9ea5ed1289f55b8c68b11b926af9ec">GameAIDemos::Entity</a>
+</li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
 <li>LevelScene()
-: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#ae9fa14c50007a555455e91b5ac029421">GameAIDemos::LevelScene</a>
+: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#aa14730323b380ed4cd6a9ff8f5e743e4">GameAIDemos::LevelScene</a>
 </li>
 <li>LiveEntity()
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a81dcdd282874f0e44cd831c55a63934b">GameAIDemos::LiveEntity</a>
@@ -228,6 +291,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </ul>
 
 
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>PlayerEntity()
+: <a class="el" href="class_game_a_i_demos_1_1_player_entity.html#a5d8e12a81f5c391cc5223f089d2d3ddd">GameAIDemos::PlayerEntity</a>
+</li>
+</ul>
+
+
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>removeScene()
 : <a class="el" href="class_game_a_i_demos_1_1_game.html#a94a7473c70172a3e0776d18cfb815a4f">GameAIDemos::Game</a>
@@ -242,6 +312,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>Scene()
 : <a class="el" href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">GameAIDemos::Scene</a>
 </li>
+<li>SeekEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a2919d5753efe88beaa7c5dd6119e6513">GameAIDemos::SeekEntityState</a>
+</li>
 <li>setBackgroundImage()
 : <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a56445a6d6e83738b645d63f7019da7a7">GameAIDemos::LevelScene</a>
 </li>
@@ -254,8 +327,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>setDirection()
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a5881d5a21e26cb4852a2ffdf7c83b6f8">GameAIDemos::LiveEntity</a>
 </li>
+<li>setHealth()
+: <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a57860c61c856597f97711cf5d733c7e4">GameAIDemos::LiveEntity</a>
+</li>
+<li>setMaxSpeed()
+: <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a42778ab739d6bb0ace937f9e627b1b46">GameAIDemos::LiveEntity</a>
+</li>
 <li>setPanelPosition()
-: <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#aa57b1499658a77db024e62910ba8061b">GameAIDemos::InfoPanel</a>
+: <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a55e75744f727275b75e5828794fc8525">GameAIDemos::InfoPanel</a>
 </li>
 <li>setPosition()
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a5feadceb43c0397fc873f27dc633b771">GameAIDemos::Entity</a>
@@ -265,6 +344,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>setSpriteColor()
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a8a81264c6a37a266a03e639685fb252e">GameAIDemos::Entity</a>
+</li>
+<li>setState()
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a5814d7b8e15fd8a17798cdd1a352914c">GameAIDemos::Entity</a>
 </li>
 <li>setTextString()
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a0c84791080e490e326f83518a5b40699">GameAIDemos::InfoPanel</a>
@@ -276,7 +358,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#a26dc8c4cc67490565dc024a29a04a888">GameAIDemos::LiveEntity</a>
 </li>
 <li>spawnLiveEntity()
-: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a81e2d864f4c13d0379f554e41dd5d73a">GameAIDemos::LevelScene</a>
+: <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#afc8a5558afd7592fdbdf7b8292c725a3">GameAIDemos::LevelScene</a>
 </li>
 </ul>
 
@@ -285,22 +367,47 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>toggleInfoPanel()
 : <a class="el" href="class_game_a_i_demos_1_1_entity.html#a6015a440a054785dbefb20b184af3252">GameAIDemos::Entity</a>
 </li>
+<li>toggleSelected()
+: <a class="el" href="class_game_a_i_demos_1_1_entity.html#aa093fddba368084f931c590dec16045e">GameAIDemos::Entity</a>
+</li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>update()
-: <a class="el" href="class_game_a_i_demos_1_1_entity.html#a76b033002fc3109a7b53548932534c60">GameAIDemos::Entity</a>
+: <a class="el" href="class_game_a_i_demos_1_1_agent_entity.html#a628a7c0d0081faadb7b86382ef3714b0">GameAIDemos::AgentEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#a3e07cab93bc20a0cee7783753dccfdbe">GameAIDemos::BaseEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#a3e7f4b32b50cd6e1dce41780eedcd504">GameAIDemos::DeadEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_entity.html#a76b033002fc3109a7b53548932534c60">GameAIDemos::Entity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#a8e560ab1b90901f8977d1040f387d46b">GameAIDemos::FleeEntityState</a>
+, <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a20f47a50e1d3d117180e3015792c7536">GameAIDemos::IdleEntityState</a>
 , <a class="el" href="class_game_a_i_demos_1_1_level_scene.html#a033f6f8d58a4523b7f9764437a53479b">GameAIDemos::LevelScene</a>
 , <a class="el" href="class_game_a_i_demos_1_1_live_entity.html#aed20bb214cdcf4767647251a101b05ff">GameAIDemos::LiveEntity</a>
+, <a class="el" href="class_game_a_i_demos_1_1_player_entity.html#acac87d6a182ad614a53268ac88282f4a">GameAIDemos::PlayerEntity</a>
 , <a class="el" href="class_game_a_i_demos_1_1_scene.html#a80c0d89fa43eeb5de8367019ab721293">GameAIDemos::Scene</a>
+, <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#a7cb3a603fdde8f524856277cc3a9e583">GameAIDemos::SeekEntityState</a>
 </li>
 </ul>
 
 
 <h3><a id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~BaseEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html#a2145d02d9b6302c2f0a23d3c0f955a6f">GameAIDemos::BaseEntityState</a>
+</li>
+<li>~DeadEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html#a0ad4a9cbce4105ea09aa3b604221cd31">GameAIDemos::DeadEntityState</a>
+</li>
+<li>~FleeEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html#afeb04bc486949fed1846d8dbde78306c">GameAIDemos::FleeEntityState</a>
+</li>
+<li>~IdleEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html#a71bfef6e231e2998bc9acb29a9fb4e10">GameAIDemos::IdleEntityState</a>
+</li>
 <li>~InfoPanel()
 : <a class="el" href="class_game_a_i_demos_1_1_info_panel.html#a6e99839fe8b9e569ac1234ed0099365e">GameAIDemos::InfoPanel</a>
+</li>
+<li>~SeekEntityState()
+: <a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html#ad707dc469562c839208ace5463eff529">GameAIDemos::SeekEntityState</a>
 </li>
 </ul>
 </div><!-- contents -->

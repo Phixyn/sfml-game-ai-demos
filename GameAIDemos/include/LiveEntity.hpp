@@ -13,8 +13,8 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Default constructor taking parameters for the entity's health
-			/// and attack power.
+			/// Default constructor taking parameters for the entity's health,
+			/// size and position.
 			/// </summary>
 			///
 			/// <param name="health">
@@ -59,7 +59,7 @@ namespace GameAIDemos
 			/// </summary>
 			///
 			/// <param name="sfEvent">
-			/// A SFML event (e.g. generated user input) instance.
+			/// A SFML event (e.g. generated user input) object.
 			/// </param>
 			void handleEvents(sf::Event sfEvent) override;
 
@@ -78,19 +78,19 @@ namespace GameAIDemos
 			void draw() override;
 
 			/// <summary>
-			/// TODO
+			/// Sets the live entity's health points.
 			/// </summary>
 			///
 			/// <param name="health">
-			/// TODO
+			/// An integer specifying the entity's new health points.
 			/// </param>
 			void setHealth(int health);
 			/// <summary>
-			/// TODO
+			/// Returns the entity's current health points.
 			/// </summary>
 			///
 			/// <returns>
-			/// TODO
+			/// An integer containing the entity's current health points.
 			/// </returns>
 			int getHealth();
 			/// <summary>
@@ -102,6 +102,14 @@ namespace GameAIDemos
 			/// </param>
 			void setSpeed(float speed);
 			/// <summary>
+			/// Sets the entity's maximum speed.
+			/// </summary>
+			///
+			/// <param name="maxSpeed">
+			/// Float specifying the entity's maximum speed.
+			/// </param>
+			void setMaxSpeed(float maxSpeed);
+			/// <summary>
 			/// Returns the entity's current speed.
 			/// </summary>
 			///
@@ -109,6 +117,14 @@ namespace GameAIDemos
 			/// Float specifying the entity's speed.
 			/// </returns>
 			float getSpeed();
+			/// <summary>
+			/// Returns the entity's maximum speed.
+			/// </summary>
+			///
+			/// <returns>
+			/// Float specifying the entity's maximum speed.
+			/// </returns>
+			float getMaxSpeed();
 
 			// TODO: animate method?
 			/// <summary>
@@ -131,7 +147,6 @@ namespace GameAIDemos
 			/// A boolean specifying if the entity is aggressive.
 			/// </returns>
 			bool isAggressive();
-
 			/// <summary>
 			/// Returns a value which specifies if the live entity is dead.
 			/// </summary>
@@ -140,7 +155,6 @@ namespace GameAIDemos
 			/// A boolean specifying if the live entity is dead.
 			/// </returns>
 			bool isDead();
-
 			/// <summary>
 			/// Sets the live entity's <see cref="m_dead">m_dead</see> member
 			/// variable, which specifies if the entity is dead.
@@ -159,7 +173,6 @@ namespace GameAIDemos
 			/// A SFML Vector2f containing the entity's velocity.
 			/// </returns>
 			sf::Vector2f getVelocity();
-
 			/// <summary>
 			/// Sets the entity's velocity vector.
 			/// </summary>
@@ -177,7 +190,6 @@ namespace GameAIDemos
 			/// A SFML Vector2f containing the entity's direction.
 			/// </returns>
 			sf::Vector2f getDirection();
-
 			/// <summary>
 			/// Sets the entity's direction.
 			/// </summary>
@@ -194,6 +206,11 @@ namespace GameAIDemos
 			/// Entity's movement speed.
 			/// </summary>
 			float m_speed;
+			/// <summary>
+			/// Entity's maximum movement speed.
+			/// </summary>
+			float m_maxSpeed;
+
 			/// <summary>
 			/// A boolean specifying if the live entity is aggressive.
 			/// If a live entity is aggressive, it may attack other entities

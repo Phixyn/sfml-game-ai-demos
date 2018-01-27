@@ -6,7 +6,8 @@
 #include <queue>
 
 /// <summary>
-/// Namespace for the game AI demos.
+/// Namespace for the game AI demos. Contains all the classes required for the
+/// game demo, its scenes, entities, player, and artificial intelligence.
 /// </summary>
 namespace GameAIDemos
 {
@@ -46,7 +47,7 @@ namespace GameAIDemos
 			/// </summary>
 			///
 			/// <param name="drawable">
-			/// Reference to the SFML Drawable instance to be drawn on the
+			/// Reference to the SFML Drawable object to be drawn on the
 			/// window.
 			/// </param>
 			void draw(const sf::Drawable &drawable);
@@ -75,7 +76,10 @@ namespace GameAIDemos
 			/// Adds a new scene to the game.
 			/// </summary>
 			///
-			/// <param name="scene"> A unique pointer to a Scene. </param>
+			/// <param name="scene">
+			/// A unique pointer to a <see cref="Scene">Scene</see> object.
+			/// </param>
+			///
 			/// <seealso cref="Scene" />
 			void addScene(std::unique_ptr<Scene> scene);
 			/// <summary>
@@ -88,7 +92,10 @@ namespace GameAIDemos
 			/// Changes the current scene in the game.
 			/// </summary>
 			///
-			/// <param name="scene"> A unique pointer to a Scene. </param>
+			/// <param name="scene">
+			/// A unique pointer to a <see cref="Scene">Scene</see> object.
+			/// </param>
+			///
 			/// <seealso cref="Scene" />
 			void changeScene(std::unique_ptr<Scene> scene);
 
@@ -97,8 +104,8 @@ namespace GameAIDemos
 			/// </summary>
 			sf::View m_view;
 			/// <summary>
-			/// Unique pointer to SFML RenderWindow instance.
-			/// TODO this and View can be made private maybe?
+			/// Unique pointer to a SFML RenderWindow object.
+			/// TODO this and m_view can be made private maybe?
 			/// </summary>
 			std::unique_ptr<sf::RenderWindow> m_window;
 		private:

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -107,7 +107,7 @@ Inheritance diagram for GameAIDemos::Scene:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a90c71af56347a4ab94efb3c1a46f8f89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a90c71af56347a4ab94efb3c1a46f8f89">Scene</a> (<a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> &amp;game)</td></tr>
-<tr class="memdesc:a90c71af56347a4ab94efb3c1a46f8f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a90c71af56347a4ab94efb3c1a46f8f89">More...</a><br /></td></tr>
+<tr class="memdesc:a90c71af56347a4ab94efb3c1a46f8f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor taking an argument for a reference to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object.  <a href="#a90c71af56347a4ab94efb3c1a46f8f89">More...</a><br /></td></tr>
 <tr class="separator:a90c71af56347a4ab94efb3c1a46f8f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa564a4a34e06d947ae95615ac2e660"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#a0fa564a4a34e06d947ae95615ac2e660">handleEvents</a> (sf::Event sfEvent)=0</td></tr>
 <tr class="memdesc:a0fa564a4a34e06d947ae95615ac2e660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to handle events in the scene.  <a href="#a0fa564a4a34e06d947ae95615ac2e660">More...</a><br /></td></tr>
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:adf9fab83a0b05c1769c56b001b309a86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#adf9fab83a0b05c1769c56b001b309a86">m_game_ptr</a></td></tr>
-<tr class="memdesc:adf9fab83a0b05c1769c56b001b309a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to an instance of the <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> class.  <a href="#adf9fab83a0b05c1769c56b001b309a86">More...</a><br /></td></tr>
+<tr class="memdesc:adf9fab83a0b05c1769c56b001b309a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object, used to access game properties and methods.  <a href="#adf9fab83a0b05c1769c56b001b309a86">More...</a><br /></td></tr>
 <tr class="separator:adf9fab83a0b05c1769c56b001b309a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad396212d0f45cdf67065622360a745bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html#ad396212d0f45cdf67065622360a745bd">m_logger</a></td></tr>
 <tr class="memdesc:ad396212d0f45cdf67065622360a745bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a> for logging.  <a href="#ad396212d0f45cdf67065622360a745bd">More...</a><br /></td></tr>
@@ -147,11 +147,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor. </p>
+<p>Default constructor taking an argument for a reference to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object. </p>
 <p>Sets <a class="el" href="class_game_a_i_demos_1_1_scene.html#adf9fab83a0b05c1769c56b001b309a86">m_game_ptr</a> to the reference of <a class="el" href="class_game_a_i_demos_1_1_game.html" title="Main game class used to initialize the game, create a game window and add scenes to it...">Game</a> in the parameter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">game</td><td>A pointer to an instance of the <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> class. </td></tr>
+    <tr><td class="paramname">game</td><td>A pointer to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object, used to access game properties and methods. </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,7 +281,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to an instance of the <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> class. </p>
+<p>Pointer to a <a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a> object, used to access game properties and methods. </p>
 
 </div>
 </div>
@@ -310,8 +310,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/include/<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a></li>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/src/Scene.cpp</li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/include/<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a></li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/src/Scene.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

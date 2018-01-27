@@ -1,42 +1,46 @@
+#include "../include/AgentEntity.hpp"
 #include "../include/Game.hpp"
 #include "../include/LevelScene.hpp"
-#include "../include/DefendEntityState.hpp"
-#include "../include/AttackEntityState.hpp"
 
 /// <summary>
 /// Entry point for the game.
 /// </summary>
 int main()
 {
+	// Game window properties
 	const unsigned int WINDOW_WIDTH = 800;
 	const unsigned int WINDOW_HEIGHT = 600;
 	const std::string WINDOW_TITLE = "SFML Game AI Demos";
-	// TODO: Temporary, asset doesn't exist but arg is required
-	const std::string BACKGROUND_IMAGE = "assets/background.png";
-	const std::string ENTITY_TEXTURE = "assets/boid.png";
+	// Initial entity health
+	const int ENTITY_SPAWN_HEALTH = 100;
+	// Entity sprite sizes
+	const sf::Vector2f ENTITY_SIZE = sf::Vector2f(32.0f, 32.0f);
+	// Coordinates for player entity spawn point (middle of the window)
+	const float PLAYER_SPAWN_X = (float)((WINDOW_WIDTH / 2) - (ENTITY_SIZE.x / 2));
+	const float PLAYER_SPAWN_Y = (float)((WINDOW_HEIGHT / 2) - (ENTITY_SIZE.y / 2));
+	const std::string BACKGROUND_IMAGE = "assets/background.jpg";
 
-	// Placeholder entities for testing / demo
-	GameAIDemos::LiveEntity tempEntity = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(10.f, 150.f));
-	tempEntity.setTexture(ENTITY_TEXTURE);
-	GameAIDemos::LiveEntity tempEntity2 = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(150.f, 150.f));
-	tempEntity2.setTexture(ENTITY_TEXTURE);
-	tempEntity2.setVelocity(sf::Vector2f(0.25f, 0.0f));
-	tempEntity2.setState(new GameAIDemos::DefendEntityState());
-	GameAIDemos::LiveEntity tempEntity3 = GameAIDemos::LiveEntity(100, sf::Vector2f(32.0f, 32.0f), sf::Vector2f(250.f, 250.f));
-	tempEntity3.setTexture(ENTITY_TEXTURE);
-	tempEntity3.setVelocity(sf::Vector2f(0.25f, 0.0f));
-	tempEntity3.setState(new GameAIDemos::AttackEntityState(&tempEntity2));
+	// Initialize entities to spawn at the start of the demo
+	GameAIDemos::PlayerEntity player = GameAIDemos::PlayerEntity(ENTITY_SPAWN_HEALTH, ENTITY_SIZE, sf::Vector2f(PLAYER_SPAWN_X, PLAYER_SPAWN_Y));
+	GameAIDemos::AgentEntity agentEntity1 = GameAIDemos::AgentEntity(ENTITY_SPAWN_HEALTH, ENTITY_SIZE, sf::Vector2f(10.f, 150.f), player);
+	GameAIDemos::AgentEntity agentEntity2 = GameAIDemos::AgentEntity(ENTITY_SPAWN_HEALTH, ENTITY_SIZE, sf::Vector2f(150.f, 250.f), player);
 
-	// Create game and level scene instances
+	/* We can also set velocities for the entities before spawning them
+	 * If this is done, their state will be idle (unless setState is used),
+	 * but they will be cruising in space at the given velocity. */
+	// seekEntity1.setVelocity(sf::Vector2f(0.25f, 0.0f));
+	// fleeEntity1.setVelocity(sf::Vector2f(0.25f, 0.0f));
+
+	// Initialize Game and LevelScene instances
 	GameAIDemos::Game game(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
-	GameAIDemos::LevelScene testScene = GameAIDemos::LevelScene(game, BACKGROUND_IMAGE);
-	// Spawn entities in level scene
-	testScene.spawnLiveEntity(tempEntity);
-	testScene.spawnLiveEntity(tempEntity2);
-	testScene.spawnLiveEntity(tempEntity3);
+	GameAIDemos::LevelScene testScene = GameAIDemos::LevelScene(game, player, BACKGROUND_IMAGE);
 
-	// It works, but no default texture means the sprite won't be drawn
+	// Spawn entities in level scene
+	testScene.spawnLiveEntity(agentEntity1);
+	testScene.spawnLiveEntity(agentEntity2);
+	// This also works, but no default texture means the sprite won't be drawn and visible
 	// testScene.spawnLiveEntity(100, sf::Vector2f(50.f, 50.f), sf::Vector2f(250.f, 250.f));
+
 	// Add scene to game and start main loop
 	game.addScene(std::make_unique<GameAIDemos::LevelScene>(testScene));
 	game.mainLoop();

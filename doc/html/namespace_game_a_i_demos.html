@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -88,19 +88,34 @@ $(document).ready(function(){initNavTree('namespace_game_a_i_demos.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Namespace for the game AI demos.  
+<p>Namespace for the game AI demos. Contains all the classes required for the game demo, its scenes, entities, player, and artificial intelligence.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_agent_entity.html">AgentEntity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> for the intelligent agent entity. An agent entity can seek or flee from targets, or it can be in idle state.  <a href="class_game_a_i_demos_1_1_agent_entity.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html">BaseEntityState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base state class for entities in the game. A state defines an entity's current actions in the game. For example, an entity can be fleeing from another entity, or seeking an entity.  <a href="class_game_a_i_demos_1_1_base_entity_state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_dead_entity_state.html">DeadEntityState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html">BaseEntityState</a> used for the dead state of entities.  <a href="class_game_a_i_demos_1_1_dead_entity_state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_entity.html">Entity</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for game entities such as items, NPCs, tiles and the player character.  <a href="class_game_a_i_demos_1_1_entity.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_flee_entity_state.html">FleeEntityState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html">BaseEntityState</a> used for the fleeing state of an entity. In this state, an entity is moving away from a target entity.  <a href="class_game_a_i_demos_1_1_flee_entity_state.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_game.html">Game</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main game class used to initialize the game, create a game window and add scenes to it.  <a href="class_game_a_i_demos_1_1_game.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_idle_entity_state.html">IdleEntityState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html">BaseEntityState</a> used for the idling state. In this state, an entity is not performing any specific action (but may still be moving in a specified direction).  <a href="class_game_a_i_demos_1_1_idle_entity_state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_info_panel.html">InfoPanel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their vital information.  <a href="class_game_a_i_demos_1_1_info_panel.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for information panel UI elements. An info panel element in the UI is a simple rectangle with text displayed inside it. This can be used to display game information, tooltips, HUD elements and more. It may also be attached to entities to display their information, such as health and current state.  <a href="class_game_a_i_demos_1_1_info_panel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_level_scene.html">LevelScene</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a> for game AI demo levels.  <a href="class_game_a_i_demos_1_1_level_scene.html#details">More...</a><br /></td></tr>
@@ -111,12 +126,18 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_logger.html">Logger</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a very simple logging utility for the game.  <a href="class_game_a_i_demos_1_1_logger.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_player_entity.html">PlayerEntity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_live_entity.html">LiveEntity</a> for the player character entity.  <a href="class_game_a_i_demos_1_1_player_entity.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_scene.html">Scene</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for scenes and scene management. Scenes can be anything from levels to main menu screens.  <a href="class_game_a_i_demos_1_1_scene.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_seek_entity_state.html">SeekEntityState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass of <a class="el" href="class_game_a_i_demos_1_1_base_entity_state.html">BaseEntityState</a> used for the seeking state of an entity. In this state, an entity is moving towards a target entity.  <a href="class_game_a_i_demos_1_1_seek_entity_state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Namespace for the game AI demos. </p>
+<div class="textblock"><p>Namespace for the game AI demos. Contains all the classes required for the game demo, its scenes, entities, player, and artificial intelligence. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

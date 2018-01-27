@@ -15,7 +15,7 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Default constructor.
+			/// Default constructor with an argument for the entity's size.
 			/// </summary>
 			///
 			/// <param name="size">
@@ -24,8 +24,8 @@ namespace GameAIDemos
 			Entity(sf::Vector2f size);
 
 			/// <summary>
-			/// Overloaded constructor with an argument for the entity's
-			/// position in the game.
+			/// Overloaded constructor with an additional argument for the
+			/// entity's position in the game.
 			/// </summary>
 			///
 			/// <param name="size">
@@ -74,7 +74,7 @@ namespace GameAIDemos
 			/// </summary>
 			///
 			/// <param name="sfEvent">
-			/// A SFML event (e.g. generated user input) instance.
+			/// A SFML event (e.g. generated user input) object.
 			/// </param>
 			virtual void handleEvents(sf::Event sfEvent) = 0;
 
@@ -141,6 +141,8 @@ namespace GameAIDemos
 			/// Toggles the entity's information panel on or off, depending on
 			/// its current state.
 			/// </summary>
+			///
+			/// <seealso cref="InfoPanel" />
 			void toggleInfoPanel();
 
 			/// <summary>
@@ -152,11 +154,11 @@ namespace GameAIDemos
 			/// </returns>
 			float getRectWidth();
 			/// <summary>
-			/// Gets the Height of the entity's rectangle.
+			/// Gets the height of the entity's rectangle.
 			/// </summary>
 			///
 			/// <returns>
-			/// A float containing the rectangle's Height.
+			/// A float containing the rectangle's height.
 			/// </returns>
 			float getRectHeight();
 			/// <summary>
@@ -187,13 +189,15 @@ namespace GameAIDemos
 			/// </returns>
 			sf::Sprite getSprite();
 			/// <summary>
-			/// Gets the entity's InfoPanel object.
+			/// Gets the entity's <see cref="InfoPanel">InfoPanel</see> object.
 			/// </summary>
 			///
 			/// <returns>
 			/// A <see cref="InfoPanel">InfoPanel</see> instance of the entity.
 			/// </returns>
-			GameAIDemos::InfoPanel getInfoPanel();
+			///
+			/// <seealso cref="InfoPanel" />
+			GameAIDemos::InfoPanel& getInfoPanel();
 			/// <summary>
 			/// Returns a boolean indicating if this entity's info panel UI
 			/// element is enabled and being displayed in the UI.
@@ -202,6 +206,7 @@ namespace GameAIDemos
 			/// <returns>
 			/// A boolean indicating if the entity's info panel is enabled.
 			/// </returns>
+			///
 			/// <seealso cref="InfoPanel" />
 			bool isInfoPanelEnabled();
 
@@ -214,7 +219,6 @@ namespace GameAIDemos
 			/// A boolean indicating if the entity is currently selected.
 			/// </returns>
 			bool isSelected();
-
 			/// <summary>
 			/// Toggles the entity's selected state to true or false, depending
 			/// on its current value.
@@ -222,13 +226,14 @@ namespace GameAIDemos
 			void toggleSelected();
 
 			/// <summary>
-			/// Returns an instance of the BaseEntityState subclass for this
-			/// entity's current state.
+			/// Returns a pointer to a BaseEntityState object for this entity's
+			/// current state.
 			/// </summary>
 			///
 			/// <returns>
 			/// An instance of the current state of the entity.
 			/// </returns>
+			///
 			/// <seealso cref="BaseEntityState" />
 			BaseEntityState* getState();
 			/// <summary>
@@ -239,6 +244,7 @@ namespace GameAIDemos
 			/// <param name="state">
 			/// A pointer to a new state object.
 			/// </param>
+			///
 			/// <seealso cref="BaseEntityState" />
 			void setState(BaseEntityState* state);
 
@@ -253,7 +259,6 @@ namespace GameAIDemos
 			/// the entity's rectangle.
 			/// </returns>
 			// Collision getCollision();
-
 			// Collision m_collision; // TODO: make this private or protected?
 		protected:
 			/// <summary>
@@ -295,9 +300,9 @@ namespace GameAIDemos
 			/// displayed in the UI. An info panel displays useful information
 			/// about an entity.
 			/// </summary>
+			///
 			/// <seealso cref="InfoPanel" />
 			bool m_displayInfoPanel = false;
-
 			/// <summary>
 			/// A boolean specifying if the entity is currently selected by the
 			/// user.
@@ -305,9 +310,8 @@ namespace GameAIDemos
 			bool m_isSelected = false;
 
 			/// <summary>
-			/// An instance of a BaseEntityState subclass, representing the
+			/// An pointer to a BaseEntityState object, representing the
 			/// current state of this entity.
-			/// about an entity.
 			/// </summary>
 			/// <seealso cref="BaseEntityState" />
 			BaseEntityState* m_state;

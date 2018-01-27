@@ -2,7 +2,7 @@
 #define LEVEL_SCENE_H
 
 #include "Scene.hpp"
-#include "LiveEntity.hpp"
+#include "PlayerEntity.hpp"
 #include "InfoPanel.hpp"
 
 namespace GameAIDemos
@@ -14,24 +14,32 @@ namespace GameAIDemos
 	{
 		public:
 			/// <summary>
-			/// Default constructor.
+			/// Default constructor taking arguments for a reference to
+			/// <see cref="Game">Game</see> and
+			/// <see cref="PlayerEntity">PlayerEntity</see> objects, as well
+			/// as a string containing the file path for a background image
+			/// to be used in the level scene.
 			/// </summary>
 			///
 			/// <param name="game">
-			/// A pointer to an instance of the <see cref="Game">Game</see>
-			/// class.
+			/// A pointer to a <see cref="Game">Game</see> object, used to
+			/// access game properties and methods.
+			/// </param>
+			/// <param name="player">
+			/// A pointer to a <see cref="PlayerEntity">PlayerEntity</see>
+			/// object, used to access player properties and methods.
 			/// </param>
 			/// <param name="backgroundImagePath">
 			/// A string containing the path for the background image file.
 			/// </param>
-			LevelScene(Game &game, std::string backgroundImagePath);
+			LevelScene(Game &game, PlayerEntity &player, std::string backgroundImagePath);
 
 			/// <summary>
 			/// Handles events specific to the level scene.
 			/// </summary>
 			///
 			/// <param name="sfEvent">
-			/// A SFML event (e.g. generated user input) instance.
+			/// A SFML event (e.g. generated user input) object.
 			/// </param>
 			void handleEvents(sf::Event sfEvent) override;
 
@@ -60,17 +68,20 @@ namespace GameAIDemos
 			void setBackgroundImage(std::string imageFilePath);
 
 			/// <summary>
-			/// Spawns a new live entity in the level scene.
+			/// Spawns a new live entity in the level scene and adds it to the
+			/// <see cref="m_liveEntities">m_liveEntities</see> vector.
 			/// </summary>
 			///
 			/// <param name="entity">
 			/// Instance of <see cref="LiveEntity">LiveEntity</see> to be added
 			/// to the level scene.
 			/// </param>
+			///
 			/// <seealso cref="LiveEntity" />
-			void spawnLiveEntity(LiveEntity entity);
+			void spawnLiveEntity(LiveEntity &entity);
 			/// <summary>
-			/// Spawns a new live entity in the level scene.
+			/// Spawns a new live entity in the level scene and adds it to the
+			/// m_liveEntities vector.
 			/// </summary>
 			///
 			/// <param name="health">
@@ -83,10 +94,12 @@ namespace GameAIDemos
 			/// A SFML Vector2f containing the entity's position on the
 			/// game scene.
 			/// </param>
+			///
 			/// <seealso cref="LiveEntity" />
 			void spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position);
 			/// <summary>
-			/// Spawns a new live entity in the level scene.
+			/// Spawns a new live entity in the level scene and adds it to the
+			/// m_liveEntities vector.
 			/// </summary>
 			///
 			/// <param name="health">
@@ -102,6 +115,7 @@ namespace GameAIDemos
 			/// <param name="speed">
 			/// The movement speed of the live entity.
 			/// </param>
+			///
 			/// <seealso cref="LiveEntity" />
 			void spawnLiveEntity(int health, sf::Vector2f size, sf::Vector2f position, float speed);
 		private:
@@ -112,12 +126,12 @@ namespace GameAIDemos
 			// std::vector<GameAIDemos::TileEntity> m_tileEntities;
 			/// <summary>
 			/// Vector containing <see cref="LiveEntity">LiveEntity</see>
-			/// objects to be used in the scene.
+			/// objects present in the scene.
 			/// </summary>
 			///
 			/// <seealso cref="Entity" />
 			/// <seealso cref="LiveEntity" />
-			std::vector<GameAIDemos::LiveEntity> m_liveEntities;
+			std::vector<GameAIDemos::LiveEntity*> m_liveEntities;
 			// std::vector<sf::RectangleShape> m_tileSprites;
 			/// <summary>
 			/// Map containing entries with an ID of a texture and an instance
@@ -132,6 +146,15 @@ namespace GameAIDemos
 			/// SFML Sprite object for the level's background sprite.
 			/// </summary>
 			sf::Sprite m_backgroundSprite;
+			/// <summary>
+			/// A pointer to a <see cref="PlayerEntity">PlayerEntity</see>
+			/// object, necessary to access information about the player
+			/// (such as its position), in order to draw or update them in
+			/// the scene.
+			/// </summary>
+			///
+			/// <seealso cref="PlayerEntity" />
+			PlayerEntity* m_playerEntity;
 	};
 }
 

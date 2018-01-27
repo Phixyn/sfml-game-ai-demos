@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SFML Game AI Demos
-   &#160;<span id="projectnumber">v0.2.0</span>
+   &#160;<span id="projectnumber">0.5.0</span>
    </div>
    <div id="projectbrief">C++ intelligent agents for games, with demos using the SFML framework.</div>
   </td>
@@ -111,10 +111,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2e4c7dfd8481f6980a36a7997d30d0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30264d4ec76840cc8dc3555b1220e5da"><td class="memItemLeft" align="right" valign="top">struct tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_logger.html#a30264d4ec76840cc8dc3555b1220e5da">m_timeInfo</a></td></tr>
 <tr class="separator:a30264d4ec76840cc8dc3555b1220e5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcb9b0b6d5198d0389932988d3f35b0e"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_logger.html#adcb9b0b6d5198d0389932988d3f35b0e">m_timeT</a> = std::time(nullptr)</td></tr>
-<tr class="separator:adcb9b0b6d5198d0389932988d3f35b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3456197a8cec83d93ac052d3cf69b65"><td class="memItemLeft" align="right" valign="top">errno_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_a_i_demos_1_1_logger.html#ac3456197a8cec83d93ac052d3cf69b65">m_localtime</a> = localtime_s(&amp;<a class="el" href="class_game_a_i_demos_1_1_logger.html#a30264d4ec76840cc8dc3555b1220e5da">m_timeInfo</a>, &amp;<a class="el" href="class_game_a_i_demos_1_1_logger.html#adcb9b0b6d5198d0389932988d3f35b0e">m_timeT</a>)</td></tr>
-<tr class="separator:ac3456197a8cec83d93ac052d3cf69b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides a very simple logging utility for the game. </p>
@@ -184,37 +180,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac3456197a8cec83d93ac052d3cf69b65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3456197a8cec83d93ac052d3cf69b65">&#9670;&nbsp;</a></span>m_localtime</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">errno_t GameAIDemos::Logger::m_localtime = localtime_s(&amp;<a class="el" href="class_game_a_i_demos_1_1_logger.html#a30264d4ec76840cc8dc3555b1220e5da">m_timeInfo</a>, &amp;<a class="el" href="class_game_a_i_demos_1_1_logger.html#adcb9b0b6d5198d0389932988d3f35b0e">m_timeT</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p></p>
-<p>localtime() converts a given time since epoch into calendar time, expressed in local time, in the struct tm format. The result is stored in a struct tm. </p>
-<p>localtime_s() is Microsoft's thread-safe version of this function. Its first argument is a pointer to the time structure to store the result in. The second argument is a pointer to the time since epoch time_t to be used. </p>
-<p>See also: </p><ul>
-<li>
-<a href="https://msdn.microsoft.com/en-us/library/a442x3ye(v=vs.140).aspx">https://msdn.microsoft.com/en-us/library/a442x3ye(v=vs.140).aspx</a>  </li>
-</ul>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game_a_i_demos_1_1_logger.html#a30264d4ec76840cc8dc3555b1220e5da">m_timeInfo</a>, <a class="el" href="class_game_a_i_demos_1_1_logger.html#adcb9b0b6d5198d0389932988d3f35b0e">m_timeT</a></dd></dl>
-
-</div>
-</div>
 <a id="a2e4c7dfd8481f6980a36a7997d30d0e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e4c7dfd8481f6980a36a7997d30d0e7">&#9670;&nbsp;</a></span>m_showTimestamps</h2>
 
@@ -268,41 +233,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adcb9b0b6d5198d0389932988d3f35b0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcb9b0b6d5198d0389932988d3f35b0e">&#9670;&nbsp;</a></span>m_timeT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::time_t GameAIDemos::Logger::m_timeT = std::time(nullptr)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p></p>
-<p>Arithmetic type capable of representing times. </p>
-<p>time() returns the current time of the system as time since epoch. The argument for this function can be a pointer to a std::time_t object to store the time, or a null pointer. </p>
-<p>See also: </p><ul>
-<li>
-<a href="http://en.cppreference.com/w/cpp/chrono/c/time_t">http://en.cppreference.com/w/cpp/chrono/c/time_t</a>  </li>
-<li>
-<a href="http://en.cppreference.com/w/cpp/chrono/c/time">http://en.cppreference.com/w/cpp/chrono/c/time</a>  </li>
-</ul>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/include/<a class="el" href="_logger_8hpp_source.html">Logger.hpp</a></li>
-<li>E:/Phixyn/Projects/sfml-game-ai-demos/GameAIDemos/src/Logger.cpp</li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/include/<a class="el" href="_logger_8hpp_source.html">Logger.hpp</a></li>
+<li>E:/Phixyn/Projects/ai-assignment-one-Phixyn/GameAIDemos/src/Logger.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

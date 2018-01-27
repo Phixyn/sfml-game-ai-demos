@@ -1,8 +1,7 @@
 #include "../include/LiveEntity.hpp"
-#include "../include/AttackEntityState.hpp"
-#include "../include/DefendEntityState.hpp"
 #include "../include/DeadEntityState.hpp"
 #include "../include/IdleEntityState.hpp"
+#include "../include/SeekEntityState.hpp"
 #include <sstream>
 
 /// <summary>
@@ -14,6 +13,9 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	// TODO: give entities unique IDs and include this in log statement below
 	m_logger.log("DEBUG", "Initializing a live entity.");
 	// setSpriteColor(sf::Color::Red);
+	setMaxSpeed(0.25f);
+
+	// Set up entity info panel
 	std::ostringstream entityInfoSS;
 	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
@@ -23,43 +25,17 @@ GameAIDemos::LiveEntity::LiveEntity(int health, sf::Vector2f size, sf::Vector2f 
 	Entity(size, position), m_health(health), m_velocity(0.0f, 0.0f), m_speed(speed)
 {
 	m_logger.log("DEBUG", "Initializing a live entity.");
+	setMaxSpeed(speed);
 }
 
 void GameAIDemos::LiveEntity::handleEvents(sf::Event sfEvent)
 {
 	// TODO expand this
-
-	if (sfEvent.type == sf::Event::KeyPressed && m_isSelected)
-	{
-		switch (sfEvent.key.code)
-		{
-			case sf::Keyboard::D:
-				setState(new DefendEntityState());
-				break;
-			case sf::Keyboard::A:
-				setState(new AttackEntityState());
-				break;
-			case sf::Keyboard::I:
-				setState(new IdleEntityState());
-				break;
-			default:
-				break;
-		}
-	}
 }
 
 void GameAIDemos::LiveEntity::update(float deltaTime)
 {
-	// TODO
-	// sf::Vector2f toNormalize = getPosition() - m_target.getPosition();
-	// float vectorLength = sqrt((toNormalize.x * toNormalize.x) + (toNormalize.y * toNormalize.y));
-	// sf::Vector2f normalizedVector(toNormalize.x / vectorLength, toNormalize.y / vectorLength);
-
-	// sf::Vector2f desired_velocity = (getPosition() - m_target.getPosition()) * (0.1f * deltaTime);
-	// sf::Vector2f desired_velocity = normalizedVector * (0.1f * deltaTime);
-	// sf::Vector2f steering = desired_velocity - velocity;
-	// sf::Vector2f pos = getPosition() + steering;
-	// setPosition(getPosition() + m_velocity);
+	m_state->update();
 	m_sprite.move(m_velocity);
 
 	// We must also move the associated InfoPanel
@@ -69,7 +45,7 @@ void GameAIDemos::LiveEntity::update(float deltaTime)
 	entityInfoSS << "State: " << getState()->getStateName() << "\nHealth: " << m_health << "\nPosX: " << getPosition().x << "\nPosY: " << getPosition().y << "\nVelocityX: " << m_velocity.x << "\nVelocityY: " << m_velocity.y;
 	m_infoPanel.setTextString(entityInfoSS.str());
 
-	m_state->update();
+	// Check if entity is dead
 	if (m_health <= 0 && !m_dead)
 	{
 		setDead(true);
@@ -95,8 +71,12 @@ int GameAIDemos::LiveEntity::getHealth()
 
 void GameAIDemos::LiveEntity::setSpeed(float speed)
 {
-	m_logger.log("DEBUG", "Setting live entity speed.");
 	m_speed = speed;
+}
+
+void GameAIDemos::LiveEntity::setMaxSpeed(float maxSpeed)
+{
+	m_maxSpeed = maxSpeed;
 }
 
 float GameAIDemos::LiveEntity::getSpeed()
@@ -104,9 +84,16 @@ float GameAIDemos::LiveEntity::getSpeed()
 	return m_speed;
 }
 
+float GameAIDemos::LiveEntity::getMaxSpeed()
+{
+	return m_maxSpeed;
+}
+
 /// <summary>
 /// Takes a direction vector.
 /// Adjusts the live entity's velocity based on the direction vector.
+///
+/// TODO: Incomplete and not in use
 /// </summary>
 void GameAIDemos::LiveEntity::onCollision(sf::Vector2f direction)
 {
@@ -155,7 +142,7 @@ bool GameAIDemos::LiveEntity::isDead()
 void GameAIDemos::LiveEntity::setDead(bool dead)
 {
 	// TODO: give entities unique IDs and include this in log statement below
-	m_logger.log("DEBUG", "Entity: setting m_dead.");
+	m_logger.log("DEBUG", "Setting m_dead.");
 	m_dead = dead;
 }
 
@@ -166,7 +153,6 @@ sf::Vector2f GameAIDemos::LiveEntity::getVelocity()
 
 void GameAIDemos::LiveEntity::setVelocity(sf::Vector2f velocity)
 {
-	m_logger.log("DEBUG", "Setting entity velocity");
 	m_velocity = velocity;
 }
 
