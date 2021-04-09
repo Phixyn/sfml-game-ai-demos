@@ -1,12 +1,12 @@
 # C++ AI demos using SFML
 
-**Author:** Alpeche Pancha
+This project is no longer in development. The repository is now archived and in read-only mode.
+
+- - -
 
 **Version:** 0.3.0
 
 An SFML game demonstrating the implementation of a Finite State Machine and Steering Behaviours in intelligent agents.
-
-Follow the project's sprint planning on [Taiga.](https://tree.taiga.io/project/phixyn-sfml-game-ai-demos/)
 
 **Quick start:** Click on an agent and press F. De-select agents and hide their information by left-clicking them.
 
